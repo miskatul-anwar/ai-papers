@@ -6,19 +6,63 @@
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Curated Archive of 217 Landmark Papers (1763–2026){% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="author" content="{{ site.author }}">
+  <meta name="keywords" content="AI papers, artificial intelligence archive, machine learning research, neural networks, foundation models, large language models, LLM, autonomous agents, Turing, deep learning, BibTeX citations, open access PDFs, academic bibliography">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
 
   <!-- Open Graph & Social -->
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ '/assets/images/logo.jpeg' | absolute_url }}">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="AI Paper Library Logo">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:image" content="{{ '/assets/images/logo.jpeg' | absolute_url }}">
+
+  <!-- Color Scheme -->
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f1012" media="(prefers-color-scheme: dark)">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "alternateName": "AI Paper Archive",
+    "url": "{{ '/' | absolute_url }}",
+    "description": "{{ site.description }}",
+    "inLanguage": "en-US",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author }}",
+      "url": "https://github.com/miskatul-anwar"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "{{ site.author }}"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "{{ '/catalog.html?q={search_term_string}' | absolute_url }}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
   <!-- Theme Script (Zero-FOUC) -->
   <script>
@@ -37,9 +81,11 @@
   <link rel="icon" type="image/jpeg" href="{{ '/assets/images/logo.jpeg' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/logo.jpeg' | relative_url }}">
 
-  <!-- Typography: Newsreader (Editorial Serif) + Inter + JetBrains Mono -->
+  <!-- Typography Preconnect & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
