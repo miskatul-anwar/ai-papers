@@ -146,6 +146,23 @@ a.inline-link:hover, .prose a:hover {
   gap: 10px;
 }
 
+.masthead-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.masthead-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid var(--border-rule);
+  flex-shrink: 0;
+}
+
 .masthead-title {
   font-family: var(--font-serif);
   font-size: 1.25rem;
