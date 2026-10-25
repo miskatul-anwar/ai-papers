@@ -1,0 +1,200 @@
+[
+  {
+    "num": 1,
+    "title": "Mathematical and computational roots",
+    "description": "Build intuition for probability, computation, information, and trainable units.",
+    "paper_ids": [
+      "bayes1763",
+      "pearson1901",
+      "turing1936",
+      "mcculloch1943",
+      "shannon1948",
+      "turing1950",
+      "robbinsmonro1951"
+    ]
+  },
+  {
+    "num": 2,
+    "title": "Symbolic AI and early language systems",
+    "description": "See how early AI represented facts, searched for solutions, and handled language.",
+    "paper_ids": [
+      "dartmouth1955",
+      "newell1956",
+      "lispmccarthy1960",
+      "solomonoff_induction_1964",
+      "resolution1965",
+      "eliza_1966",
+      "strips_1971",
+      "minsky_frames_1974",
+      "mycin_1975"
+    ]
+  },
+  {
+    "num": 3,
+    "title": "Statistical learning",
+    "description": "Compare instance methods, clustering, likelihood, learnability, margins, ensembles, and optimization.",
+    "paper_ids": [
+      "rosenblatt1958",
+      "coverhart1967",
+      "macqueen1967",
+      "em1977",
+      "valiant1984",
+      "svm1995",
+      "adaboost1997",
+      "nfl_1997",
+      "randomforest2001",
+      "xgboost2016"
+    ]
+  },
+  {
+    "num": 4,
+    "title": "Neural networks to deep learning",
+    "description": "Trace representations from recurrent and energy-based networks to modern deep training.",
+    "paper_ids": [
+      "neocognitron_1980",
+      "hopfield1982",
+      "boltzmann1985",
+      "rumelhart1986",
+      "lstm1997",
+      "lenet1998",
+      "dbn2006",
+      "alexnet2012",
+      "dropout_2014",
+      "adversarial_training_2014",
+      "batchnorm2015"
+    ]
+  },
+  {
+    "num": 5,
+    "title": "NLP and language modeling",
+    "description": "Follow statistical translation and word representations into attention and pretrained Transformers.",
+    "paper_ids": [
+      "brown_mt1993",
+      "bleu2002",
+      "neural_lm2003",
+      "word2vec2013",
+      "seq2seq2014",
+      "attention2014",
+      "transformer2017",
+      "bert2018",
+      "t5_2019"
+    ]
+  },
+  {
+    "num": 6,
+    "title": "Knowledge graphs and neuro-symbolic AI",
+    "description": "Learn where graph facts come from, how links are learned, and how rules connect to neural models.",
+    "paper_ids": [
+      "wordnet_1993",
+      "semanticweb2001",
+      "dbpedia2007",
+      "freebase2008",
+      "transe2013",
+      "gcn2016",
+      "neural_lp2017",
+      "deepproblog2018",
+      "graph_networks_2018",
+      "nscl_2019",
+      "graphrag2024",
+      "alphageometry_2024",
+      "alphageometry2_2025"
+    ]
+  },
+  {
+    "num": 7,
+    "title": "Reinforcement learning",
+    "description": "Move from value prediction to policy gradients, deep control, self-play, and planning.",
+    "paper_ids": [
+      "sutton1988",
+      "qlearning1992",
+      "reinforce_1992",
+      "policy_gradient_1999",
+      "dqn2015",
+      "alphago2016",
+      "ppo2017",
+      "alphazero_2017",
+      "mu_zero2019"
+    ]
+  },
+  {
+    "num": 8,
+    "title": "Vision and multimodal learning",
+    "description": "Follow CNNs through visual self-supervision, Transformers, image-language models, and generation.",
+    "paper_ids": [
+      "imagenet2009",
+      "resnet2015",
+      "mask_rcnn_2017",
+      "moco_2019",
+      "vit2020",
+      "score_sde_2020",
+      "clip2021",
+      "stable_diffusion2021",
+      "mae_2021",
+      "flow_matching_2022",
+      "blip2_2023",
+      "llava_2023"
+    ]
+  },
+  {
+    "num": 9,
+    "title": "LLMs, instruction tuning, and reasoning",
+    "description": "Understand pretraining, scaling, retrieval, alignment, adaptation, and reasoning.",
+    "paper_ids": [
+      "gpt1_2018",
+      "gpt2_2019",
+      "gpt3_2020",
+      "scaling2020",
+      "rag2020",
+      "flan_2021",
+      "lora2021",
+      "instructgpt2022",
+      "cot2022",
+      "chinchilla2022",
+      "dpo2023",
+      "vllm_2023",
+      "selfrag_2023",
+      "deepseekmath_2024",
+      "deepseek_r1_2025"
+    ]
+  },
+  {
+    "num": 10,
+    "title": "AI for science and current directions",
+    "description": "Apply graph and sequence models to chemistry, proteins, materials, and genomics.",
+    "paper_ids": [
+      "mpnn_2017",
+      "schnet_2017",
+      "megnet_2018",
+      "alphafold2021",
+      "esmfold_2022",
+      "gnome_2023",
+      "alphafold3_2024",
+      "alphagenome_2025"
+    ]
+  },
+  {
+    "num": 11,
+    "title": "Tool use and autonomous agents",
+    "description": "Study how language models browse, plan, use tools, remember earlier work, and act in interactive environments. Read the benchmarks alongside the systems they evaluate.",
+    "paper_ids": [
+      "webgpt_2021",
+      "react2022",
+      "toolformer2023",
+      "reflexion_2023",
+      "generative_agents_2023",
+      "tree_of_thoughts_2023",
+      "voyager_2023",
+      "webarena_2023",
+      "agentbench_2023",
+      "autogen_2023",
+      "swebench_2023",
+      "memgpt_2023",
+      "gaia_2023",
+      "osworld_2024",
+      "sweagent_2024",
+      "aiscientist_2024",
+      "aiscientist2_2025",
+      "osworld2_2026"
+    ]
+  }
+]

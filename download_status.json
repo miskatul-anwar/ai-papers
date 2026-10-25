@@ -1,0 +1,1521 @@
+{
+  "a3c_2016": {
+    "bytes": 2302720,
+    "path": "library/09_Reinforcement_Learning/2016_a3c_2016.pdf",
+    "sha256": "f56a70559364254c4d60d9b697e7345add402ae1de081075aaddc060c5cbe964",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1602.01783"
+  },
+  "actor_critic_1983": {
+    "bytes": 12894209,
+    "path": "library/09_Reinforcement_Learning/1983_actor_critic_1983.pdf",
+    "sha256": "a0fa7a5e40469a3370f7a49cfbdcf21211798d203906246c2c97048d7d1d4856",
+    "state": "downloaded",
+    "url": "https://raw.githubusercontent.com/david78k/pendulum/master/c/anderson/Neuronlike%20Adaptive%20Elements%20That%20Can%20Solve%20Difficult%20Learning%20Control%20Problems%20Barto1983.pdf"
+  },
+  "adaboost1997": {
+    "bytes": 642306,
+    "path": "library/03_Machine_Learning/1997_adaboost1997.pdf",
+    "sha256": "01f49de027c4c2c146869da85f8e8482d6b723344cb80ce957d11e93c615e7cc",
+    "state": "downloaded",
+    "url": "https://www.face-rec.org/algorithms/Boosting-Ensemble/decision-theoretic_generalization.pdf"
+  },
+  "adam2014": {
+    "bytes": 584641,
+    "path": "library/03_Machine_Learning/2014_adam2014.pdf",
+    "sha256": "eab9c73ae2ceda884b94830bda99312254bac4806f6c9f045cbab90721ecda31",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1412.6980"
+  },
+  "adversarial_2013": {
+    "bytes": 6565323,
+    "path": "library/04_Deep_Learning/2013_adversarial_2013.pdf",
+    "sha256": "c4e3bd872ef20b7d2c4d77a63cd8f37cb8ff518609ae09acaf0fd5dd9e76c54c",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1312.6199"
+  },
+  "adversarial_training_2014": {
+    "bytes": 1036360,
+    "path": "library/04_Deep_Learning/2014_adversarial_training_2014.pdf",
+    "sha256": "7f6c0a50475149e11e3b7efc9c0a00383652b7cae62f80facd8ae2684ef251e7",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1412.6572"
+  },
+  "agentbench_2023": {
+    "bytes": 23017024,
+    "path": "library/12_AI_Agents/2023_agentbench_2023.pdf",
+    "sha256": "9c780e35fc0b2de6c2e21e0572f6aaaadcf7ecdd56d63cfaae2b415bc0dc83c3",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2308.03688"
+  },
+  "aiscientist2_2025": {
+    "bytes": 8923691,
+    "path": "library/12_AI_Agents/2025_aiscientist2_2025.pdf",
+    "sha256": "53bafd3028e3f8829a3d85220e84dcf0d18934f9b75c092a60de303ff3644bd2",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2504.08066"
+  },
+  "aiscientist_2024": {
+    "bytes": 11731143,
+    "path": "library/12_AI_Agents/2024_aiscientist_2024.pdf",
+    "sha256": "e911f90b0114d5e3fc23a0000177ea670fa9ed79d5f9a664efa2980fdb350507",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2408.06292"
+  },
+  "alexnet2012": {
+    "bytes": 1418820,
+    "path": "library/04_Deep_Learning/2012_alexnet2012.pdf",
+    "sha256": "90137160c57217953d5f61857e64ca58e85f06e1b13b4f475c918b1b582b9771",
+    "state": "downloaded",
+    "url": "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf"
+  },
+  "alphafold2021": {
+    "bytes": 3651992,
+    "path": "library/11_AI_for_Science/2021_alphafold2021.pdf",
+    "sha256": "6eae057a9faf4f671c3101e0745ed704460c6d3dec77243dfd3a9f2d2ab68970",
+    "state": "downloaded",
+    "url": "https://www.nature.com/articles/s41586-021-03819-2.pdf"
+  },
+  "alphafold3_2024": {
+    "bytes": 8602339,
+    "path": "library/11_AI_for_Science/2024_alphafold3_2024.pdf",
+    "sha256": "aba3109f2892454c9512570001598a069aaf422adb5aa0f3879414cb29a258fb",
+    "state": "downloaded",
+    "url": "https://www.nature.com/articles/s41586-024-07487-w.pdf"
+  },
+  "alphagenome_2025": {
+    "bytes": 14133865,
+    "path": "library/11_AI_for_Science/2025_alphagenome_2025.pdf",
+    "sha256": "c88fa5167f331bf99a98fd726c5e1e06b19f7098668df5c63f19dd1e8f1259bc",
+    "state": "downloaded",
+    "url": "https://storage.googleapis.com/deepmind-media/papers/alphagenome.pdf"
+  },
+  "alphageometry2_2025": {
+    "bytes": 1136320,
+    "path": "library/06_Neuro_Symbolic/2025_alphageometry2_2025.pdf",
+    "sha256": "5d481741941713c3203b73ec8f4503d5ae489e9e8ecfd5b1ce52b27f0651ac9f",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2502.03544"
+  },
+  "alphageometry_2024": {
+    "bytes": 12404345,
+    "path": "library/06_Neuro_Symbolic/2024_alphageometry_2024.pdf",
+    "sha256": "5aba09c646b220f960372cb0056ccb21c535432659cd4ad3daf88b55f0b45a53",
+    "state": "downloaded",
+    "url": "https://www.nature.com/articles/s41586-023-06747-5.pdf"
+  },
+  "alphago2016": {
+    "bytes": 2682222,
+    "path": "library/09_Reinforcement_Learning/2016_alphago2016.pdf",
+    "sha256": "9c9184385a3d37b4f4e9d9715270986c43172747b1d08f29093128c1ef878b60",
+    "state": "downloaded",
+    "url": "https://webdocs.cs.ualberta.ca/~hayward/396/masteringgameofgo.pdf"
+  },
+  "alphago_zero_2017": {
+    "bytes": 4038377,
+    "path": "library/09_Reinforcement_Learning/2017_alphago_zero_2017.pdf",
+    "sha256": "b0f197a12fcb328b1255de2ee4d1ff339b30d7ec33337ef242ea9498e27a4895",
+    "state": "downloaded",
+    "url": "https://gwern.net/doc/reinforcement-learning/model/alphago/2017-silver.pdf"
+  },
+  "alphazero_2017": {
+    "bytes": 636527,
+    "path": "library/09_Reinforcement_Learning/2017_alphazero_2017.pdf",
+    "sha256": "26c43408551c22f4fdc98e47f9b4592ab2161fac1ba5df27c897f46d8b6cec7f",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1712.01815"
+  },
+  "attention2014": {
+    "bytes": 444482,
+    "path": "library/05_NLP_Language/2014_attention2014.pdf",
+    "sha256": "84801c8410da51b449d379d2fa4939a416123f2c93991077a680f863026022a7",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1409.0473"
+  },
+  "autogen_2023": {
+    "bytes": 3571809,
+    "path": "library/12_AI_Agents/2023_autogen_2023.pdf",
+    "sha256": "fcf8b1acae6b1bd6f14c92463caa9726828bf998234ba9f10c2411087897c96b",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2308.08155"
+  },
+  "bart2019": {
+    "bytes": 296072,
+    "path": "library/05_NLP_Language/2019_bart2019.pdf",
+    "sha256": "c884c393e817e408e581a3ac219263f54e086b0703e0b079e41c2f2e71f63195",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1910.13461"
+  },
+  "batchnorm2015": {
+    "bytes": 173548,
+    "path": "library/04_Deep_Learning/2015_batchnorm2015.pdf",
+    "sha256": "bdc69e0b568f41d8d3181cc9077a461f58fcdd1c70c9f49efe60a05ee6109655",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1502.03167"
+  },
+  "bayes1763": {
+    "bytes": 246428,
+    "path": "library/01_Foundations/1763_bayes1763.pdf",
+    "sha256": "f30cc016d00eea7649e5d5103e167d001b351077f5cedd1a5838f8c45b6b9786",
+    "state": "downloaded",
+    "url": "https://bayes.wustl.edu/Manual/an.essay.pdf"
+  },
+  "bert2018": {
+    "bytes": 775166,
+    "path": "library/05_NLP_Language/2018_bert2018.pdf",
+    "sha256": "5692a5514787a8c6727b4ff3b726a3385798bc68e12138d1d4af83947e2acf6e",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1810.04805"
+  },
+  "binder2023": {
+    "bytes": 1265617,
+    "path": "library/06_Neuro_Symbolic/2023_binder2023.pdf",
+    "sha256": "8a125d224aeeedadc4a5cb490a2516a4bdf75671c962cb66de2ac21f6d89ae23",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2210.02875"
+  },
+  "bleu2002": {
+    "bytes": 282048,
+    "path": "library/05_NLP_Language/2002_bleu2002.pdf",
+    "sha256": "c0ee6aedcb674da26a640578ead33f66eb5bec87daa2656d4f845da37e096997",
+    "state": "downloaded",
+    "url": "https://aclanthology.org/P02-1040.pdf"
+  },
+  "blip2_2023": {
+    "bytes": 6737540,
+    "path": "library/08_Vision_Multimodal/2023_blip2_2023.pdf",
+    "sha256": "6bc5d399d6127a64ace5167a2f0c00112a49725d2475d80322dbf0083f139e80",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2301.12597"
+  },
+  "boltzmann1985": {
+    "bytes": 1881725,
+    "path": "library/02_Neural_Networks/1985_boltzmann1985.pdf",
+    "sha256": "3efd598c42da63fbe22c945180f402acb195f5d04eec48efb8e4b88cbf44a4f0",
+    "state": "downloaded",
+    "url": "https://papers.cnl.salk.edu/PDFs/A%20learning%20algorithm%20for%20Boltzmann%20machines%201985-4616.pdf"
+  },
+  "brown_mt1993": {
+    "bytes": 2803649,
+    "path": "library/05_NLP_Language/1993_brown_mt1993.pdf",
+    "sha256": "f90c181d17ed78db74e61023fb311bfb148b874b3bc8554dd798df0eefd3de8f",
+    "state": "downloaded",
+    "url": "https://aclanthology.org/J93-2003.pdf"
+  },
+  "chinchilla2022": {
+    "bytes": 6004349,
+    "path": "library/10_LLMs/2022_chinchilla2022.pdf",
+    "sha256": "3fd3632a8ef48171bd25282990221d49535d75356192f068b3b2ebe08f2aedd4",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2203.15556"
+  },
+  "clip2021": {
+    "bytes": 6813639,
+    "path": "library/08_Vision_Multimodal/2021_clip2021.pdf",
+    "sha256": "6478b6e571a7d6fcd846d8ef77bfd60c285f1986abb8f475eedc43de403074f5",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2103.00020"
+  },
+  "complex2016": {
+    "bytes": 910920,
+    "path": "library/07_Knowledge_Graphs/2016_complex2016.pdf",
+    "sha256": "674565a4588b0541f1bcd564b6f50e730e647df981723a10285986c0acf99cd4",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1606.06357"
+  },
+  "conceptnet55_2017": {
+    "bytes": 803876,
+    "path": "library/07_Knowledge_Graphs/2017_conceptnet55_2017.pdf",
+    "sha256": "b4db400f20dd8b50f0ef1159b838aef57ff70331a1121cc7a5d021898b625d6f",
+    "state": "downloaded",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/download/11164/11023"
+  },
+  "constitutional_ai_2022": {
+    "bytes": 2088111,
+    "path": "library/10_LLMs/2022_constitutional_ai_2022.pdf",
+    "sha256": "9a456a07ad346e3372f9867d346f69f5b0f68b4c65f060aca0b8a13fa9d98e83",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2212.08073"
+  },
+  "cot2022": {
+    "bytes": 891773,
+    "path": "library/10_LLMs/2022_cot2022.pdf",
+    "sha256": "7d9f878c23b460e4566aa4ec9201b1abfb3b8faefb2b1356e411cb90fef72a12",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2201.11903"
+  },
+  "coverhart1967": {
+    "bytes": 1044020,
+    "path": "library/03_Machine_Learning/1967_coverhart1967.pdf",
+    "sha256": "0be35b195d2dd1b9c1e3ee0c88d1347a5e4af9ef7c59fc731712f1c4a2fce48c",
+    "state": "downloaded",
+    "url": "https://isl.stanford.edu/~cover/papers/transIT/0021cove.pdf"
+  },
+  "crf2001": {
+    "bytes": 307737,
+    "path": "library/05_NLP_Language/2001_crf2001.pdf",
+    "sha256": "92c13ce790046fef6fbc361f8b9dfcdd3bf73bbd511cf063036bceddb7247b4a",
+    "state": "downloaded",
+    "url": "https://www.cs.columbia.edu/~jebara/6772/papers/crf.pdf"
+  },
+  "cyc1985": {
+    "bytes": 3744949,
+    "path": "library/07_Knowledge_Graphs/1985_cyc1985.pdf",
+    "sha256": "c61518ee18b17f2eabe4d06c1ad608d6ac0da08695446217399d5fed006bcaef",
+    "state": "downloaded",
+    "url": "https://web.archive.org/web/20201216171735id_/https://ojs.aaai.org/index.php/aimagazine/article/download/510/446"
+  },
+  "dartmouth1955": {
+    "bytes": 2727090,
+    "path": "library/01_Foundations/1955_dartmouth1955.pdf",
+    "sha256": "c3c946a5da12f2e91240a906228f5196304daf4149e0b9692976f8d2e6733c4a",
+    "state": "downloaded",
+    "url": "https://people.csail.mit.edu/brooks/idocs/DartmouthProposal.pdf"
+  },
+  "dbn2006": {
+    "bytes": 5773173,
+    "path": "library/04_Deep_Learning/2006_dbn2006.pdf",
+    "sha256": "2d7827740ac48e35727e7aef0b2864c69f06e0ee6132da0f9aa46387e9127526",
+    "state": "downloaded",
+    "url": "https://www.stats.ox.ac.uk/~teh/research/unsup/nc2006.pdf"
+  },
+  "dbpedia2007": {
+    "bytes": 1240868,
+    "path": "library/07_Knowledge_Graphs/2007_dbpedia2007.pdf",
+    "sha256": "e72b87cc50a24d3053dc34dd66b31aafd2d015cf02147e35e4050c6568b30502",
+    "state": "downloaded",
+    "url": "https://jens-lehmann.org/files/2008/dbpedia.pdf"
+  },
+  "ddpg_2015": {
+    "bytes": 663643,
+    "path": "library/09_Reinforcement_Learning/2015_ddpg_2015.pdf",
+    "sha256": "34ef677ecdee8c2a72721c70c7d849191be72af39ac8691a12e8c2979a28feda",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1509.02971"
+  },
+  "ddpm2020": {
+    "bytes": 10267274,
+    "path": "library/04_Deep_Learning/2020_ddpm2020.pdf",
+    "sha256": "aee5e07a802e8dfd2a386374c94fd61d1d056cb7e1e0fec4f28e8120ff5d8505",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2006.11239"
+  },
+  "deep_sets_2017": {
+    "bytes": 5354924,
+    "path": "library/04_Deep_Learning/2017_deep_sets_2017.pdf",
+    "sha256": "b72a01cc43b222ea9e5808e10135c55c63444546b4c9f29cbe8e9abed9f7ea70",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1703.06114"
+  },
+  "deepproblog2018": {
+    "bytes": 573496,
+    "path": "library/06_Neuro_Symbolic/2018_deepproblog2018.pdf",
+    "sha256": "7de8b2a4934baa6c12d753bd6d062a7b0fb471afc53edb1730e7403d67bc280b",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1805.10872"
+  },
+  "deepseek_r1_2025": {
+    "bytes": 5034998,
+    "path": "library/10_LLMs/2025_deepseek_r1_2025.pdf",
+    "sha256": "b191b0a365a64b4ab2791d117069ed17a2933d03554a662ced58b37df52018f4",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2501.12948"
+  },
+  "deepseek_v3_2024": {
+    "bytes": 1887366,
+    "path": "library/10_LLMs/2024_deepseek_v3_2024.pdf",
+    "sha256": "812a3fd645c80725354de9d831a6785503007a60681461407f64e97305fa9330",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2412.19437"
+  },
+  "deepseekmath_2024": {
+    "bytes": 1844642,
+    "path": "library/10_LLMs/2024_deepseekmath_2024.pdf",
+    "sha256": "6cc20b3c5b8d25b8b53868fc4ec1792c144f07d67bdf7395138efd4422197e7b",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2402.03300"
+  },
+  "dendral_1971": {
+    "bytes": 5435759,
+    "path": "library/01_Foundations/1971_dendral_1971.pdf",
+    "sha256": "c5098a9794206d21b9ed71050b4edf01def7c2e4ae8888b69ca1fe522b5af28b",
+    "state": "downloaded",
+    "url": "https://www.ijcai.org/Proceedings/71/Papers/005%20A.pdf"
+  },
+  "detr_2020": {
+    "bytes": 7634041,
+    "path": "library/08_Vision_Multimodal/2020_detr_2020.pdf",
+    "sha256": "d4b846bd44896e1d21527f48eddc422c263c9a4f8a3fa4be249750956882698d",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2005.12872"
+  },
+  "distillation_2015": {
+    "bytes": 106630,
+    "path": "library/04_Deep_Learning/2015_distillation_2015.pdf",
+    "sha256": "74e6689115c539db499f9d6153edecb364059926fd45402454f8210442444c5a",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1503.02531"
+  },
+  "distmult2014": {
+    "bytes": 1495321,
+    "path": "library/07_Knowledge_Graphs/2014_distmult2014.pdf",
+    "sha256": "728f546dd92b146ae1cd1aa5ef1f72f289d7fb87fb58c275ce8907cdde0a2124",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1412.6575"
+  },
+  "dpo2023": {
+    "bytes": 1299212,
+    "path": "library/10_LLMs/2023_dpo2023.pdf",
+    "sha256": "92cb3a2b71362acda98a789b03d88688fd33cf5fcf13f81d2b1de30ee7d3b67a",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2305.18290"
+  },
+  "dpr_2020": {
+    "bytes": 383508,
+    "path": "library/05_NLP_Language/2020_dpr_2020.pdf",
+    "sha256": "3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2004.04906"
+  },
+  "dqn2015": {
+    "bytes": 4400586,
+    "path": "library/09_Reinforcement_Learning/2015_dqn2015.pdf",
+    "sha256": "7e76cfd09e121cf546992ffc5b2116c0da73ec1595069f142a29da5bae400f4e",
+    "state": "downloaded",
+    "url": "https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf"
+  },
+  "dropout_2014": {
+    "bytes": 2869095,
+    "path": "library/04_Deep_Learning/2014_dropout_2014.pdf",
+    "sha256": "9c196ccbe6c6a595a1adba6cd030d35f7c2e548bbf5e7f1278b0109d8dd9ebaa",
+    "state": "downloaded",
+    "url": "https://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf"
+  },
+  "efficientnet_2019": {
+    "bytes": 933600,
+    "path": "library/04_Deep_Learning/2019_efficientnet_2019.pdf",
+    "sha256": "af6b1bd620f81bfaea81edf8227484588e1fcc2427d6b5020fa17454d7566c70",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1905.11946"
+  },
+  "eliza_1966": {
+    "bytes": 1215301,
+    "path": "library/05_NLP_Language/1966_eliza_1966.pdf",
+    "sha256": "d0c58989bff11741aec3fbf52a49b3dcd0ede45ebabfa249815602b81ef07c1a",
+    "state": "downloaded",
+    "url": "https://web.stanford.edu/class/cs124/p36-weizenabaum.pdf"
+  },
+  "elman1990": {
+    "bytes": 1937563,
+    "path": "library/05_NLP_Language/1990_elman1990.pdf",
+    "sha256": "e2967c704c68f8bd9d8dc6c60760fb17d77a3082007beaadea9a654c67aaf8c5",
+    "state": "downloaded",
+    "url": "https://gwern.net/doc/ai/nn/rnn/1990-elman.pdf"
+  },
+  "elmo2018": {
+    "bytes": 425880,
+    "path": "library/05_NLP_Language/2018_elmo2018.pdf",
+    "sha256": "d3859b3adb02783a2b6cad951e5554b485cad1df53b737e08c93e8925e014632",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1802.05365"
+  },
+  "em1977": {
+    "bytes": 4671818,
+    "path": "library/03_Machine_Learning/1977_em1977.pdf",
+    "sha256": "b0988a82c1c10274298c83b31d88a22422e61f5fb3371749fdaeb22587166db1",
+    "state": "downloaded",
+    "url": "https://www.maths.usyd.edu.au/u/jchan/GLM/Dempster1977EM.pdf"
+  },
+  "esmfold_2022": {
+    "bytes": 4982480,
+    "path": "library/11_AI_for_Science/2022_esmfold_2022.pdf",
+    "sha256": "9149bfe6fcce7607c8b02e1906d4b51e0281ac6335b865df631fe648a67c0e79",
+    "state": "downloaded",
+    "url": "https://yiheng-zhu.github.io/Yiheng/papers/5/ESMFold_Science_2023.pdf"
+  },
+  "faster_rcnn2015": {
+    "bytes": 6913803,
+    "path": "library/08_Vision_Multimodal/2015_faster_rcnn2015.pdf",
+    "sha256": "f2630182ccfabd6fc89ac20270b4daf15a0ca849298a7db1e5d124ca443051f1",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1506.01497"
+  },
+  "fisher1936": {
+    "bytes": 494926,
+    "path": "library/03_Machine_Learning/1936_fisher1936.pdf",
+    "sha256": "d3a49aaa4f2d283931544f58cb12b1174f537642b83def7ae9119a1d8717b740",
+    "state": "downloaded",
+    "url": "https://lgross.utk.edu/Math589Fall2020/RAFisher1936measurementsFlowerTaxa.pdf"
+  },
+  "flan_2021": {
+    "bytes": 1626775,
+    "path": "library/10_LLMs/2021_flan_2021.pdf",
+    "sha256": "7126b83c5590b9eb4b6e6027446cb88c0aeff132e47d88e9407982b1f7fad044",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2109.01652"
+  },
+  "flashattn2022": {
+    "bytes": 2630825,
+    "path": "library/04_Deep_Learning/2022_flashattn2022.pdf",
+    "sha256": "ca7f9fda10b90fc05dd291a3accc85e9c1a4a860b99b31928dab03ed3fcb14e4",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2205.14135"
+  },
+  "flashnext_rl_2026": {
+    "bytes": 599268,
+    "path": "library/09_Reinforcement_Learning/2026_flashnext_rl_2026.pdf",
+    "sha256": "b335a92e6a90a86daf4f2a7609e24f91091cb53ae0ed8e23a3fe16f306908f84",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2610.28998"
+  },
+  "flow_matching_2022": {
+    "bytes": 25147129,
+    "path": "library/04_Deep_Learning/2022_flow_matching_2022.pdf",
+    "sha256": "5eeb39ba516396924aba4787452f9d0abdee88467a4d0c264d9f66cad0c5ee14",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2210.02747"
+  },
+  "freebase2008": {
+    "bytes": 336019,
+    "path": "library/07_Knowledge_Graphs/2008_freebase2008.pdf",
+    "sha256": "91952458a62c8ac16c9c4d726c6571f93c167120e449d14f0face4149b37a954",
+    "state": "downloaded",
+    "url": "https://web.archive.org/web/20170314233333id_/http://ids.snu.ac.kr/w/images/9/98/SC17.pdf"
+  },
+  "gaia_2023": {
+    "bytes": 4254059,
+    "path": "library/12_AI_Agents/2023_gaia_2023.pdf",
+    "sha256": "5bf6f968d4f5cd20acdfca6e81e3c9f5277bb66061fad7a02e35442dff812ba0",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2311.12983"
+  },
+  "gan2014": {
+    "bytes": 530482,
+    "path": "library/04_Deep_Learning/2014_gan2014.pdf",
+    "sha256": "ff5819e3a7b713c3bd3107b7de3d51fe0a347aa5d8444f0efdcf2345ef0a8b63",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1406.2661"
+  },
+  "gat2017": {
+    "bytes": 1637828,
+    "path": "library/07_Knowledge_Graphs/2017_gat2017.pdf",
+    "sha256": "a7d811a44e1c65bf27da3a01859f23a8edbe33b8f96114b4b5066aedb078f284",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1710.10903"
+  },
+  "gcn2016": {
+    "bytes": 873897,
+    "path": "library/07_Knowledge_Graphs/2016_gcn2016.pdf",
+    "sha256": "a654f884db04a317b0f2414a83f2ba32a9f8442d29bcf1cb5f73f7af78a98070",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1609.02907"
+  },
+  "gemini25_2025": {
+    "bytes": 10130715,
+    "path": "library/10_LLMs/2025_gemini25_2025.pdf",
+    "sha256": "d10cf3e99841b6411901de4a1fb8538a3cd9aab3cc84880941811d8dd7e86a1a",
+    "state": "downloaded",
+    "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf"
+  },
+  "gemma3_2025": {
+    "bytes": 3699196,
+    "path": "library/10_LLMs/2025_gemma3_2025.pdf",
+    "sha256": "b2793d288d6672f8d6a03f65370bb4a48d607f54937a22fc7d9f727435795305",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2503.19786"
+  },
+  "generative_agents_2023": {
+    "bytes": 11947867,
+    "path": "library/12_AI_Agents/2023_generative_agents_2023.pdf",
+    "sha256": "1b31e77fb24d25d7598f2c49e955d12a28b95a6dabad34acdac40f44bfb7a139",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2304.03442"
+  },
+  "gin2018": {
+    "bytes": 819821,
+    "path": "library/07_Knowledge_Graphs/2018_gin2018.pdf",
+    "sha256": "a6ebf80c2790b8bac1fa378902993eae26020cc6d0d95e3964eea42b0c66a974",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1810.00826"
+  },
+  "glove2014": {
+    "bytes": 2661778,
+    "path": "library/05_NLP_Language/2014_glove2014.pdf",
+    "sha256": "6631a1719122a89b3941d851a55ecf38c55971c36b30ae9c0cec617124056adf",
+    "state": "downloaded",
+    "url": "https://aclanthology.org/D14-1162.pdf"
+  },
+  "gnome_2023": {
+    "bytes": 3132539,
+    "path": "library/11_AI_for_Science/2023_gnome_2023.pdf",
+    "sha256": "f1af6c92eda54f5bd84eb5012f3010d7bb9167dca337414cffca81623b4a535a",
+    "state": "downloaded",
+    "url": "https://www.law.berkeley.edu/wp-content/uploads/2024/02/Merchant-Scaling-deep-learning-for-materials-discovery.pdf"
+  },
+  "gpt1_2018": {
+    "bytes": 541036,
+    "path": "library/10_LLMs/2018_gpt1_2018.pdf",
+    "sha256": "eb81a65e0856bd38e855e1f1de6ee12e7c3eb92ae05c8270d345a475beb631d0",
+    "state": "downloaded",
+    "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+  },
+  "gpt2_2019": {
+    "bytes": 582775,
+    "path": "library/10_LLMs/2019_gpt2_2019.pdf",
+    "sha256": "d9d852e2894556e73f53cb22b7c605a9643d6f0b19bf604b429ed6192fa24f4e",
+    "state": "downloaded",
+    "url": "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"
+  },
+  "gpt3_2020": {
+    "bytes": 6768044,
+    "path": "library/10_LLMs/2020_gpt3_2020.pdf",
+    "sha256": "97fd272f1fdfc18677462d0292f5fbf26ca86b4d1b485c2dba03269b643a0e83",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2005.14165"
+  },
+  "gpt4_2023": {
+    "bytes": 5245564,
+    "path": "library/10_LLMs/2023_gpt4_2023.pdf",
+    "sha256": "c33a66dadca2388d7b172d6293b00dc32b71110c6f38fafe0d41112e61be7774",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2303.08774"
+  },
+  "gradientboost2001": {
+    "bytes": 512286,
+    "path": "library/03_Machine_Learning/2001_gradientboost2001.pdf",
+    "sha256": "a29f56836d09647e43ca72660d7c4c5dfe7ba228a85afa30ffbece3edb9977be",
+    "state": "downloaded",
+    "url": "https://faculty.cc.gatech.edu/~zha/CS8803WST/boosting.pdf"
+  },
+  "graph_networks_2018": {
+    "bytes": 9421943,
+    "path": "library/07_Knowledge_Graphs/2018_graph_networks_2018.pdf",
+    "sha256": "3ff9931633c2fdd56cd45f1169c960b5298493f167b575ae656e0724d30257f4",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1806.01261"
+  },
+  "graphrag2024": {
+    "bytes": 6893854,
+    "path": "library/07_Knowledge_Graphs/2024_graphrag2024.pdf",
+    "sha256": "730f1a9f38d16689900969a3eeeb1b31e45eda1dcc1f37a043afa90aff76c867",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2404.16130"
+  },
+  "graphsage2017": {
+    "bytes": 1086007,
+    "path": "library/07_Knowledge_Graphs/2017_graphsage2017.pdf",
+    "sha256": "e1f354eb12011cde24af1eb500d72463fc971b09d26b55688c7f918a86e31ce8",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1706.02216"
+  },
+  "hog2005": {
+    "bytes": 456138,
+    "path": "library/08_Vision_Multimodal/2005_hog2005.pdf",
+    "sha256": "eb2bad4bc1e30c9a467a135100ba2be4d12fd8736675af0268e98ebd179c46f0",
+    "state": "downloaded",
+    "url": "https://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf"
+  },
+  "hogan_kg2020": {
+    "bytes": 2376773,
+    "path": "library/07_Knowledge_Graphs/2020_hogan_kg2020.pdf",
+    "sha256": "348d06999cd5fd039d31620f9552dba0ac34e9e16a614f88473a74591b9f438e",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2003.02320"
+  },
+  "hopfield1982": {
+    "bytes": 1180207,
+    "path": "library/02_Neural_Networks/1982_hopfield1982.pdf",
+    "sha256": "1543e997fbbb49c3534dbff1cee399ab89c751bd1c98ac3cd3e7e5e22d5af926",
+    "state": "downloaded",
+    "url": "https://authors.library.caltech.edu/records/w41x7-8bn13/files/HOPpnas82.pdf?download=1"
+  },
+  "imagenet2009": {
+    "bytes": 3509636,
+    "path": "library/08_Vision_Multimodal/2009_imagenet2009.pdf",
+    "sha256": "9875ae02d26ad1c77554bcd6921610189d86c2609d542de0fa43e34b0990f3b3",
+    "state": "downloaded",
+    "url": "https://www.image-net.org/static_files/papers/imagenet_cvpr09.pdf"
+  },
+  "instructgpt2022": {
+    "bytes": 1797405,
+    "path": "library/10_LLMs/2022_instructgpt2022.pdf",
+    "sha256": "c1984bb50a5b90fddb895fdc3a0f72e5bc977148c9f63ef6040cbe7a3e1f0d98",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2203.02155"
+  },
+  "kimi_k2_2025": {
+    "bytes": 5872335,
+    "path": "library/10_LLMs/2025_kimi_k2_2025.pdf",
+    "sha256": "035062b5e1ab865ffad9f90f81d6c8332f8af805063fac54cc6f2cca1fe608b5",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2507.20534"
+  },
+  "kohonen1982": {
+    "bytes": 1088742,
+    "path": "library/02_Neural_Networks/1982_kohonen1982.pdf",
+    "sha256": "9e69f5e04a92f2cf161bb421ff1ffedcf51b702b09aa39a43c647f397a17c3c1",
+    "state": "downloaded",
+    "url": "https://tcosmo.github.io/assets/soms/doc/kohonen1982.pdf"
+  },
+  "lda2003": {
+    "bytes": 417996,
+    "path": "library/05_NLP_Language/2003_lda2003.pdf",
+    "sha256": "4667de63545b57d55d6c43e5af6f3429edfaac9472ed9eff68fdf43572735dd9",
+    "state": "downloaded",
+    "url": "https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf"
+  },
+  "lenet1998": {
+    "bytes": 913055,
+    "path": "library/02_Neural_Networks/1998_lenet1998.pdf",
+    "sha256": "fcad20d33c48a3cf671cc216af434f9843031136010471d9b387fc085c539aee",
+    "state": "downloaded",
+    "url": "https://gwern.net/doc/ai/nn/cnn/1998-lecun.pdf"
+  },
+  "lispmccarthy1960": {
+    "bytes": 219563,
+    "path": "library/01_Foundations/1960_lispmccarthy1960.pdf",
+    "sha256": "3d981849e59505eff3f14397a177b409f5d978d43d114bdd67c956e74320fc92",
+    "state": "downloaded",
+    "url": "https://jmvidal.cse.sc.edu/library/maccarthy60a.pdf"
+  },
+  "llama2023": {
+    "bytes": 726566,
+    "path": "library/10_LLMs/2023_llama2023.pdf",
+    "sha256": "2e663675ae36ad12adb2f5a05281bac2747ecf8d23d92bedd9f937a89fee7136",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2302.13971"
+  },
+  "llama2_2023": {
+    "bytes": 13661300,
+    "path": "library/10_LLMs/2023_llama2_2023.pdf",
+    "sha256": "1df284ce95f783002074bfe8f21d47c646b396ceb1736ea3ec0ea212fc070d91",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2307.09288"
+  },
+  "llama3_2024": {
+    "bytes": 9833173,
+    "path": "library/10_LLMs/2024_llama3_2024.pdf",
+    "sha256": "481f1599468f95a07d05e97fafe55bbe786dc1624c6f881bcb4c7d14c933d083",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2407.21783"
+  },
+  "llava_2023": {
+    "bytes": 5906135,
+    "path": "library/08_Vision_Multimodal/2023_llava_2023.pdf",
+    "sha256": "dc8bace378a282ea78caa9b5959306202fbfa3b8cedaf8a66541a9af18f4d3bf",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2304.08485"
+  },
+  "logic_tensor2016": {
+    "bytes": 153675,
+    "path": "library/06_Neuro_Symbolic/2016_logic_tensor2016.pdf",
+    "sha256": "127d442006afbaecc0b94bfbc234eb3aa105a51ec115c5cabb3bd99d11b41017",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1606.04422"
+  },
+  "lora2021": {
+    "bytes": 1609513,
+    "path": "library/10_LLMs/2021_lora2021.pdf",
+    "sha256": "e9a0d3128767db616085dc0f4e6e455e672e89af823e8ed1282793682787395a",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2106.09685"
+  },
+  "lottery_ticket_2018": {
+    "bytes": 4001475,
+    "path": "library/04_Deep_Learning/2018_lottery_ticket_2018.pdf",
+    "sha256": "e5fe9482538b6573b59382f058c6eaefd933a9941cf7c06baf5c7577c62f68ec",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1803.03635"
+  },
+  "lstm1997": {
+    "bytes": 438324,
+    "path": "library/02_Neural_Networks/1997_lstm1997.pdf",
+    "sha256": "51e319ebc53b96964bc167faa3a45d02eca61964eb7ed6bbc1cb2e70517064f2",
+    "state": "downloaded",
+    "url": "https://people.idsia.ch/~juergen/lstm1997-2024head.pdf"
+  },
+  "macqueen1967": {
+    "bytes": 1398174,
+    "path": "library/03_Machine_Learning/1967_macqueen1967.pdf",
+    "sha256": "7b7bff0753f500c79e684f8e196b9cfdbf690768621110a195c3bd3a9733fec8",
+    "state": "downloaded",
+    "url": "https://digicoll.lib.berkeley.edu/record/113015/files/math_s5_v1_article-17.pdf"
+  },
+  "mae_2021": {
+    "bytes": 7445748,
+    "path": "library/08_Vision_Multimodal/2021_mae_2021.pdf",
+    "sha256": "1b490443925c72a2b7c770f90dd797e248729ae34a57e1abfe9ed36751c4cc5b",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2111.06377"
+  },
+  "mamba2023": {
+    "bytes": 1168615,
+    "path": "library/04_Deep_Learning/2023_mamba2023.pdf",
+    "sha256": "adf70ed1803c85b1899dec3e21f3af0b124411439e8654b840ea65f7b9f52b2e",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2312.00752"
+  },
+  "mamba3_2026": {
+    "bytes": 1090013,
+    "path": "library/04_Deep_Learning/2026_mamba3_2026.pdf",
+    "sha256": "17e65b882c4b7dc7dad82a437e54c5fa973e4624d5653dc431f1a2a55538c826",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2603.15569"
+  },
+  "markovlogic2006": {
+    "bytes": 328588,
+    "path": "library/06_Neuro_Symbolic/2006_markovlogic2006.pdf",
+    "sha256": "5d36dd47c572cab7350eef54c3571e1623745849632afd5476ea5e36e0e80414",
+    "state": "downloaded",
+    "url": "https://alchemy.cs.washington.edu/papers/richardson06/richardson06.pdf"
+  },
+  "mask_rcnn_2017": {
+    "bytes": 7723886,
+    "path": "library/08_Vision_Multimodal/2017_mask_rcnn_2017.pdf",
+    "sha256": "b595a882b763d55d933543131f32a2c4b6f41d0818d418ef46a2b66f946b67a8",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1703.06870"
+  },
+  "mcculloch1943": {
+    "bytes": 1238638,
+    "path": "library/01_Foundations/1943_mcculloch1943.pdf",
+    "sha256": "99d07f2697d572c9d864319c55193fd754f182ca722ef0dae6c44a12e3f98fd1",
+    "state": "downloaded",
+    "url": "https://gwern.net/doc/ai/nn/1943-mcculloch.pdf"
+  },
+  "megnet_2018": {
+    "bytes": 3824297,
+    "path": "library/11_AI_for_Science/2018_megnet_2018.pdf",
+    "sha256": "bb2dec0717c1603e875d7c61521947af63974079ee5c68c888bcbf758bf21ce5",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1812.05055"
+  },
+  "memgpt_2023": {
+    "bytes": 663708,
+    "path": "library/12_AI_Agents/2023_memgpt_2023.pdf",
+    "sha256": "9f674bcff69c86f11c813dcfad613d8841f5f8ed17979e3c4df06a91df7762e0",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2310.08560"
+  },
+  "minsky1961": {
+    "bytes": 6073914,
+    "path": "library/01_Foundations/1961_minsky1961.pdf",
+    "sha256": "7982c8e0049c3c2311578f94489683075ef88709bcd4b0026280797fbd41df80",
+    "state": "downloaded",
+    "url": "https://people.csail.mit.edu/brooks/idocs/steps.pdf"
+  },
+  "minsky_frames_1974": {
+    "bytes": 760351,
+    "path": "library/01_Foundations/1974_minsky_frames_1974.pdf",
+    "sha256": "1b0aa8ad811d29901ae9c23049297b2489cde81849c4c960ccea5c5cc5e18913",
+    "state": "downloaded",
+    "url": "https://courses.media.mit.edu/2004spring/mas966/Minsky%201974%20Framework%20for%20knowledge.pdf"
+  },
+  "mistral7b_2023": {
+    "bytes": 3749788,
+    "path": "library/10_LLMs/2023_mistral7b_2023.pdf",
+    "sha256": "dfbac4e7035344b305c947481f2e7e8a02f7a24a563917eb6e47f6591d14c5ae",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2310.06825"
+  },
+  "mixtral2024": {
+    "bytes": 2475990,
+    "path": "library/10_LLMs/2024_mixtral2024.pdf",
+    "sha256": "f8bbf0e9d979b7a8ce7be65119266545a229a85b57e077d8bd048e458bb642da",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2401.04088"
+  },
+  "moco_2019": {
+    "bytes": 593470,
+    "path": "library/08_Vision_Multimodal/2019_moco_2019.pdf",
+    "sha256": "ad31ea26ed2d9ba3e2f767a2dcb0961a5b70ff505b1c3fb18d07201140e4e1fe",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1911.05722"
+  },
+  "mpnn_2017": {
+    "bytes": 523413,
+    "path": "library/11_AI_for_Science/2017_mpnn_2017.pdf",
+    "sha256": "37dc4ad74bf3da3ee000474cc85cabfad9bc9daa47f1aced6e8b8eea71467741",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1704.01212"
+  },
+  "mu_zero2019": {
+    "bytes": 2701361,
+    "path": "library/09_Reinforcement_Learning/2019_mu_zero2019.pdf",
+    "sha256": "25588ee1d48690b33359a08a42fadfe86335aefefeee241d465b8bbd5eaa445c",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1911.08265"
+  },
+  "mycin_1975": {
+    "bytes": 1205612,
+    "path": "library/01_Foundations/1975_mycin_1975.pdf",
+    "sha256": "333fdb1b43e2a711aeae2451052d1b7b60482a74c6a76933c3bd2714bbb687fa",
+    "state": "downloaded",
+    "url": "https://www.inf.ufpr.br/alexd/ARTIGOS_IA/Shortliffe_et_al_1975.pdf"
+  },
+  "neocognitron_1980": {
+    "bytes": 1113520,
+    "path": "library/02_Neural_Networks/1980_neocognitron_1980.pdf",
+    "sha256": "8b84dbcc66e495bf8fb66f54dcdad18483281d1f785c028b8dc5296d45d9dc4c",
+    "state": "downloaded",
+    "url": "https://www.cs.princeton.edu/courses/archive/spr08/cos598B/Readings/Fukushima1980.pdf"
+  },
+  "nerf2020": {
+    "bytes": 8274228,
+    "path": "library/08_Vision_Multimodal/2020_nerf2020.pdf",
+    "sha256": "c7fc70b38f84cb2e42890a69a7c9b9c26ded464b221e0355031004f24fb8e727",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2003.08934"
+  },
+  "neural_lm2003": {
+    "bytes": 140095,
+    "path": "library/05_NLP_Language/2003_neural_lm2003.pdf",
+    "sha256": "0bddf9a608d62da449a6413d86cbf6e8b206212595efe0e0a14da0d79d5f4976",
+    "state": "downloaded",
+    "url": "https://jmlr.org/papers/volume3/bengio03a/bengio03a.pdf"
+  },
+  "neural_logic_machines2019": {
+    "bytes": 629876,
+    "path": "library/06_Neuro_Symbolic/2019_neural_logic_machines2019.pdf",
+    "sha256": "72d10a2d6f6874be2807e228b52658cd5afb7d131c96e4b3ef46704d774ebbef",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1904.11694"
+  },
+  "neural_lp2017": {
+    "bytes": 656563,
+    "path": "library/06_Neuro_Symbolic/2017_neural_lp2017.pdf",
+    "sha256": "87ddcc51ebb0d1ccfa9ddc1140a8ecdd62f7d8b0f49a25ae69b4a51361a94a2d",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1702.08367"
+  },
+  "neural_theorem2017": {
+    "bytes": 563892,
+    "path": "library/06_Neuro_Symbolic/2017_neural_theorem2017.pdf",
+    "sha256": "d4dda698c95c3b6849a645cdb9fbe8024cf0ba571ab978e5c0a64070c26f8cdb",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1705.11040"
+  },
+  "neural_turing2014": {
+    "bytes": 1357690,
+    "path": "library/06_Neuro_Symbolic/2014_neural_turing2014.pdf",
+    "sha256": "b8d2939cd7c76097f2cc2e5061188ca824ef8cad12de4500dfbd014b60dd16a9",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1410.5401"
+  },
+  "neurosym2020": {
+    "bytes": 1358218,
+    "path": "library/06_Neuro_Symbolic/2020_neurosym2020.pdf",
+    "sha256": "22251c919a79c4fb7367a3450da1bac57bbb787732188d3211c524b8341f45cd",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2010.05446"
+  },
+  "neurosym2023": {
+    "bytes": 493792,
+    "path": "library/06_Neuro_Symbolic/2023_neurosym2023.pdf",
+    "sha256": "bd4de86facefe0d1f079833bd158fbb4c3f2fdebab8ce615494f17d984cf8d68",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2302.07200"
+  },
+  "neurosym2024": {
+    "bytes": 1086478,
+    "path": "library/06_Neuro_Symbolic/2024_neurosym2024.pdf",
+    "sha256": "eb13d9d4a13dd986f3955e4067c6d8e94b7e6aa7c5767b5e1d3bdcdfeb97e914",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2412.10390"
+  },
+  "newell1956": {
+    "bytes": 3498773,
+    "path": "library/01_Foundations/1956_newell1956.pdf",
+    "sha256": "33f718f6558c6ccc2e2882f4f35e4258eebc7a85ab1afe45c53463da2b8284cc",
+    "state": "downloaded",
+    "url": "https://iiif.library.cmu.edu/file/Simon_box00006_fld00406_bdl0001_doc0001/Simon_box00006_fld00406_bdl0001_doc0001.pdf"
+  },
+  "nfl_1997": {
+    "bytes": 714274,
+    "path": "library/03_Machine_Learning/1997_nfl_1997.pdf",
+    "sha256": "7bf3552a29bcbdfa60e70156a7ab6072174586fb596ae29fb4b1509cff0b6266",
+    "state": "downloaded",
+    "url": "https://faculty.cc.gatech.edu/~isbell/reading/papers/nfl-optimization.pdf"
+  },
+  "nice_2014": {
+    "bytes": 1717618,
+    "path": "library/04_Deep_Learning/2014_nice_2014.pdf",
+    "sha256": "e49847b26e04908b7e68ce0862baade593d1968a09746ca15d23c420c156b434",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1410.8516"
+  },
+  "nscl_2019": {
+    "bytes": 8144703,
+    "path": "library/06_Neuro_Symbolic/2019_nscl_2019.pdf",
+    "sha256": "fe8ac827268b24f30384ccde2c3f6b1a6f71d7cdff589ff262b6a43eca0dff3b",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1904.12584"
+  },
+  "osworld2_2026": {
+    "bytes": 25962973,
+    "path": "library/12_AI_Agents/2026_osworld2_2026.pdf",
+    "sha256": "a1e4d52bbf3a5fae8e3153835adcfd5f314efc45bbc8e9e73b19bcbf20d3fefc",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2606.29537"
+  },
+  "osworld_2024": {
+    "bytes": 36863784,
+    "path": "library/12_AI_Agents/2024_osworld_2024.pdf",
+    "sha256": "d4c6e20dd59467f005561b1e97199f9842fd3b0e9fdd93e66e06ba0ec09edfdb",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2404.07972"
+  },
+  "pagerank1998": {
+    "bytes": 313853,
+    "path": "library/07_Knowledge_Graphs/1998_pagerank1998.pdf",
+    "sha256": "91c3a407edfdfe435b3ff987130a765349d530e039555ff8b93018bc886576fc",
+    "state": "downloaded",
+    "url": "https://gwern.net/doc/technology/google/1998-page.pdf"
+  },
+  "palm_2022": {
+    "bytes": 2711295,
+    "path": "library/10_LLMs/2022_palm_2022.pdf",
+    "sha256": "1e88f1f3027cd1abecb1713c1c08a89137c7730582549ec7ca78ca329f3f975d",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2204.02311"
+  },
+  "pearson1901": {
+    "bytes": 683737,
+    "path": "library/03_Machine_Learning/1901_pearson1901.pdf",
+    "sha256": "f6c1e233243517fb82c23196b9c5b8a76b9c2184d213e2c2af0f91ac6c155e19",
+    "state": "downloaded",
+    "url": "https://pca.narod.ru/pearson1901.pdf"
+  },
+  "phrase_mt2003": {
+    "bytes": 102143,
+    "path": "library/05_NLP_Language/2003_phrase_mt2003.pdf",
+    "sha256": "ac68afe772c2a7f881ee76edb4fdccccb42d8b3e7fd5d4edcbec25929f0cbd35",
+    "state": "downloaded",
+    "url": "https://aclanthology.org/N03-1017.pdf"
+  },
+  "physical_symbol_1976": {
+    "bytes": 2360205,
+    "path": "library/01_Foundations/1976_physical_symbol_1976.pdf",
+    "sha256": "fa5c43addeec40d8f0cde3dd3a78e95e29ba403f81b3daa7484b176f68b8eade",
+    "state": "downloaded",
+    "url": "https://www.contrib.andrew.cmu.edu/~kk3n/80-300/newell-simon1976.pdf"
+  },
+  "policy_gradient_1999": {
+    "bytes": 1541309,
+    "path": "library/09_Reinforcement_Learning/1999_policy_gradient_1999.pdf",
+    "sha256": "a7b400e47be17013611cc945455e03e4b973d52cca6bc487bcfe03fe64514a77",
+    "state": "downloaded",
+    "url": "https://papers.nips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf"
+  },
+  "ppo2017": {
+    "bytes": 2923532,
+    "path": "library/09_Reinforcement_Learning/2017_ppo2017.pdf",
+    "sha256": "e78feadadbdbb0b601b3c2bcc81404722cd431a489b307545f9b7bea1e8c4f5b",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1707.06347"
+  },
+  "qlearning1992": {
+    "bytes": 685568,
+    "path": "library/09_Reinforcement_Learning/1992_qlearning1992.pdf",
+    "sha256": "3f1938a6001991f3171e13a93196fc8fc27978f18c87445321bb25058f35776f",
+    "state": "downloaded",
+    "url": "https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf"
+  },
+  "qlora2023": {
+    "bytes": 1065470,
+    "path": "library/10_LLMs/2023_qlora2023.pdf",
+    "sha256": "33a4e757c19d6ea8d3cca8958fce8fe405e290272e135c99ee66065c775d5bd1",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2305.14314"
+  },
+  "quinlan1986": {
+    "bytes": 1845513,
+    "path": "library/03_Machine_Learning/1986_quinlan1986.pdf",
+    "sha256": "4416a44719a0d0e8f9c16ec43f05a2acd2cf0a9e83d6cdd0f0a960b11c1d7ddf",
+    "state": "downloaded",
+    "url": "https://storm.cis.fordham.edu/~gweiss/selected-papers/quinlan86.pdf"
+  },
+  "qwen38_next_2026": {
+    "bytes": 2363790,
+    "path": "library/10_LLMs/2026_qwen38_next_2026.pdf",
+    "sha256": "17db868acaa0b86caaf89cd9516e0a92f79d7e161431e5e274b70a3123d60ef7",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2608.30320"
+  },
+  "qwen3_2025": {
+    "bytes": 779424,
+    "path": "library/10_LLMs/2025_qwen3_2025.pdf",
+    "sha256": "84a5e2b1fa04bb774bf12ae606d1e6d9dd2147ed2ebe78a4cfeb91ba380ffdd5",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2505.09388"
+  },
+  "qwen3_coder_2026": {
+    "bytes": 2678546,
+    "path": "library/10_LLMs/2026_qwen3_coder_2026.pdf",
+    "sha256": "4be52e371e59284a0141eb176e4b489a47885046aed43377500cd0935951886b",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2603.00729"
+  },
+  "qwen3_vl_2025": {
+    "bytes": 4385558,
+    "path": "library/08_Vision_Multimodal/2025_qwen3_vl_2025.pdf",
+    "sha256": "ee075d08e67de1148d6437c6c1d481f7894183b8793905a2deb5f62664f49380",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2511.21631"
+  },
+  "rag2020": {
+    "bytes": 885323,
+    "path": "library/10_LLMs/2020_rag2020.pdf",
+    "sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2005.11401"
+  },
+  "randomforest2001": {
+    "bytes": 123819,
+    "path": "library/03_Machine_Learning/2001_randomforest2001.pdf",
+    "sha256": "aaa9bc464d1d63eacc807ac8251331aa93b2aeb1c9411033e58cb7e8423fb920",
+    "state": "downloaded",
+    "url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf"
+  },
+  "rcnn2013": {
+    "bytes": 6537772,
+    "path": "library/08_Vision_Multimodal/2013_rcnn2013.pdf",
+    "sha256": "ed7c448793d4c8a750bf4892c9ad5ef901b51f797a7195c18db540cffaed25bd",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1311.2524"
+  },
+  "react2022": {
+    "bytes": 633805,
+    "path": "library/10_LLMs/2022_react2022.pdf",
+    "sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2210.03629"
+  },
+  "realnvp_2016": {
+    "bytes": 6681321,
+    "path": "library/04_Deep_Learning/2016_realnvp_2016.pdf",
+    "sha256": "b80d619f41d7e7fe537907bdb6029d8b6c20e6b454e1331f3271c9550e4424d6",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1605.08803"
+  },
+  "reflexion_2023": {
+    "bytes": 591097,
+    "path": "library/12_AI_Agents/2023_reflexion_2023.pdf",
+    "sha256": "6059b6f89fea9959bd3dab553fbb97756a3dfb1b15e3cbab2fbf3ab6664333bd",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2303.11366"
+  },
+  "reinforce_1992": {
+    "bytes": 648357,
+    "path": "library/09_Reinforcement_Learning/1992_reinforce_1992.pdf",
+    "sha256": "e1029df5459f4a83bf33a876df018ee4f7b628b210bb9d047a6d60ec13f7c838",
+    "state": "downloaded",
+    "url": "https://gwern.net/doc/reinforcement-learning/model-free/1992-williams.pdf"
+  },
+  "resnet2015": {
+    "bytes": 819383,
+    "path": "library/08_Vision_Multimodal/2015_resnet2015.pdf",
+    "sha256": "1e0651b6810ecba34a3dbc5b5b0209226f889004607c1f203540a48d64e5a93a",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1512.03385"
+  },
+  "resolution1965": {
+    "bytes": 1103738,
+    "path": "library/01_Foundations/1965_resolution1965.pdf",
+    "sha256": "757c6bcef2e07fdae1e604cea0556413b82ad46f3f26d62dbc20f30675b9886b",
+    "state": "downloaded",
+    "url": "https://web.stanford.edu/class/linguist289/robinson65.pdf"
+  },
+  "rgcn2017": {
+    "bytes": 331387,
+    "path": "library/07_Knowledge_Graphs/2017_rgcn2017.pdf",
+    "sha256": "7f2fa4aa0ac16f46f9d2459ff432d740b5ac8c36bcea598ba95ec34ef1d126bd",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1703.06103"
+  },
+  "robbinsmonro1951": {
+    "bytes": 761824,
+    "path": "library/03_Machine_Learning/1951_robbinsmonro1951.pdf",
+    "sha256": "f042fb3c3d06c577ea7ee9164ff95e6125e3916e35e015594154c6663f1f5720",
+    "state": "downloaded",
+    "url": "https://www.columbia.edu/~ww2040/8100F16/RM51.pdf"
+  },
+  "roberta2019": {
+    "bytes": 209675,
+    "path": "library/05_NLP_Language/2019_roberta2019.pdf",
+    "sha256": "76a3872d244793563a5b000b818cbaf0ca8972ab1145d32be474c05b2a8f3070",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1907.11692"
+  },
+  "rosenblatt1958": {
+    "bytes": 1631543,
+    "path": "library/02_Neural_Networks/1958_rosenblatt1958.pdf",
+    "sha256": "f32fdf8c0657cda33ace13487856dd4facd34c3eeb6a6d3011107339928fbd57",
+    "state": "downloaded",
+    "url": "https://www.cs.cmu.edu/~epxing/Class/10715/reading/Rosenblatt.perceptron.pdf"
+  },
+  "rotate2019": {
+    "bytes": 677273,
+    "path": "library/07_Knowledge_Graphs/2019_rotate2019.pdf",
+    "sha256": "0ed92ed335fed5097a72fcce10fe426473c8e539e3420f560634fc69d78f7e89",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1902.10197"
+  },
+  "rumelhart1986": {
+    "bytes": 251472,
+    "path": "library/02_Neural_Networks/1986_rumelhart1986.pdf",
+    "sha256": "917bc10e4d42bfe3b9040e50731e99b2946d311cc9b235a3d30b4b7b5d412669",
+    "state": "downloaded",
+    "url": "https://gwern.net/doc/ai/nn/1986-rumelhart-2.pdf"
+  },
+  "sam2023": {
+    "bytes": 15644599,
+    "path": "library/08_Vision_Multimodal/2023_sam2023.pdf",
+    "sha256": "c6ca524e47200c3e542587ca76ac1dbc89cc67340f948c819250d16fdbd90cfb",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2304.02643"
+  },
+  "samuel1959": {
+    "bytes": 926433,
+    "path": "library/03_Machine_Learning/1959_samuel1959.pdf",
+    "sha256": "07b103a657a0cdafdf0f986e33e4b2831e9c66e53891c8e5667c498bd9dc08ff",
+    "state": "downloaded",
+    "url": "https://gwern.net/doc/reinforcement-learning/model-free/1959-samuel.pdf"
+  },
+  "scaling2020": {
+    "bytes": 2493004,
+    "path": "library/10_LLMs/2020_scaling2020.pdf",
+    "sha256": "a41bd7877fd1a6bcbba096b2619618bd2f90e02488f2365644903eb2f7c6a494",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2001.08361"
+  },
+  "schnet_2017": {
+    "bytes": 9763363,
+    "path": "library/11_AI_for_Science/2017_schnet_2017.pdf",
+    "sha256": "5c537d6464ed412a4464066ffcd0153bc76221573e90b0ae024d0de4d6573cfc",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1706.08566"
+  },
+  "score_sde_2020": {
+    "bytes": 26918820,
+    "path": "library/04_Deep_Learning/2020_score_sde_2020.pdf",
+    "sha256": "b244b740e60628d01bc3d4b98d721c2343be1fb9b67ad22593c8555e66f4d4a6",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2011.13456"
+  },
+  "self_consistency_2022": {
+    "bytes": 10505941,
+    "path": "library/10_LLMs/2022_self_consistency_2022.pdf",
+    "sha256": "1a49ce0373afc89d2d6e97fb1aa8230f6b818c70590d732a3187f753f4df6aba",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2203.11171"
+  },
+  "selfrag_2023": {
+    "bytes": 1405127,
+    "path": "library/10_LLMs/2023_selfrag_2023.pdf",
+    "sha256": "d9eaa1398abac0df67a9d0933a5bf8b6d9d83d2e72da2a486073cd842dd52978",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2310.11511"
+  },
+  "semanticweb2001": {
+    "bytes": 531388,
+    "path": "library/07_Knowledge_Graphs/2001_semanticweb2001.pdf",
+    "sha256": "db2a006fda32c85ef4cff0e52711448d17e29791ea59c56817fab2313ee2eb3c",
+    "state": "downloaded",
+    "url": "https://www.lassila.org/publications/2001/SciAm.pdf"
+  },
+  "seq2seq2014": {
+    "bytes": 112084,
+    "path": "library/05_NLP_Language/2014_seq2seq2014.pdf",
+    "sha256": "5c74e1db863e2d61b869c9b0603494b34c41fb05db1a4fa7f9a83d5a42b7350f",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1409.3215"
+  },
+  "shannon1948": {
+    "bytes": 366296,
+    "path": "library/01_Foundations/1948_shannon1948.pdf",
+    "sha256": "6e4e3411984f3edf99dbfe8b941cb5e8a321379ff0cae6ae5c1f592ad8882ca8",
+    "state": "downloaded",
+    "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+  },
+  "shrdlu1972": {
+    "bytes": 11550750,
+    "path": "library/05_NLP_Language/1972_shrdlu1972.pdf",
+    "sha256": "57631e39410b6086cd6560204fb75612f2c7a15641d56833c1e5a74f620b2562",
+    "state": "downloaded",
+    "url": "https://teaching.bb-ai.net/Student-Projects/Winograd-Challenge-Papers/Winograd-1972-Understanding-Natural-Language.pdf"
+  },
+  "simclr_2020": {
+    "bytes": 6564895,
+    "path": "library/08_Vision_Multimodal/2020_simclr_2020.pdf",
+    "sha256": "e1b10db76adeb0d21a014b9abcf42f6a6af928540c223f010fa1d8c293d9d105",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2002.05709"
+  },
+  "soft_actor_critic_2018": {
+    "bytes": 2407011,
+    "path": "library/09_Reinforcement_Learning/2018_soft_actor_critic_2018.pdf",
+    "sha256": "b071079b67ced375ad88cbbbfd2fc363b3b8ccd894766fb5d329e7ee30d843f5",
+    "state": "downloaded",
+    "url": "https://proceedings.mlr.press/v80/haarnoja18b/haarnoja18b.pdf"
+  },
+  "solomonoff_induction_1964": {
+    "bytes": 1200086,
+    "path": "library/01_Foundations/1964_solomonoff_induction_1964.pdf",
+    "sha256": "bad9d0d3e7c889d35df94b2738f4c2e3a7648901bd6b78198897d4992f9b5e0c",
+    "state": "downloaded",
+    "url": "https://raysolomonoff.com/publications/1964pt1.pdf"
+  },
+  "spec_decode_2022": {
+    "bytes": 574982,
+    "path": "library/10_LLMs/2022_spec_decode_2022.pdf",
+    "sha256": "8967e2daab74178b8a73a6f0b0780c5cbb40f9f6dcbd5c456b24a89c128c52ed",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2211.17192"
+  },
+  "stable_diffusion2021": {
+    "bytes": 40842586,
+    "path": "library/08_Vision_Multimodal/2021_stable_diffusion2021.pdf",
+    "sha256": "46ede043a8dc07ca1f0f445620523fe1ad8b2436bd83856a3835612a47e9f79e",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2112.10752"
+  },
+  "strips_1971": {
+    "bytes": 1125346,
+    "path": "library/01_Foundations/1971_strips_1971.pdf",
+    "sha256": "eda9886ab67aef6d43f248681514d2ce11294e5afd8350e49e4d6b8019c38b0e",
+    "state": "downloaded",
+    "url": "https://cs.uky.edu/~sgware/reading/papers/fikes1972strips.pdf"
+  },
+  "sutton1988": {
+    "bytes": 2663339,
+    "path": "library/09_Reinforcement_Learning/1988_sutton1988.pdf",
+    "sha256": "f1153204158bffd641cdd5ac23995cbdb4c74c34cb92022de4b54e8be6739d6e",
+    "state": "downloaded",
+    "url": "https://jmvidal.cse.sc.edu/library/sutton88a.pdf"
+  },
+  "svm1995": {
+    "bytes": 2376602,
+    "path": "library/03_Machine_Learning/1995_svm1995.pdf",
+    "sha256": "561361e49eb22df6f5e14f8c19d681c6b596891f07057fc43703394383233002",
+    "state": "downloaded",
+    "url": "https://homepages.math.uic.edu/~lreyzin/papers/cortes95.pdf"
+  },
+  "sweagent_2024": {
+    "bytes": 4963538,
+    "path": "library/12_AI_Agents/2024_sweagent_2024.pdf",
+    "sha256": "d171e0693060b910ceb2cddd0fd4bc7cae302005d42d0d8059bfdbe056c3adba",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2405.15793"
+  },
+  "swebench_2023": {
+    "bytes": 4533722,
+    "path": "library/12_AI_Agents/2023_swebench_2023.pdf",
+    "sha256": "f7e8e1df64129742b8199a21a042734519a823a1dafd6f48f8f3ddcfb48ee296",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2310.06770"
+  },
+  "switch_transformer_2021": {
+    "bytes": 1304157,
+    "path": "library/10_LLMs/2021_switch_transformer_2021.pdf",
+    "sha256": "f340f6ace31abf7d0730ef461404279f40d3c890e9cc2daeb7068b3304afdbd6",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2101.03961"
+  },
+  "t5_2019": {
+    "bytes": 1190021,
+    "path": "library/05_NLP_Language/2019_t5_2019.pdf",
+    "sha256": "ad07e47cedf437a4156419ce5d3076e08a3e59bbfd6dac7cc53df1009cdcbe7f",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1910.10683"
+  },
+  "toolformer2023": {
+    "bytes": 657966,
+    "path": "library/10_LLMs/2023_toolformer2023.pdf",
+    "sha256": "6d7483d94653008e40c2058a1c22441c92e3713dae278b6361e8efc447c99522",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2302.04761"
+  },
+  "transe2013": {
+    "bytes": 424115,
+    "path": "library/07_Knowledge_Graphs/2013_transe2013.pdf",
+    "sha256": "3af5701eaeebd70d2fbc0c98031fb17fda2b2987162953bba4c49aafe7af19a4",
+    "state": "downloaded",
+    "url": "https://papers.nips.cc/paper_files/paper/2013/file/1cecc7a77928ca8133fa24680a88d2f9-Paper.pdf"
+  },
+  "transformer2017": {
+    "bytes": 2215244,
+    "path": "library/05_NLP_Language/2017_transformer2017.pdf",
+    "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1706.03762"
+  },
+  "tree_of_thoughts_2023": {
+    "bytes": 799685,
+    "path": "library/12_AI_Agents/2023_tree_of_thoughts_2023.pdf",
+    "sha256": "79c5237e3f63953a73f2b0d6894327702ee1f7e981450c251bb1b5cb4f8d7b8f",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2305.10601"
+  },
+  "trpo_2015": {
+    "bytes": 987863,
+    "path": "library/09_Reinforcement_Learning/2015_trpo_2015.pdf",
+    "sha256": "8e959ae88caeb6d8bdcc92763bc3ff766edff826aa4eb5b96b58a4a56b56ce47",
+    "state": "downloaded",
+    "url": "https://proceedings.mlr.press/v37/schulman15.pdf"
+  },
+  "tsne_2008": {
+    "bytes": 3716712,
+    "path": "library/03_Machine_Learning/2008_tsne_2008.pdf",
+    "sha256": "f05922e427639a08cb5214cc4ef314689ecf2d87333cb5050003323d7631017f",
+    "state": "downloaded",
+    "url": "https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf"
+  },
+  "turing1936": {
+    "bytes": 2198146,
+    "path": "library/01_Foundations/1936_turing1936.pdf",
+    "sha256": "a126650c315e998ba96ea8248a60bde0afe60fec3e810acfc2b6c70d3b0e9f36",
+    "state": "downloaded",
+    "url": "https://www.cs.cmu.edu/~15455/resources/Turing1936.pdf"
+  },
+  "turing1950": {
+    "bytes": 164237,
+    "path": "library/01_Foundations/1950_turing1950.pdf",
+    "sha256": "c844ec05ff9b735dbb797eb026e1196e248eacddba7e4c4de0551086ec52edf5",
+    "state": "downloaded",
+    "url": "https://d1yx3ys82bpsa0.cloudfront.net/chess/computing-machinery-and-intelligence.turing-alan.mind-59.1950.062303001.pdf"
+  },
+  "umap_2018": {
+    "bytes": 7880321,
+    "path": "library/03_Machine_Learning/2018_umap_2018.pdf",
+    "sha256": "45ca6cfcd08d5808ab20b5cf53364d2b2d5ab19dca95a594f54af515a15421c3",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1802.03426"
+  },
+  "unet2015": {
+    "bytes": 1648684,
+    "path": "library/08_Vision_Multimodal/2015_unet2015.pdf",
+    "sha256": "a3172b2124f38e260dc2c7ed968d87c31bc94dbc19a42a7ab3dcbd7534319c44",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1505.04597"
+  },
+  "unified_neurosym2025": {
+    "bytes": 12117739,
+    "path": "library/06_Neuro_Symbolic/2025_unified_neurosym2025.pdf",
+    "sha256": "900d5f03920473d319cf65addd12c1b07145783ef21edfcbc8b404ecb93e0998",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2507.03697"
+  },
+  "universalapprox1989": {
+    "bytes": 1729583,
+    "path": "library/02_Neural_Networks/1989_universalapprox1989.pdf",
+    "sha256": "6308ea95c8439dc6309a4aa1897f012d7faf50cd9ce759d2cc009ebed5aa294e",
+    "state": "downloaded",
+    "url": "https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/archive-f19/www-bak11-28-2019/document/reading/article1.pdf"
+  },
+  "vae2013": {
+    "bytes": 3926758,
+    "path": "library/04_Deep_Learning/2013_vae2013.pdf",
+    "sha256": "bdcb63b79ed88f64f8ee2d43a721930d01dde5441a4dba20ecaa2342b34e017c",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1312.6114"
+  },
+  "valiant1984": {
+    "bytes": 806385,
+    "path": "library/03_Machine_Learning/1984_valiant1984.pdf",
+    "sha256": "5ab696a5f2afe34fc184872a11e7fe120782094b3b4810a0f1ac0a21f99ece59",
+    "state": "downloaded",
+    "url": "https://people.mpi-inf.mpg.de/~mehlhorn/SeminarEvolvability/ValiantLearnable.pdf"
+  },
+  "vit2020": {
+    "bytes": 3743814,
+    "path": "library/08_Vision_Multimodal/2020_vit2020.pdf",
+    "sha256": "8ce7b83971a14508ca711a27c875c9b6914c4f6767cf3150fb1ca6c07aa056d6",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2010.11929"
+  },
+  "vllm_2023": {
+    "bytes": 1459631,
+    "path": "library/10_LLMs/2023_vllm_2023.pdf",
+    "sha256": "55b3b324d779a67c59dac2519445e3b07c14e6ff5c656fadb47a3d7b5997469e",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2309.06180"
+  },
+  "voyager_2023": {
+    "bytes": 18830859,
+    "path": "library/12_AI_Agents/2023_voyager_2023.pdf",
+    "sha256": "769a4e33ddeeb73870849232eece49afe882c2d146362e33917ccb432ba0efb8",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2305.16291"
+  },
+  "webarena_2023": {
+    "bytes": 9128123,
+    "path": "library/12_AI_Agents/2023_webarena_2023.pdf",
+    "sha256": "f9731b92bc3d29a2ea7b5f9cb46b48540c76bc3f84a57e0c48fc37ea73107f95",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2307.13854"
+  },
+  "webgpt_2021": {
+    "bytes": 1486858,
+    "path": "library/12_AI_Agents/2021_webgpt_2021.pdf",
+    "sha256": "acad8d9fd55a30b94de9dfdae413e10b21e07bde54d767b2405b31341739cedb",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2112.09332"
+  },
+  "werbos1974": {
+    "bytes": 9478545,
+    "path": "library/02_Neural_Networks/1974_werbos1974.pdf",
+    "sha256": "353dfe93e7e5b6da519094d2dc7ee38bce0bed75f9d1de02feeec147abd5925d",
+    "state": "downloaded",
+    "url": "https://gwern.net/doc/ai/nn/1974-werbos.pdf"
+  },
+  "whisper2022": {
+    "bytes": 1008644,
+    "path": "library/08_Vision_Multimodal/2022_whisper2022.pdf",
+    "sha256": "6337bde031b2f237547a977b022f831169a7e05b4d9047f29501166d83594566",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/2212.04356"
+  },
+  "wikidata2014": {
+    "bytes": 4540339,
+    "path": "library/07_Knowledge_Graphs/2014_wikidata2014.pdf",
+    "sha256": "c513319fcb731d42da5d4daf67745bfdaa359733cd402aae7bac19a706f95836",
+    "state": "downloaded",
+    "url": "https://iccl.inf.tu-dresden.de/w/images/8/89/Wikidata-CACM-2014.pdf"
+  },
+  "word2vec2013": {
+    "bytes": 228716,
+    "path": "library/05_NLP_Language/2013_word2vec2013.pdf",
+    "sha256": "a44d7e22d2005752271c9cc1929c6462d4c8270916b063977992a883e3a54362",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1301.3781"
+  },
+  "wordnet_1993": {
+    "bytes": 104564,
+    "path": "library/07_Knowledge_Graphs/1993_wordnet_1993.pdf",
+    "sha256": "70dd520f91d962fee5e1d1202a58e759e39d677fa0ae03da1afee7be8991f286",
+    "state": "downloaded",
+    "url": "https://aclanthology.org/H93-1103.pdf"
+  },
+  "xgboost2016": {
+    "bytes": 944793,
+    "path": "library/03_Machine_Learning/2016_xgboost2016.pdf",
+    "sha256": "52bc282c922a239134ee4d6f4367c58bf920a9bdd53acbb3b2aa3342e2bb7214",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1603.02754"
+  },
+  "yago_2007": {
+    "bytes": 189924,
+    "path": "library/07_Knowledge_Graphs/2007_yago_2007.pdf",
+    "sha256": "45648a3b998f4b2458b0c083e6a0ba598930ac11aaec9197deb25ed7f32494be",
+    "state": "downloaded",
+    "url": "https://suchanek.name/work/publications/www2007.pdf"
+  },
+  "yolo2015": {
+    "bytes": 5296750,
+    "path": "library/08_Vision_Multimodal/2015_yolo2015.pdf",
+    "sha256": "54bcd2dd05dc618849e8a94d8b88fe3eeb37f80e96e200600d38f1f733931678",
+    "state": "downloaded",
+    "url": "https://arxiv.org/pdf/1506.02640"
+  }
+}

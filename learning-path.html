@@ -1,0 +1,73 @@
+---
+layout: default
+title: "Guided AI Learning Path (121 Landmark Papers)"
+description: "A structured, progressive reading path through 121 milestone papers in AI with interactive progress tracking."
+---
+
+<div class="lp-header">
+  <div class="container">
+    <div class="hero-pill">
+      <span class="hero-pill-dot"></span>
+      <span>121 Curated Milestone Papers · 11 Progressive Phases</span>
+    </div>
+    <h1 class="hero-title" style="font-size: 2.3rem;">Guided <span class="gradient-text">Learning Path</span></h1>
+    <p class="hero-subtitle">
+      A carefully designed progression through the core intellectual developments of AI. For each paper: write down its problem, core idea, evidence, limitations, and subsequent improvements.
+    </p>
+  </div>
+</div>
+
+<div class="container" style="max-width: 920px; padding-bottom: 60px;">
+  <!-- Reading Progress Card -->
+  <div class="lp-progress-bar-card">
+    <div class="lp-progress-top">
+      <div>
+        <span style="font-size: 1.05rem; font-weight: 700;">Your Reading Progress</span>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">Saved locally in your browser</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span id="lpProgressText" style="font-family: var(--font-mono); font-weight: 700; color: var(--primary);">0 / 121 papers (0%)</span>
+        <button id="lpResetBtn" class="btn btn-outline btn-sm" title="Clear checked papers">Reset</button>
+      </div>
+    </div>
+    <div class="lp-progress-track">
+      <div id="lpProgressFill" class="lp-progress-fill" style="width: 0%;"></div>
+    </div>
+  </div>
+
+  <!-- Phases Loop -->
+  {% for phase in site.data.learning_paths %}
+  <section class="lp-phase-card">
+    <div class="lp-phase-header">
+      <h2 class="lp-phase-title">{{ phase.num }}. {{ phase.title }}</h2>
+      <p class="lp-phase-desc">{{ phase.description }}</p>
+    </div>
+
+    <ul class="lp-paper-list">
+      {% for pid in phase.paper_ids %}
+        {% assign match = site.data.papers | where: "id", pid | first %}
+        {% if match %}
+        <li class="lp-paper-item">
+          <input type="checkbox" class="lp-checkbox" data-id="{{ match.id }}" id="cb_{{ match.id }}" aria-label="Mark {{ match.title }} as read">
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 3px;">
+              <span class="badge badge-year">{{ match.year }}</span>
+              <span class="badge" style="background-color: {{ match.area_color }}; color: #fff;">{{ match.area_name }}</span>
+              <span style="font-size: 0.74rem; font-family: var(--font-mono); color: var(--text-muted);">{{ match.size_human }}</span>
+            </div>
+            <a href="{{ match.local_path | relative_url }}" class="paper-pdf-trigger lp-paper-name" data-id="{{ match.id }}" style="font-weight: 600; font-size: 0.95rem; display: block; margin-bottom: 2px;">
+              {{ match.title }}
+            </a>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">{{ match.authors }}</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <button class="btn btn-primary btn-sm paper-read-btn" data-id="{{ match.id }}">Read</button>
+            <a href="{{ match.local_path | relative_url }}" download="{{ match.year }}_{{ match.id }}.pdf" class="btn btn-outline btn-sm">PDF</a>
+          </div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>

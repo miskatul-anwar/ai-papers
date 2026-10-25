@@ -1,0 +1,98 @@
+---
+layout: default
+title: "About & Methodology — AI Paper Library"
+description: "Catalog curation principles, verification commands, and archival methodology for the 217 AI papers."
+---
+
+<div class="container prose">
+  <div style="text-align: center; margin-bottom: 30px;">
+    <div class="hero-pill">
+      <span class="hero-pill-dot"></span>
+      <span>Archive Documentation & Integrity</span>
+    </div>
+    <h1 style="margin-top: 10px; font-size: 2.3rem;">About the <span class="gradient-text">AI Paper Library</span></h1>
+  </div>
+
+  <p>
+    The <strong>AI Paper Library</strong> is an open, curated collection of 217 influential research works in artificial intelligence, machine learning, neural networks, deep learning, natural language processing, knowledge graphs, neuro-symbolic AI, reinforcement learning, multimodal intelligence, large language models, and autonomous agents.
+  </p>
+  <p>
+    The archive covers over 260 years of intellectual development, from Thomas Bayes’ 1763 essay on probability to the frontier multimodal and autonomous reasoning agents of 2026.
+  </p>
+
+  <h2>Archive Statistics & Audit</h2>
+  <div class="stats-grid" style="margin: 24px 0 32px;">
+    <div class="stat-card">
+      <div class="stat-value">217</div>
+      <div class="stat-label">Cataloged Papers</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">6,443</div>
+      <div class="stat-label">Total Pages</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">783 MiB</div>
+      <div class="stat-label">Archival Storage</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">100%</div>
+      <div class="stat-label">SHA-256 Verified</div>
+    </div>
+  </div>
+
+  <h2>Methodology & Integrity Checks</h2>
+  <p>
+    Every paper in this repository has been audited and verified locally using the included Python standard library tool <code>paper_library.py</code>. The verification script ensures:
+  </p>
+  <ul>
+    <li>The file exists in the designated area directory: <code>library/&lt;area&gt;/&lt;year&gt;_&lt;id&gt;.pdf</code>.</li>
+    <li>The file starts with the PDF magic header <code>%PDF-</code> and terminates with an <code>%%EOF</code> marker.</li>
+    <li>The file is non-empty and uncorrupted, successfully readable by standard PDF parsers (<code>pdfinfo</code>).</li>
+    <li>The file matches the recorded cryptographic <strong>SHA-256</strong> checksum in <code>download_status.json</code>.</li>
+  </ul>
+
+  <h2>Running the Local Audit</h2>
+  <p>
+    You can audit or reproduce the library directly on any machine with Python 3.10+ (no third-party dependencies required):
+  </p>
+  <pre><code># Clone repository
+git clone https://github.com/{{ site.repository }}.git
+cd ai-papers
+
+# Verify local archive integrity
+python paper_library.py verify
+
+# Check current status
+python paper_library.py status</code></pre>
+
+  <h2>Catalog Structure</h2>
+  <p>
+    The repository catalog is stored in <code>catalog.csv</code> with the following schema:
+  </p>
+  <ul>
+    <li><code>id</code>: Unique alphanumeric identifier (e.g. <code>bayes1763</code>, <code>attention2017</code>).</li>
+    <li><code>year</code>: First publication or preprint year used in the reading timeline.</li>
+    <li><code>area</code>: Category folder under <code>library/</code> (e.g. <code>01_Foundations</code>, <code>10_LLMs</code>).</li>
+    <li><code>title</code>: Official published paper title.</li>
+    <li><code>authors</code>: Authors listed in publication order.</li>
+    <li><code>source_url</code>: Official publisher page, DOI resolver, or ArXiv landing page.</li>
+    <li><code>pdf_url</code>: Direct link to the open access PDF copy.</li>
+  </ul>
+
+  <h2>Hosted Site Architecture</h2>
+  <p>
+    This website is built with <strong>Jekyll</strong> and hosted on <strong>GitHub Pages</strong>. It features:
+  </p>
+  <ul>
+    <li><strong>Client-side instant filtering & search:</strong> Sub-millisecond filtering across titles, authors, categories, and years.</li>
+    <li><strong>In-browser PDF reader modal:</strong> Instant preview with full-screen and direct download capabilities.</li>
+    <li><strong>One-click BibTeX export:</strong> Formatted academic citation export for every paper.</li>
+    <li><strong>Reading progress tracker:</strong> Local storage progress persistence for the 121-paper guided curriculum.</li>
+    <li><strong>Full responsive design:</strong> Optimized for mobile, tablet, and desktop viewports with dark and light themes.</li>
+  </ul>
+
+  <h2>Curator</h2>
+  <p>
+    Curated and maintained by <a href="https://github.com/miskatul-anwar" target="_blank" rel="noopener">Miskatul Anwar</a>.
+  </p>
+</div>

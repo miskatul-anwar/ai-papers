@@ -1,0 +1,45 @@
+---
+layout: default
+title: "AI Research Topics (12 Subject Areas)"
+description: "Browse 217 AI research papers organized across 12 distinct subject areas from foundational mathematics to autonomous agents."
+---
+
+<div class="hero-section" style="padding-bottom: 10px;">
+  <div class="container">
+    <div class="hero-pill">
+      <span class="hero-pill-dot"></span>
+      <span>12 Comprehensive Subject Categories</span>
+    </div>
+    <h1 class="hero-title" style="font-size: 2.3rem;">Subject <span class="gradient-text">Area Explorer</span></h1>
+    <p class="hero-subtitle">
+      Explore papers categorized by their primary domain, complete with timeline bounds, paper counts, and direct reading access.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="topics-grid">
+    {% for area in site.data.areas %}
+    <div class="topic-box" style="--topic-color: {{ area.color }};">
+      <div class="topic-box-header">
+        <span class="badge" style="background-color: {{ area.color }}; color: #fff;">{{ area.name }}</span>
+        <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);">{{ area.year_min }}–{{ area.year_max }}</span>
+      </div>
+
+      <h3 class="topic-box-title">{{ area.name }}</h3>
+      <p class="topic-box-desc">{{ area.description }}</p>
+
+      <div class="topic-box-stats">
+        <span><strong>{{ area.count }}</strong> papers</span>
+        <span><strong>{{ area.size_human }}</strong> total size</span>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <a href="{{ '/?area=' | append: area.id | relative_url }}" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">
+          Browse {{ area.name }} Papers (${{ area.count }}) →
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,31 @@
+title: "AI Paper Library"
+description: "Curated collection of 217 foundational and modern AI papers (1763–2026) with full hosted PDFs."
+author: "Miskatul Anwar"
+email: "miskat6603.dev@gmail.com"
+url: "https://miskatul-anwar.github.io"
+baseurl: "/ai-papers"
+repository: "miskatul-anwar/ai-papers"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Include library PDFs and data
+include:
+  - library
+  - _data
+  - assets
+
+# Exclude unneeded files from site generation
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - __pycache__
+  - paper_library.py
+  - scripts
+  - "*.pyc"
+  - README.md

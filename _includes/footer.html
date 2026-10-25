@@ -1,0 +1,69 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+            <path d="M6 6h10"></path>
+            <path d="M6 10h10"></path>
+            <path d="M6 14h7"></path>
+          </svg>
+          <span class="footer-title">AI Paper Library</span>
+        </div>
+        <p class="footer-desc">
+          An open, fully hosted archive of 217 landmark papers in artificial intelligence, machine learning, neural networks, NLP, and autonomous agents spanning 1763 to 2026.
+        </p>
+        <div class="footer-stats-badges">
+          <span class="f-badge">217 Papers</span>
+          <span class="f-badge">12 Categories</span>
+          <span class="f-badge">783 MiB Archive</span>
+          <span class="f-badge">100% Verified</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="{{ '/' | relative_url }}">Browse Library</a></li>
+          <li><a href="{{ '/timeline.html' | relative_url }}">Chronological Timeline</a></li>
+          <li><a href="{{ '/learning-path.html' | relative_url }}">Guided Learning Path</a></li>
+          <li><a href="{{ '/topics.html' | relative_url }}">Subject Areas</a></li>
+          <li><a href="{{ '/about.html' | relative_url }}">About & Methodology</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Key Topics</h4>
+        <ul class="footer-links">
+          <li><a href="{{ '/?area=01_Foundations' | relative_url }}">Foundations</a></li>
+          <li><a href="{{ '/?area=04_Deep_Learning' | relative_url }}">Deep Learning</a></li>
+          <li><a href="{{ '/?area=05_NLP_Language' | relative_url }}">NLP & Language</a></li>
+          <li><a href="{{ '/?area=09_Reinforcement_Learning' | relative_url }}">Reinforcement Learning</a></li>
+          <li><a href="{{ '/?area=10_LLMs' | relative_url }}">LLMs & Reasoning</a></li>
+          <li><a href="{{ '/?area=12_AI_Agents' | relative_url }}">AI Agents</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Local Audit</h4>
+        <p class="footer-subtext">Clone and audit the full archive locally using Python standard library:</p>
+        <div class="code-snippet">
+          <code>python paper_library.py verify</code>
+        </div>
+        <p class="footer-subtext" style="margin-top: 10px;">
+          Curated by <a href="https://github.com/miskatul-anwar" target="_blank" rel="noopener">Miskatul Anwar</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2026 AI Paper Library. Hosted on GitHub Pages. Open for academic research and study.</p>
+      <div class="footer-bottom-links">
+        <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener">GitHub</a>
+        <a href="{{ '/catalog.csv' | relative_url }}" download>Download Catalog CSV</a>
+        <a href="{{ '/download_status.json' | relative_url }}" download>Status JSON</a>
+      </div>
+    </div>
+  </div>
+</footer>
