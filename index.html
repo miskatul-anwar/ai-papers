@@ -34,6 +34,49 @@ permalink: /
   </div>
 </section>
 
+<!-- Voices from the Frontier (Epigraph Quotes Showcase) -->
+<section class="voices-section">
+  <div class="container voices-wrapper">
+    <div class="voices-header">
+      <span class="voices-kicker">Voices from the Frontier · Landmark Paper Quotes</span>
+      <div class="voices-controls">
+        <button id="prevQuoteBtn" class="voices-nav-btn" aria-label="Previous Quote">← Previous</button>
+        <button id="nextQuoteBtn" class="voices-nav-btn" aria-label="Next Quote">Next →</button>
+      </div>
+    </div>
+
+    <div class="quote-slide-container">
+      {% for q in site.data.quotes %}
+      <article class="quote-card {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
+        <div class="quote-glyph">“</div>
+        <div class="quote-theme-pill">{{ q.theme }}</div>
+        <blockquote class="quote-body">
+          {{ q.quote }}
+        </blockquote>
+        <div class="quote-attribution">
+          <div>
+            <div class="quote-author">{{ q.author }} ({{ q.year }})</div>
+            <div class="quote-context">{{ q.context }}</div>
+          </div>
+          <div class="quote-actions">
+            <a href="{{ q.local_path | relative_url }}" target="_blank" rel="noopener noreferrer" class="action-link">Read Original Paper (PDF) ↗</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- Quick Quote Selector Strip -->
+    <div class="quote-tab-strip">
+      {% for q in site.data.quotes %}
+      <button class="quote-tab-btn {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
+        {{ q.author | split: ',' | first | split: ' ' | last }} ({{ q.year }})
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- Direct Catalog Search Bar -->
 <section class="home-search-bar">
   <div class="container home-search-container">
@@ -55,13 +98,58 @@ permalink: /
   </div>
 </section>
 
-<!-- Featured Landmark Papers -->
+<!-- The Curator's Reading Dossiers -->
+<section class="home-section">
+  <div class="container">
+    <div class="home-section-header">
+      <h2 class="home-section-title">The Curator's Reading Dossiers</h2>
+      <p class="home-section-desc">
+        Four curated intellectual trajectories through the library, tracing linchpins from foundational probability to modern autonomous agents.
+      </p>
+    </div>
+
+    <div class="home-dossiers-grid">
+      {% for dossier in site.data.dossiers %}
+      <article class="dossier-card">
+        <div>
+          <div class="dossier-topline">
+            <span>DOSSIER {{ dossier.num }}</span>
+            <span>{{ dossier.time_span }}</span>
+          </div>
+
+          <h3 class="dossier-title">{{ dossier.title }}</h3>
+          <div class="dossier-subtitle">{{ dossier.subtitle }}</div>
+          <p class="dossier-summary">{{ dossier.summary }}</p>
+
+          <ul class="dossier-paper-list">
+            {% for p in dossier.papers %}
+            <li class="dossier-paper-item">
+              <span class="dossier-paper-year">{{ p.year }}</span>
+              <a href="{{ p.local_path | relative_url }}" target="_blank" rel="noopener noreferrer" class="dossier-paper-link">
+                {{ p.title }}
+              </a>
+              <span class="dossier-paper-authors">{{ p.authors | split: ',' | first }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div>
+          <a href="{{ '/timeline.html' | relative_url }}" class="action-link">Explore in Chronological Timeline →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Essential Landmark Papers -->
 <section class="home-section">
   <div class="container">
     <div class="home-section-header">
       <h2 class="home-section-title">Essential Landmark Papers</h2>
       <p class="home-section-desc">
-        Ten canonical milestones spanning 263 years that established foundational mathematics, catalyzed connectionism, pioneered deep architectures, and sparked modern reasoning agents.
+        Ten canonical milestones spanning 263 years that established foundational mathematics, catalyzed connectionism, and sparked modern reasoning agents.
       </p>
     </div>
 
@@ -69,10 +157,10 @@ permalink: /
       {% for paper in site.data.landmarks %}
       <article class="home-landmark-card">
         <div>
-          <div class="home-card-meta">
-            <span class="home-card-year">{{ paper.year }}</span>
-            <span>{{ paper.area_name }}</span>
-            <span>{{ paper.size_human }}</span>
+          <div class="home-card-header">
+            <span class="home-card-callnum">{{ paper.call_number }}</span>
+            <span class="home-card-type-badge">{{ paper.doc_type }}</span>
+            <span>{{ paper.year }} · {{ paper.size_human }}</span>
           </div>
 
           <h3 class="home-card-title">
@@ -83,7 +171,13 @@ permalink: /
 
           <p class="home-card-authors">{{ paper.authors }}</p>
 
-          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">
+          {% if paper.pull_quote %}
+          <div class="home-card-pullquote">
+            “{{ paper.pull_quote }}”
+          </div>
+          {% endif %}
+
+          <p class="home-card-significance">
             {{ paper.significance }}
           </p>
         </div>

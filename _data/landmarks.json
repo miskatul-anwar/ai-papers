@@ -9,7 +9,10 @@
     "local_path": "library/01_Foundations/1763_bayes1763.pdf",
     "source_url": "https://doi.org/10.1098/rstl.1763.0053",
     "size_human": "241 KB",
-    "significance": "Introduces inverse probability and Bayes\u2019 Theorem, establishing the foundation of probabilistic reasoning and Bayesian statistical learning."
+    "significance": "Introduces inverse probability and Bayes\u2019 Theorem, establishing the foundation of probabilistic reasoning and Bayesian statistical learning.",
+    "call_number": "FOLIO-1763.01",
+    "doc_type": "Foundational Monograph",
+    "pull_quote": "Given the number of times on which an unknown event has happened and failed: Required the chance that the probability of its happening in a single trial lies somewhere between any two degrees of probability that can be named."
   },
   {
     "id": "shannon1948",
@@ -21,7 +24,10 @@
     "local_path": "library/01_Foundations/1948_shannon1948.pdf",
     "source_url": "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x",
     "size_human": "358 KB",
-    "significance": "Foundational treatise creating information theory, mathematically defining entropy, channel capacity, and discrete information quantification."
+    "significance": "Foundational treatise creating information theory, mathematically defining entropy, channel capacity, and discrete information quantification.",
+    "call_number": "FOLIO-1948.01",
+    "doc_type": "Foundational Treatise",
+    "pull_quote": "The fundamental problem of communication is that of reproducing at one point either exactly or approximately a message selected at another point. Frequently the messages have meaning... these semantic aspects of communication are irrelevant to the engineering problem."
   },
   {
     "id": "turing1950",
@@ -33,7 +39,10 @@
     "local_path": "library/01_Foundations/1950_turing1950.pdf",
     "source_url": "https://doi.org/10.1093/mind/LIX.236.433",
     "size_human": "160 KB",
-    "significance": "Introduces the Imitation Game (Turing Test) and articulates the fundamental philosophy, arguments, and prospect of artificial machine intelligence."
+    "significance": "Introduces the Imitation Game (Turing Test) and articulates the fundamental philosophy, arguments, and prospect of artificial machine intelligence.",
+    "call_number": "FOLIO-1950.01",
+    "doc_type": "Philosophical Foundation",
+    "pull_quote": "I propose to consider the question, \"Can machines think?\" ... We can only see a short distance ahead, but we can see plenty there that needs to be done."
   },
   {
     "id": "rumelhart1986",
@@ -45,7 +54,10 @@
     "local_path": "library/02_Neural_Networks/1986_rumelhart1986.pdf",
     "source_url": "https://doi.org/10.1038/323533a0",
     "size_human": "246 KB",
-    "significance": "Demonstrates generalized backpropagation for multi-layer neural networks, solving the non-linear representation problem and catalyzing connectionism."
+    "significance": "Demonstrates generalized backpropagation for multi-layer neural networks, solving the non-linear representation problem and catalyzing connectionism.",
+    "call_number": "FOLIO-1986.01",
+    "doc_type": "Seminal Discovery",
+    "pull_quote": "The representation of concepts by patterns of activity over many units allows the network to generalize to new cases in a natural way... and generalized backpropagation provides the credit-assignment mechanism required to learn internal representations."
   },
   {
     "id": "lstm1997",
@@ -57,7 +69,10 @@
     "local_path": "library/02_Neural_Networks/1997_lstm1997.pdf",
     "source_url": "https://doi.org/10.1162/neco.1997.9.8.1735",
     "size_human": "428 KB",
-    "significance": "Invents the constant error carousel and gating mechanism to eliminate vanishing gradients in recurrent networks, enabling long-range sequence modeling."
+    "significance": "Invents the constant error carousel and gating mechanism to eliminate vanishing gradients in recurrent networks, enabling long-range sequence modeling.",
+    "call_number": "FOLIO-1997.01",
+    "doc_type": "Architectural Innovation",
+    "pull_quote": "A novel recurrent network architecture, Long Short-Term Memory (LSTM), solves the vanishing gradient problem by enforcing constant error flow through constant error carousels within special units."
   },
   {
     "id": "alexnet2012",
@@ -69,7 +84,10 @@
     "local_path": "library/04_Deep_Learning/2012_alexnet2012.pdf",
     "source_url": "https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks",
     "size_human": "1.4 MB",
-    "significance": "Wins ImageNet 2012 by an unprecedented margin using deep convolutional networks on GPUs with ReLU and dropout, sparking modern deep learning."
+    "significance": "Wins ImageNet 2012 by an unprecedented margin using deep convolutional networks on GPUs with ReLU and dropout, sparking modern deep learning.",
+    "call_number": "FOLIO-2012.01",
+    "doc_type": "Empirical Breakthrough",
+    "pull_quote": "We trained a large, deep convolutional neural network on GPUs with ReLU non-linearities and dropout, achieving top-5 error rates of 17.0%, dramatically improving upon the state of the art."
   },
   {
     "id": "transformer2017",
@@ -81,7 +99,10 @@
     "local_path": "library/05_NLP_Language/2017_transformer2017.pdf",
     "source_url": "https://arxiv.org/abs/1706.03762",
     "size_human": "2.1 MB",
-    "significance": "Dispenses with recurrence and convolutions entirely, introducing multi-head self-attention that became the universal backbone for modern foundation models."
+    "significance": "Dispenses with recurrence and convolutions entirely, introducing multi-head self-attention that became the universal backbone for modern foundation models.",
+    "call_number": "FOLIO-2017.01",
+    "doc_type": "Universal Architecture",
+    "pull_quote": "We propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between input and output... Attention is all you need."
   },
   {
     "id": "gpt3_2020",
@@ -93,7 +114,10 @@
     "local_path": "library/10_LLMs/2020_gpt3_2020.pdf",
     "source_url": "https://arxiv.org/abs/2005.14165",
     "size_human": "6.5 MB",
-    "significance": "Demonstrates that massive scaling of autoregressive Transformers produces emergent few-shot learning and in-context task execution without gradient updates."
+    "significance": "Demonstrates that massive scaling of autoregressive Transformers produces emergent few-shot learning and in-context task execution without gradient updates.",
+    "call_number": "FOLIO-2020.01",
+    "doc_type": "Scaling Law & Paradigm Shift",
+    "pull_quote": "Scaling up language models greatly improves task-agnostic, few-shot performance, demonstrating that massive autoregressive pretraining allows models to execute diverse tasks with zero gradient updates."
   },
   {
     "id": "react2022",
@@ -105,7 +129,10 @@
     "local_path": "library/10_LLMs/2022_react2022.pdf",
     "source_url": "https://arxiv.org/abs/2210.03629",
     "size_human": "619 KB",
-    "significance": "Synergizes verbal reasoning traces with external tool actions, establishing the foundational architecture for autonomous language model agents."
+    "significance": "Synergizes verbal reasoning traces with external tool actions, establishing the foundational architecture for autonomous language model agents.",
+    "call_number": "FOLIO-2022.01",
+    "doc_type": "Agentic Architecture",
+    "pull_quote": "While reasoning traces help models induce, track, and update action plans, action execution interfaces with external knowledge sources. Synergizing reasoning and acting creates agents that think, act, and observe in closed loops."
   },
   {
     "id": "deepseek_r1_2025",
@@ -117,6 +144,9 @@
     "local_path": "library/10_LLMs/2025_deepseek_r1_2025.pdf",
     "source_url": "https://arxiv.org/abs/2501.12948",
     "size_human": "4.8 MB",
-    "significance": "Demonstrates large-scale pure reinforcement learning without supervised cold-start data to elicit emergent deep reasoning and self-verification in LLMs."
+    "significance": "Demonstrates large-scale pure reinforcement learning without supervised cold-start data to elicit emergent deep reasoning and self-verification in LLMs.",
+    "call_number": "FOLIO-2025.01",
+    "doc_type": "Reinforcement Reasoning",
+    "pull_quote": "Large-scale reinforcement learning applied directly to base models without supervised cold-start data demonstrates that reasoning capabilities naturally emerge through autonomous exploration, self-verification, and reward incentives."
   }
 ]

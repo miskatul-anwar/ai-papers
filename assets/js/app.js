@@ -445,9 +445,49 @@
     }
   }
 
+  /* ==========================================================================
+     Homepage Epigraph Quotes Carousel
+     ========================================================================== */
+
+  function initQuotesCarousel() {
+    const cards = document.querySelectorAll('.quote-card');
+    const tabs = document.querySelectorAll('.quote-tab-btn');
+    const prevBtn = document.getElementById('prevQuoteBtn');
+    const nextBtn = document.getElementById('nextQuoteBtn');
+    if (!cards.length) return;
+
+    let currentIndex = 0;
+
+    function showQuote(index) {
+      if (index < 0) index = cards.length - 1;
+      if (index >= cards.length) index = 0;
+      currentIndex = index;
+
+      cards.forEach((card, i) => {
+        card.classList.toggle('active', i === currentIndex);
+      });
+
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => showQuote(currentIndex - 1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => showQuote(currentIndex + 1));
+    }
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => showQuote(i));
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initCatalog();
     initLearningPath();
+    initQuotesCarousel();
   });
 
 })();

@@ -1,0 +1,176 @@
+[
+  {
+    "id": "roots",
+    "num": "I",
+    "title": "The Epistemological Roots",
+    "subtitle": "Probability, Computation & Information Theory",
+    "time_span": "1763\u20131950",
+    "summary": "Before neural architectures and gradient descent existed, mathematics and formal logic established the fundamental boundaries of what can be computed, communicated, and inferred from uncertain evidence.",
+    "paper_ids": [
+      "bayes1763",
+      "shannon1948",
+      "turing1950"
+    ],
+    "papers": [
+      {
+        "id": "bayes1763",
+        "year": 1763,
+        "title": "An Essay Towards Solving a Problem in the Doctrine of Chances",
+        "authors": "Thomas Bayes and Richard Price",
+        "local_path": "library/01_Foundations/1763_bayes1763.pdf",
+        "size_human": "241 KB"
+      },
+      {
+        "id": "shannon1948",
+        "year": 1948,
+        "title": "A Mathematical Theory of Communication",
+        "authors": "Claude Shannon",
+        "local_path": "library/01_Foundations/1948_shannon1948.pdf",
+        "size_human": "358 KB"
+      },
+      {
+        "id": "turing1950",
+        "year": 1950,
+        "title": "Computing Machinery and Intelligence",
+        "authors": "Alan Turing",
+        "local_path": "library/01_Foundations/1950_turing1950.pdf",
+        "size_human": "160 KB"
+      }
+    ]
+  },
+  {
+    "id": "connectionism",
+    "num": "II",
+    "title": "The Connectionist Crucible",
+    "subtitle": "From Single Perceptrons to Deep Representations",
+    "time_span": "1958\u20132012",
+    "summary": "The multi-decade quest to build trainable distributed representations: overcoming linear separability with generalized backpropagation, solving sequence memory with LSTM, and unlocking GPU-scale vision with AlexNet.",
+    "paper_ids": [
+      "rosenblatt1958",
+      "rumelhart1986",
+      "lstm1997",
+      "alexnet2012"
+    ],
+    "papers": [
+      {
+        "id": "rosenblatt1958",
+        "year": 1958,
+        "title": "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain",
+        "authors": "Frank Rosenblatt",
+        "local_path": "library/02_Neural_Networks/1958_rosenblatt1958.pdf",
+        "size_human": "1.6 MB"
+      },
+      {
+        "id": "rumelhart1986",
+        "year": 1986,
+        "title": "Learning Representations by Back-propagating Errors",
+        "authors": "David Rumelhart and Geoffrey Hinton and Ronald Williams",
+        "local_path": "library/02_Neural_Networks/1986_rumelhart1986.pdf",
+        "size_human": "246 KB"
+      },
+      {
+        "id": "lstm1997",
+        "year": 1997,
+        "title": "Long Short-Term Memory",
+        "authors": "Sepp Hochreiter and Juergen Schmidhuber",
+        "local_path": "library/02_Neural_Networks/1997_lstm1997.pdf",
+        "size_human": "428 KB"
+      },
+      {
+        "id": "alexnet2012",
+        "year": 2012,
+        "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+        "authors": "Alex Krizhevsky and Ilya Sutskever and Geoffrey Hinton",
+        "local_path": "library/04_Deep_Learning/2012_alexnet2012.pdf",
+        "size_human": "1.4 MB"
+      }
+    ]
+  },
+  {
+    "id": "transformers",
+    "num": "III",
+    "title": "The Transformer Revolution",
+    "subtitle": "Self-Attention, Scaling Laws & In-Context Reasoning",
+    "time_span": "2017\u20132025",
+    "summary": "How dispensing with recurrence in favor of multi-head attention unlocked unprecedented parallel scaling, turning massive autoregressive pretraining into a universal in-context generalizer and autonomous reasoning engine.",
+    "paper_ids": [
+      "transformer2017",
+      "gpt3_2020",
+      "deepseek_r1_2025"
+    ],
+    "papers": [
+      {
+        "id": "transformer2017",
+        "year": 2017,
+        "title": "Attention Is All You Need",
+        "authors": "Ashish Vaswani and others",
+        "local_path": "library/05_NLP_Language/2017_transformer2017.pdf",
+        "size_human": "2.1 MB"
+      },
+      {
+        "id": "gpt3_2020",
+        "year": 2020,
+        "title": "Language Models are Few-Shot Learners",
+        "authors": "Tom Brown and others",
+        "local_path": "library/10_LLMs/2020_gpt3_2020.pdf",
+        "size_human": "6.5 MB"
+      },
+      {
+        "id": "deepseek_r1_2025",
+        "year": 2025,
+        "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+        "authors": "DeepSeek-AI",
+        "local_path": "library/10_LLMs/2025_deepseek_r1_2025.pdf",
+        "size_human": "4.8 MB"
+      }
+    ]
+  },
+  {
+    "id": "agents",
+    "num": "IV",
+    "title": "The Frontier of Autonomous Agents",
+    "subtitle": "Reasoning Traces, Tool Use & Closed-Loop Simulation",
+    "time_span": "2022\u20132024",
+    "summary": "The leap from passive sequence prediction to embodied and digital agency: models that verbalize rationale, invoke external tool APIs, update internal memory, and coordinate in multi-agent environments.",
+    "paper_ids": [
+      "react2022",
+      "toolformer2023",
+      "generative_agents_2023",
+      "voyager_2023"
+    ],
+    "papers": [
+      {
+        "id": "react2022",
+        "year": 2022,
+        "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+        "authors": "Shunyu Yao and others",
+        "local_path": "library/10_LLMs/2022_react2022.pdf",
+        "size_human": "619 KB"
+      },
+      {
+        "id": "toolformer2023",
+        "year": 2023,
+        "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+        "authors": "Timo Schick and others",
+        "local_path": "library/10_LLMs/2023_toolformer2023.pdf",
+        "size_human": "643 KB"
+      },
+      {
+        "id": "generative_agents_2023",
+        "year": 2023,
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "authors": "Joon Sung Park and Joseph C. O'Brien and Carrie J. Cai and others",
+        "local_path": "library/12_AI_Agents/2023_generative_agents_2023.pdf",
+        "size_human": "11.4 MB"
+      },
+      {
+        "id": "voyager_2023",
+        "year": 2023,
+        "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+        "authors": "Guanzhi Wang and Yuqi Xie and Yunfan Jiang and others",
+        "local_path": "library/12_AI_Agents/2023_voyager_2023.pdf",
+        "size_human": "18.0 MB"
+      }
+    ]
+  }
+]

@@ -1499,50 +1499,348 @@ html.dark .theme-label-light {
   line-height: 1.5;
 }
 
-/* Landmark Cards Grid */
-.home-landmarks-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+/* ==========================================================================
+   Epigraph Showcase (Voices from the Frontier)
+   ========================================================================== */
+
+.voices-section {
+  padding: 44px 0;
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--bg-card);
 }
 
-.home-landmark-card {
-  padding: 18px 20px;
-  background-color: var(--bg-card);
+.voices-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.voices-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-rule);
+  padding-bottom: 8px;
+}
+
+.voices-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-ink);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.voices-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.voices-nav-btn {
+  background: var(--bg-page);
   border: 1px solid var(--border-rule);
   border-radius: 3px;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.voices-nav-btn:hover {
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+
+.quote-slide-container {
+  position: relative;
+  min-height: 200px;
+}
+
+.quote-card {
+  position: relative;
+  padding: 24px 30px 24px 44px;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-rule);
+  border-left: 3px solid var(--accent-ink);
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  display: none;
+}
+
+.quote-card.active {
+  display: block;
+}
+
+.quote-glyph {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  line-height: 1;
+  color: var(--accent-ink);
+  opacity: 0.35;
+  user-select: none;
+}
+
+.quote-theme-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--accent-ink);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.quote-body {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 18px;
+  letter-spacing: -0.015em;
+}
+
+.quote-attribution {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+}
+
+.quote-author {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.quote-context {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: normal;
+  margin-top: 3px;
+  line-height: 1.45;
+}
+
+.quote-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.quote-tab-strip {
+  display: flex;
+  gap: 6px;
+  margin-top: 18px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.quote-tab-btn {
+  background: transparent;
+  border: 1px solid var(--border-rule);
+  border-radius: 2px;
+  padding: 5px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.quote-tab-btn:hover {
+  color: var(--text-main);
+  border-color: var(--text-secondary);
+}
+
+.quote-tab-btn.active {
+  background-color: var(--text-main);
+  color: var(--bg-page);
+  border-color: var(--text-main);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Curator's Reading Dossiers (4 Thematic Pathways)
+   ========================================================================== */
+
+.home-dossiers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.dossier-card {
+  padding: 24px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-rule);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: border-color 0.15s ease;
+  transition: all 0.15s ease;
 }
 
-.home-landmark-card:hover {
+.dossier-card:hover {
   border-color: var(--accent-ink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.home-card-meta {
+.dossier-topline {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-mono);
   font-size: 0.76rem;
-  color: var(--text-muted);
+  color: var(--accent-ink);
   margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
-.home-card-year {
+.dossier-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
   font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.dossier-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.dossier-summary {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.dossier-paper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 10px 0;
+}
+
+.dossier-paper-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.88rem;
+  border-bottom: 1px dashed var(--border-light);
+}
+
+.dossier-paper-item:last-child {
+  border-bottom: none;
+}
+
+.dossier-paper-year {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   color: var(--accent-ink);
+  font-weight: 600;
+  width: 46px;
+  flex-shrink: 0;
+}
+
+.dossier-paper-link {
+  flex: 1;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.dossier-paper-link:hover {
+  color: var(--accent-ink);
+}
+
+.dossier-paper-authors {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Landmark Folio Cards (Enhanced with Pull Quotes)
+   ========================================================================== */
+
+.home-landmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.home-landmark-card {
+  padding: 22px 24px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-rule);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.15s ease;
+}
+
+.home-landmark-card:hover {
+  border-color: var(--accent-ink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.home-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.home-card-callnum {
+  color: var(--accent-ink);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.home-card-type-badge {
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-rule);
+  border-radius: 2px;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
 }
 
 .home-card-title {
   font-family: var(--font-serif);
-  font-size: 1.18rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.35;
   color: var(--text-main);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .home-card-title a {
@@ -1555,10 +1853,30 @@ html.dark .theme-label-light {
 }
 
 .home-card-authors {
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
   margin-bottom: 12px;
   line-height: 1.4;
+}
+
+.home-card-pullquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--text-main);
+  padding: 10px 14px;
+  background-color: var(--bg-page);
+  border-left: 2px solid var(--accent-ink);
+  border-radius: 0 3px 3px 0;
+  margin-bottom: 12px;
+}
+
+.home-card-significance {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 14px;
 }
 
 .home-card-footer {
@@ -1567,7 +1885,9 @@ html.dark .theme-label-light {
   gap: 14px;
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  padding-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+}
   border-top: 1px solid var(--border-light);
 }
 
@@ -1649,6 +1969,9 @@ html.dark .theme-label-light {
 }
 
 @media (max-width: 860px) {
+  .home-dossiers-grid {
+    grid-template-columns: 1fr;
+  }
   .home-landmarks-grid {
     grid-template-columns: 1fr;
   }

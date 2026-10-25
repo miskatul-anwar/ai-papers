@@ -347,6 +347,75 @@ def main():
     with open(data_dir / "landmarks.json", "w", encoding="utf-8") as f:
         json.dump(landmarks_data, f, indent=2, ensure_ascii=False)
 
+    # Quotes data for Homepage
+    quotes_spec = [
+        {"id": "turing1950", "theme": "The Horizon of Machine Thought", "quote": "We may hope that machines will eventually compete with men in all purely intellectual fields. But which are the best ones to start with? Even this is a difficult decision... We can only see a short distance ahead, but we can see plenty there that needs to be done.", "author": "Alan M. Turing", "paper_id": "turing1950", "year": 1950, "context": "From the concluding section of Computing Machinery and Intelligence, defining the roadmap toward trainable artificial minds."},
+        {"id": "shannon1948", "theme": "The Mathematical Essence of Information", "quote": "The fundamental problem of communication is that of reproducing at one point either exactly or approximately a message selected at another point. Frequently the messages have meaning... these semantic aspects of communication are irrelevant to the engineering problem.", "author": "Claude E. Shannon", "paper_id": "shannon1948", "year": 1948, "context": "The opening thesis of A Mathematical Theory of Communication, which laid the mathematical groundwork for digital computing, entropy, and statistical learning."},
+        {"id": "dartmouth1955", "theme": "The Founding Conjecture of AI", "quote": "The study is to proceed on the basis of the conjecture that every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it.", "author": "John McCarthy, Marvin Minsky, Nathaniel Rochester & Claude Shannon", "paper_id": "dartmouth1955", "year": 1955, "context": "The 1955 workshop proposal that formally christened the field of Artificial Intelligence at Dartmouth College."},
+        {"id": "rumelhart1986", "theme": "Distributed Representation & Learning", "quote": "The representation of concepts by patterns of activity over many units allows the network to generalize to new cases in a natural way... and generalized backpropagation provides the credit-assignment mechanism required to learn internal representations.", "author": "David Rumelhart, Geoffrey Hinton & Ronald Williams", "paper_id": "rumelhart1986", "year": 1986, "context": "Published in Nature, demonstrating that multi-layer neural networks can learn arbitrary non-linear mappings via gradient descent."},
+        {"id": "transformer2017", "theme": "The Architecture of Modern Intelligence", "quote": "We propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between input and output... Attention is all you need.", "author": "Ashish Vaswani, Noam Shazeer, Niki Parmar, et al.", "paper_id": "transformer2017", "year": 2017, "context": "The seminal NeurIPS 2017 paper that replaced recurrent neural networks with self-attention, establishing the backbone for all modern LLMs."},
+        {"id": "gpt3_2020", "theme": "Emergent In-Context Intelligence", "quote": "Scaling up language models greatly improves task-agnostic, few-shot performance, demonstrating that massive autoregressive pretraining allows models to perform diverse tasks with zero gradient updates.", "author": "Tom B. Brown, Benjamin Mann, Nick Ryder, et al.", "paper_id": "gpt3_2020", "year": 2020, "context": "Language Models are Few-Shot Learners, introducing GPT-3 (175B parameters) and proving scaling laws produce emergent few-shot capabilities."},
+        {"id": "react2022", "theme": "The Frontier of Autonomous Action", "quote": "While reasoning traces help models induce, track, and update action plans, action execution interfaces with external knowledge sources. Synergizing reasoning and acting creates agents that think, act, and observe in closed loops.", "author": "Shunyu Yao, Jeffrey Zhao, Dian Yu, et al.", "paper_id": "react2022", "year": 2022, "context": "ReAct: Synergizing Reasoning and Acting in Language Models, establishing the architecture that powers modern autonomous agent frameworks."},
+        {"id": "deepseek_r1_2025", "theme": "Pure Autonomous Reasoning", "quote": "Large-scale reinforcement learning applied directly to base models without supervised cold-start data demonstrates that reasoning capabilities can emerge purely through autonomous exploration, self-verification, and reward incentives.", "author": "DeepSeek-AI", "paper_id": "deepseek_r1_2025", "year": 2025, "context": "DeepSeek-R1, demonstrating that pure RL elicits long-chain reasoning, self-correction, and reflective thought without human demonstration data."}
+    ]
+    quotes_data = []
+    for q in quotes_spec:
+        if q["paper_id"] in papers_by_id:
+            p = papers_by_id[q["paper_id"]]
+            q["paper_title"] = p["title"]
+            q["local_path"] = p["local_path"]
+            q["area_name"] = p["area_name"]
+            q["size_human"] = p["size_human"]
+            quotes_data.append(q)
+    with open(data_dir / "quotes.json", "w", encoding="utf-8") as f:
+        json.dump(quotes_data, f, indent=2, ensure_ascii=False)
+
+    # Dossiers data for Homepage
+    dossiers_spec = [
+        {
+            "id": "roots", "num": "I", "title": "The Epistemological Roots",
+            "subtitle": "Probability, Computation & Information Theory", "time_span": "1763–1950",
+            "summary": "Before neural architectures and gradient descent existed, mathematics and formal logic established the fundamental boundaries of what can be computed, communicated, and inferred from uncertain evidence.",
+            "paper_ids": ["bayes1763", "shannon1948", "turing1950"]
+        },
+        {
+            "id": "connectionism", "num": "II", "title": "The Connectionist Crucible",
+            "subtitle": "From Single Perceptrons to Deep Representations", "time_span": "1958–2012",
+            "summary": "The multi-decade quest to build trainable distributed representations: overcoming linear separability with generalized backpropagation, solving sequence memory with LSTM, and unlocking GPU-scale vision with AlexNet.",
+            "paper_ids": ["rosenblatt1958", "rumelhart1986", "lstm1997", "alexnet2012"]
+        },
+        {
+            "id": "transformers", "num": "III", "title": "The Transformer Revolution",
+            "subtitle": "Self-Attention, Scaling Laws & In-Context Reasoning", "time_span": "2017–2025",
+            "summary": "How dispensing with recurrence in favor of multi-head attention unlocked unprecedented parallel scaling, turning massive autoregressive pretraining into a universal in-context generalizer and autonomous reasoning engine.",
+            "paper_ids": ["transformer2017", "gpt3_2020", "deepseek_r1_2025"]
+        },
+        {
+            "id": "agents", "num": "IV", "title": "The Frontier of Autonomous Agents",
+            "subtitle": "Reasoning Traces, Tool Use & Closed-Loop Simulation", "time_span": "2022–2024",
+            "summary": "The leap from passive sequence prediction to embodied and digital agency: models that verbalize rationale, invoke external tool APIs, update internal memory, and coordinate in multi-agent environments.",
+            "paper_ids": ["react2022", "toolformer2023", "generative_agents_2023", "voyager_2023"]
+        }
+    ]
+    dossiers_data = []
+    for d in dossiers_spec:
+        d_item = {
+            "id": d["id"], "num": d["num"], "title": d["title"],
+            "subtitle": d["subtitle"], "time_span": d["time_span"],
+            "summary": d["summary"], "papers": []
+        }
+        for pid in d["paper_ids"]:
+            if pid in papers_by_id:
+                p = papers_by_id[pid]
+                d_item["papers"].append({
+                    "id": p["id"], "year": p["year"], "title": p["title"],
+                    "authors": p["authors"], "local_path": p["local_path"],
+                    "size_human": p["size_human"]
+                })
+        dossiers_data.append(d_item)
+    with open(data_dir / "dossiers.json", "w", encoding="utf-8") as f:
+        json.dump(dossiers_data, f, indent=2, ensure_ascii=False)
+
     # Write assets/data/papers.json for client-side search
     client_data_dir = ROOT / "assets" / "data"
     client_data_dir.mkdir(parents=True, exist_ok=True)
