@@ -330,23 +330,15 @@
     let readSet = new Set(JSON.parse(localStorage.getItem('ai_papers_read') || '[]'));
 
     function update() {
-      const total = checkboxes.length;
-      let count = 0;
       checkboxes.forEach(cb => {
         if (readSet.has(cb.dataset.id)) {
           cb.checked = true;
           cb.closest('.phase-item').classList.add('done');
-          count++;
         } else {
           cb.checked = false;
           cb.closest('.phase-item').classList.remove('done');
         }
       });
-      const pct = total > 0 ? Math.round((count / total) * 100) : 0;
-      const bar = document.getElementById('syllabusProgressBar');
-      const text = document.getElementById('syllabusProgressText');
-      if (bar) bar.style.width = `${pct}%`;
-      if (text) text.textContent = `${count} / ${total} papers completed (${pct}%)`;
     }
 
     checkboxes.forEach(cb => {
@@ -362,18 +354,6 @@
         update();
       });
     });
-
-    const resetBtn = document.getElementById('syllabusResetBtn');
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        if (confirm('Reset your reading checklist progress?')) {
-          readSet.clear();
-          localStorage.removeItem('ai_papers_read');
-          update();
-          showToast('Progress reset');
-        }
-      });
-    }
 
     update();
   }

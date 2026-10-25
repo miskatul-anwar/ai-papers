@@ -750,40 +750,6 @@ html.dark .theme-label-light {
   margin: 30px auto 60px;
 }
 
-.syllabus-progress {
-  padding: 16px 20px;
-  background-color: var(--bg-subtle);
-  border: 1px solid var(--border-light);
-  border-radius: 4px;
-  margin-bottom: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.progress-track {
-  flex: 1;
-  height: 4px;
-  background-color: var(--border-rule);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: var(--text-main);
-  width: 0%;
-  transition: width 0.25s ease;
-}
-
-.progress-metric {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
 .syllabus-phase {
   margin-bottom: 40px;
 }

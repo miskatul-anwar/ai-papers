@@ -14,20 +14,6 @@ description: "A structured curriculum through 121 representative papers with per
 </div>
 
 <div class="container syllabus-container">
-  <!-- Clean Progress Bar -->
-  <div class="syllabus-progress">
-    <div style="flex: 1; min-width: 0;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-        <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-main);">Reading Progress</span>
-        <span id="syllabusProgressText" class="progress-metric">0 / 121 papers (0%)</span>
-      </div>
-      <div class="progress-track">
-        <div id="syllabusProgressBar" class="progress-bar"></div>
-      </div>
-    </div>
-    <button id="syllabusResetBtn" class="link-btn" style="font-size: 0.75rem; white-space: nowrap;">Reset</button>
-  </div>
-
   <!-- Phases -->
   {% for phase in site.data.learning_paths %}
   <section class="syllabus-phase">
