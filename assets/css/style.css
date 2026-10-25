@@ -699,63 +699,145 @@ html.dark .theme-label-light {
 }
 
 /* ==========================================================================
-   Timeline (Historical Bibliography)
+   Intuitive Vertical Timeline
    ========================================================================== */
 
-.timeline-chronology {
-  max-width: 900px;
-  margin: 30px auto 60px;
+.timeline-track {
+  position: relative;
+  max-width: 820px;
+  margin: 30px auto 80px;
+  padding-left: 32px;
+  border-left: 2px solid var(--border-rule);
 }
 
-.era-heading {
+.timeline-era-block {
+  margin-bottom: 44px;
+}
+
+.timeline-era-title {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--text-main);
-  padding: 24px 0 8px;
-  margin-top: 32px;
-  border-bottom: 1px solid var(--border-rule);
+  margin-bottom: 20px;
+  padding-top: 6px;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.timeline-row {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 20px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border-light);
+.timeline-era-title::before {
+  content: '';
+  position: absolute;
+  left: -39px;
+  top: 13px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-main);
+  border: 2px solid var(--bg-page);
 }
 
-.timeline-year-rail {
+.timeline-era-range {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-main);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
 }
 
-.timeline-content {
+.timeline-nodes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-node {
+  position: relative;
+  padding: 12px 0 16px;
+  border-bottom: 1px solid var(--border-light);
   display: flex;
   flex-direction: column;
   gap: 4px;
+  transition: all 0.1s ease;
 }
 
-.timeline-title {
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 18px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--border-strong);
+  border: 2px solid var(--bg-page);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.timeline-node:hover::before {
+  background-color: var(--link-color);
+  transform: scale(1.3);
+}
+
+.timeline-node-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.timeline-node-year {
+  font-weight: 600;
+  color: var(--text-main);
+  padding: 1px 5px;
+  background-color: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  border-radius: 3px;
+}
+
+.timeline-node-area {
+  color: var(--text-muted);
+}
+
+.timeline-node-size {
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.timeline-node-title {
   font-family: var(--font-serif);
   font-size: 1.15rem;
   font-weight: 500;
+  line-height: 1.35;
   color: var(--text-main);
 }
 
-.timeline-authors {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+.timeline-node-title a {
+  color: inherit;
 }
 
-.timeline-links {
+.timeline-node-title a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.timeline-node-authors {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.timeline-node-links {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  margin-top: 3px;
 }
 
 /* ==========================================================================

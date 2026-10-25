@@ -228,6 +228,40 @@ def main():
             "curriculum_count": len(curriculum_ids)
         })
 
+    # Build timeline eras
+    def get_era_info(y):
+        if y < 1950: return ("pre-1950", "Pre-1950: Foundations of Computation & Probability")
+        if y < 1960: return ("1950s", "1950s: The Birth of Artificial Intelligence")
+        if y < 1970: return ("1960s", "1960s: Early Logic, Search & Pattern Classification")
+        if y < 1980: return ("1970s", "1970s: Expert Systems & Knowledge Representation")
+        if y < 1990: return ("1980s", "1980s: Connectionism & Neural Resurgence")
+        if y < 2000: return ("1990s", "1990s: Statistical Learning, SVMs & Embeddings")
+        if y < 2010: return ("2000s", "2000s: Graphs, Topic Models & Early Deep Nets")
+        if y < 2020: return ("2010s", "2010s: Deep Learning & the Transformer Revolution")
+        return ("2020s", "2020s: Large Language Models & Autonomous Agents")
+
+    era_order = ["pre-1950", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
+    eras_dict = {eid: {"id": eid, "title": "", "papers": []} for eid in era_order}
+
+    for p in papers:
+        eid, title = get_era_info(p["year"])
+        eras_dict[eid]["title"] = title
+        eras_dict[eid]["papers"].append(p)
+
+    timeline_list = []
+    for eid in era_order:
+        edata = eras_dict[eid]
+        if edata["papers"]:
+            y_min = min(p["year"] for p in edata["papers"])
+            y_max = max(p["year"] for p in edata["papers"])
+            timeline_list.append({
+                "id": eid,
+                "title": edata["title"],
+                "year_range": f"{y_min}–{y_max}" if y_min != y_max else str(y_min),
+                "count": len(edata["papers"]),
+                "papers": edata["papers"]
+            })
+
     # Build areas summary
     areas_list = []
     for area_id, meta in sorted(AREA_META.items()):
@@ -270,6 +304,9 @@ def main():
 
     with open(data_dir / "areas.json", "w", encoding="utf-8") as f:
         json.dump(areas_list, f, indent=2, ensure_ascii=False)
+
+    with open(data_dir / "timeline.json", "w", encoding="utf-8") as f:
+        json.dump(timeline_list, f, indent=2, ensure_ascii=False)
 
     with open(data_dir / "learning_paths.json", "w", encoding="utf-8") as f:
         json.dump(phases, f, indent=2, ensure_ascii=False)

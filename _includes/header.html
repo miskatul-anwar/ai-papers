@@ -11,7 +11,7 @@
 
     <nav class="masthead-nav">
       <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Catalog</a>
-      <a href="{{ '/timeline.html' | relative_url }}" class="nav-link {% if page.url contains 'timeline' or page.url contains 'learning-path' %}active{% endif %}">Timeline & Path</a>
+      <a href="{{ '/timeline.html' | relative_url }}" class="nav-link {% if page.url contains 'timeline' %}active{% endif %}">Timeline</a>
       <a href="{{ '/topics.html' | relative_url }}" class="nav-link {% if page.url contains 'topics' %}active{% endif %}">Topics</a>
       <a href="{{ '/about.html' | relative_url }}" class="nav-link {% if page.url contains 'about' %}active{% endif %}">About</a>
       <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener noreferrer" class="nav-link nav-ext">GitHub ↗</a>

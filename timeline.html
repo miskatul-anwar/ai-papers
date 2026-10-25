@@ -1,86 +1,62 @@
 ---
 layout: default
-title: "Timeline & Reading Path (1763–2026)"
-description: "A unified chronological and pedagogical progression through AI history, spanning 11 developmental phases from Bayes (1763) to autonomous agents (2026)."
+title: "Timeline (1763–2026)"
+description: "A chronological progression through 263 years of landmark papers in artificial intelligence."
 ---
 
 <div class="archive-header">
   <div class="container">
-    <h1 class="archive-headline">Timeline & Reading Path</h1>
+    <h1 class="archive-headline">Timeline</h1>
     <p class="archive-summary">
-      A unified chronological progression and reading syllabus through the intellectual evolution of artificial intelligence. Follow the 121 representative milestone works through 11 developmental phases, or explore the full 217-paper archival chronology.
+      A chronological progression through 263 years of landmark papers in artificial intelligence, from early probability theory to frontier foundation models and autonomous agents.
     </p>
 
-    <!-- Scope Toggle & Era Anchors -->
-    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-top: 18px;">
-      <div class="view-btn-group" id="timelineFilterGroup">
-        <button class="view-btn active" id="filterAllWorksBtn" data-filter="all">
-          Complete Timeline (217 works)
-        </button>
-        <button class="view-btn" id="filterCurriculumBtn" data-filter="curriculum">
-          Guided Curriculum (121 works)
-        </button>
-      </div>
-
-      <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">
-        <span id="timelineCountText">Showing 217 works across 11 phases</span>
-      </div>
-    </div>
-
-    <!-- Quick Jump Links -->
-    <div class="area-tags-scroll" style="margin-top: 14px; padding-top: 4px; border-top: 1px solid var(--border-light);">
-      {% for phase in site.data.learning_paths %}
-      <a href="#phase-{{ phase.num }}" class="area-tag-btn" style="text-decoration: none;">
-        {{ phase.num }}. {{ phase.title | truncate: 22 }}
+    <!-- Quick Decade Navigation Bar -->
+    <div class="area-tags-scroll" style="margin-top: 14px; padding-top: 8px; border-top: 1px solid var(--border-light);">
+      {% for era in site.data.timeline %}
+      <a href="#{{ era.id }}" class="area-tag-btn" style="text-decoration: none;">
+        {{ era.id }} <span class="count">({{ era.count }})</span>
       </a>
       {% endfor %}
     </div>
   </div>
 </div>
 
-<div class="container syllabus-container">
-  {% for phase in site.data.learning_paths %}
-  <section class="syllabus-phase" id="phase-{{ phase.num }}" style="scroll-margin-top: 90px;">
-    <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--border-rule); padding-bottom: 6px; margin-bottom: 8px;">
-      <h2 class="phase-heading" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;">
-        {{ phase.num }}. {{ phase.title }}
+<div class="container">
+  <div class="timeline-track">
+    {% for era in site.data.timeline %}
+    <section class="timeline-era-block" id="{{ era.id }}" style="scroll-margin-top: 80px;">
+      <h2 class="timeline-era-title">
+        {{ era.title }}
+        <span class="timeline-era-range">({{ era.year_range }} · {{ era.count }} works)</span>
       </h2>
-      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
-        {{ phase.year_min }}–{{ phase.year_max }} · <span class="phase-paper-count">{{ phase.total_count }}</span> works
-      </span>
-    </div>
 
-    <p class="phase-scope">{{ phase.description }}</p>
+      <div class="timeline-nodes-list">
+        {% for paper in era.papers %}
+        <article class="timeline-node" data-id="{{ paper.id }}">
+          <div class="timeline-node-meta">
+            <span class="timeline-node-year">{{ paper.year }}</span>
+            <span class="timeline-node-area">{{ paper.area_name }}</span>
+            <span class="timeline-node-size">{{ paper.size_human }}</span>
+          </div>
 
-    <ul class="phase-items">
-      {% for pid in phase.all_ids %}
-        {% assign match = site.data.papers | where: "id", pid | first %}
-        {% if match %}
-        <li class="phase-item timeline-entry" data-curriculum="{{ match.learning_path }}" data-id="{{ match.id }}">
-          <input type="checkbox" class="phase-cb" data-id="{{ match.id }}" id="cb_{{ match.id }}" aria-label="Mark {{ match.title }} as read">
-          <div style="flex: 1; min-width: 0;">
-            <div style="display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
-              <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; color: var(--text-main);">{{ match.year }}</span>
-              <a href="{{ match.local_path | relative_url }}" target="_blank" rel="noopener noreferrer" class="phase-title">
-                {{ match.title }}
-              </a>
-              {% if match.learning_path %}
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-ink); font-weight: 500;">[Guided Path]</span>
-              {% endif %}
-            </div>
-            <div class="phase-author">
-              {{ match.authors }} · <span style="font-family: var(--font-mono); font-size: 0.75rem;">{{ match.area_name }} · {{ match.size_human }}</span>
-            </div>
+          <h3 class="timeline-node-title">
+            <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener noreferrer">
+              {{ paper.title }}
+            </a>
+          </h3>
+
+          <p class="timeline-node-authors">{{ paper.authors }}</p>
+
+          <div class="timeline-node-links">
+            <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener" class="action-link">Open PDF ↗</a>
+            <a href="{{ paper.local_path | relative_url }}" download="{{ paper.year }}_{{ paper.id }}.pdf" class="action-link action-dim">Download</a>
+            <a href="{{ paper.source_url }}" target="_blank" rel="noopener" class="action-link action-dim">Source / DOI ↗</a>
           </div>
-          <div style="display: flex; gap: 10px; font-family: var(--font-mono); font-size: 0.78rem; padding-top: 4px;">
-            <a href="{{ match.local_path | relative_url }}" target="_blank" rel="noopener" style="color: var(--link-color);">PDF ↗</a>
-            <a href="{{ match.local_path | relative_url }}" download="{{ match.year }}_{{ match.id }}.pdf" style="color: var(--text-muted);">Download</a>
-            <a href="{{ match.source_url }}" target="_blank" rel="noopener" style="color: var(--text-muted);">DOI ↗</a>
-          </div>
-        </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </section>
-  {% endfor %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
 </div>
