@@ -2,7 +2,7 @@
 
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20On-GitHub%20Pages-4f46e5?style=for-the-badge&logo=github)](https://miskatul-anwar.github.io/ai-papers/)
 [![Papers](https://img.shields.io/badge/Curated%20Papers-217-10b981?style=for-the-badge)](https://miskatul-anwar.github.io/ai-papers/)
-[![Learning Path](https://img.shields.io/badge/Guided%20Path-121%20Papers-f59e0b?style=for-the-badge)](https://miskatul-anwar.github.io/ai-papers/learning-path.html)
+[![Timeline](https://img.shields.io/badge/Chronological%20Timeline-1763--2026-f59e0b?style=for-the-badge)](https://miskatul-anwar.github.io/ai-papers/timeline.html)
 [![Storage](https://img.shields.io/badge/Archive%20Size-783%20MiB-0284c7?style=for-the-badge)](https://miskatul-anwar.github.io/ai-papers/)
 [![Integrity](https://img.shields.io/badge/Integrity-100%25%20SHA--256-6366f1?style=for-the-badge)](https://miskatul-anwar.github.io/ai-papers/about.html)
 
@@ -18,8 +18,8 @@ Every paper is hosted in full with a verified, downloadable PDF, cryptographic S
 
 - **⚡ Instant Search & Multi-Filter:** Sub-millisecond client-side filtering across titles, authors, years, categories, and IDs.
 - **📖 In-Browser PDF Reader:** Read any paper immediately in a modal viewer or download for offline reading.
-- **⏳ Chronological Timeline (1763–2026):** Visual progression from Thomas Bayes (1763) and Alan Turing (1936, 1950) to the frontier agentic architectures of 2026.
-- **🎯 Guided Learning Path:** 121-paper curated curriculum with interactive progress tracking saved locally in your browser.
+- **⏳ Chronological Timeline (1763–2026):** Visual vertical timeline from Thomas Bayes (1763) and Alan Turing (1936, 1950) to frontier agentic architectures of 2026.
+- **📚 Curated Subject Areas:** 12 thematic areas from neural foundations and deep learning to multi-agent systems.
 - **🏷️ BibTeX Citation Export:** One-click copyable citations for all 217 papers.
 - **🌓 Dark & Light Mode:** Optimized for comfortable reading on all devices.
 

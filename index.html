@@ -13,7 +13,7 @@ title: "AI Paper Library (1763–2026)"
     <div class="archive-stats-row">
       <span class="stat-item"><strong>{{ site.data.stats.paper_count }}</strong> cataloged works</span>
       <span class="stat-item"><strong>{{ site.data.stats.area_count }}</strong> subject areas</span>
-      <span class="stat-item"><strong>{{ site.data.stats.learning_path_count }}</strong> guided path papers</span>
+      <span class="stat-item"><strong>{{ site.data.stats.learning_path_count }}</strong> landmark papers</span>
       <span class="stat-item"><strong>{{ site.data.stats.year_min }}–{{ site.data.stats.year_max }}</strong> time span</span>
       <span class="stat-item"><strong>{{ site.data.stats.total_size_human }}</strong> archival storage</span>
       <span class="stat-item"><strong>6,443</strong> total pages</span>
@@ -61,7 +61,7 @@ title: "AI Paper Library (1763–2026)"
 
         <label class="checkbox-clean">
           <input type="checkbox" id="lpOnlyCb">
-          <span>Guided Learning Path only (121)</span>
+          <span>Landmark papers only (121)</span>
         </label>
       </div>
 
@@ -98,9 +98,6 @@ title: "AI Paper Library (1763–2026)"
           <div class="entry-left-meta">
             <span class="entry-year">{{ paper.year }}</span>
             <span class="entry-area-code">{{ paper.area_name }}</span>
-            {% if paper.learning_path %}
-            <span class="entry-lp-badge">· Guided Path (121)</span>
-            {% endif %}
           </div>
           <span class="entry-size">{{ paper.size_human }}</span>
         </div>

@@ -168,7 +168,6 @@
             <div class="entry-left-meta">
               <span class="entry-year">${p.year}</span>
               <span class="entry-area-code">${escapeHtml(p.area_name)}</span>
-              ${p.learning_path ? '<span class="entry-lp-badge">· Guided Path (121)</span>' : ''}
             </div>
             <span class="entry-size">${p.size_human}</span>
           </div>
@@ -204,7 +203,6 @@
           <td>
             <div class="table-paper-title">
               <a href="${pdfUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a>
-              ${p.learning_path ? '<span style="font-size: 0.75rem; color: var(--accent-ink); margin-left: 6px;">[Path]</span>' : ''}
             </div>
             <div class="table-paper-authors">${escapeHtml(p.authors)}</div>
           </td>
@@ -445,47 +443,9 @@
     }
   }
 
-  function initTimelineFilter() {
-    const allBtn = document.getElementById('filterAllWorksBtn');
-    const curriculumBtn = document.getElementById('filterCurriculumBtn');
-    const countText = document.getElementById('timelineCountText');
-    const entries = document.querySelectorAll('.timeline-entry');
-    const phases = document.querySelectorAll('.syllabus-phase');
-
-    if (!allBtn || !curriculumBtn) return;
-
-    function setMode(mode) {
-      if (mode === 'all') {
-        allBtn.classList.add('active');
-        curriculumBtn.classList.remove('active');
-        entries.forEach(e => e.style.display = 'flex');
-        phases.forEach(p => p.style.display = 'block');
-        if (countText) countText.textContent = 'Showing 217 works across 11 phases';
-      } else {
-        allBtn.classList.remove('active');
-        curriculumBtn.classList.add('active');
-        let visible = 0;
-        entries.forEach(e => {
-          const isCurriculum = e.dataset.curriculum === 'true';
-          e.style.display = isCurriculum ? 'flex' : 'none';
-          if (isCurriculum) visible++;
-        });
-        phases.forEach(p => {
-          const hasVisible = Array.from(p.querySelectorAll('.timeline-entry')).some(e => e.style.display !== 'none');
-          p.style.display = hasVisible ? 'block' : 'none';
-        });
-        if (countText) countText.textContent = `Showing ${visible} guided curriculum works across 11 phases`;
-      }
-    }
-
-    allBtn.addEventListener('click', () => setMode('all'));
-    curriculumBtn.addEventListener('click', () => setMode('curriculum'));
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
     initCatalog();
     initLearningPath();
-    initTimelineFilter();
   });
 
 })();
