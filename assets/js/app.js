@@ -169,6 +169,7 @@
             <div class="entry-left-meta">
               <span class="entry-year">${p.year}</span>
               <span class="entry-area-code">${escapeHtml(p.area_name)}</span>
+              <span style="color: var(--text-muted); font-size: 0.72rem;">[CAT. ${p.year}.${p.id}]</span>
             </div>
             <span class="entry-size">${p.size_human}</span>
           </div>

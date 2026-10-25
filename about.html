@@ -1,27 +1,77 @@
 ---
 layout: default
 title: "About — AI Paper Library"
-description: "A curated personal archive of 217 landmark papers in artificial intelligence."
+description: "A curated personal archive of 217 landmark papers in artificial intelligence spanning 1763 to 2026."
+permalink: /about.html
 ---
 
-<div class="container prose">
-  <h1>About the Library</h1>
+<!-- Scholarly Masthead Intro -->
+<section class="archive-header">
+  <div class="container">
+    <div class="archive-kicker">Colophon & Archival Statement</div>
+    <h1 class="archive-headline">About the Library</h1>
+    <p class="archive-summary">
+      An open, paywall-free research archive preserving 263 years of foundational literature in artificial intelligence, from early probability theory to frontier foundation models and autonomous reasoning agents.
+    </p>
 
-  <p>
-    This archive is a curated reading library of 217 landmark papers in artificial intelligence — spanning 263 years from Thomas Bayes' 1763 essay on probability to the foundation models and autonomous reasoning agents of 2026.
-  </p>
+    <!-- Archival Metrics Bar -->
+    <div class="archive-stats-row">
+      <span class="stat-item"><strong>{{ site.data.stats.paper_count }}</strong> preserved works</span>
+      <span class="stat-item"><strong>{{ site.data.stats.area_count }}</strong> research domains</span>
+      <span class="stat-item"><strong>{{ site.data.stats.year_min }}–{{ site.data.stats.year_max }}</strong> chronological span</span>
+      <span class="stat-item"><strong>{{ site.data.stats.total_size_human }}</strong> storage volume</span>
+      <span class="stat-item"><strong>100%</strong> SHA-256 verified</span>
+    </div>
+  </div>
+</section>
 
-  <p>
-    It exists as an ad-free, paywall-free personal resource: every paper has a locally preserved, verified PDF ready for direct reading, study, or download.
-  </p>
+<!-- Main Monograph Statement -->
+<div class="container" style="padding-top: 36px; padding-bottom: 60px;">
+  <div style="max-width: 760px; margin: 0 auto; line-height: 1.7; font-size: 1.05rem; color: var(--text-body);">
+    <h2 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; letter-spacing: -0.015em;">
+      Mission & Purpose
+    </h2>
+    <p style="margin-bottom: 20px;">
+      The AI Paper Library exists to solve a common barrier in scientific study: access to original literature. Groundbreaking research is often scattered behind publisher paywalls, buried under broken preprint links, or obscured by modern commentary. This library preserves the original documents directly, allowing researchers, students, and practitioners to read the primary texts as their authors wrote them.
+    </p>
 
-  <h2>Chronology</h2>
-  <p>
-    The library organizes 217 landmark papers across historical eras and thematic areas — spanning mathematical foundations, early symbolic AI, statistical learning, representation learning, language modeling, and interactive agents.
-  </p>
+    <h2 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; color: var(--text-main); margin-top: 36px; margin-bottom: 16px; letter-spacing: -0.015em;">
+      Archival Standards
+    </h2>
 
-  <h2>Curator</h2>
-  <p>
-    Curated and maintained by <a href="https://github.com/miskatul-anwar" target="_blank" rel="noopener">Miskatul Anwar</a>.
-  </p>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 32px;">
+      <div style="padding: 18px 20px; background-color: var(--bg-card); border: 1px solid var(--border-rule); border-left: 3px solid var(--accent-ink); border-radius: 3px;">
+        <h3 style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--text-main); margin-bottom: 6px;">1. Direct Local Preservation</h3>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.55; margin: 0;">
+          Every paper is stored as a full-text PDF directly in the Git repository. There are zero external redirect dependencies, preventing link rot and ensuring continuous offline availability.
+        </p>
+      </div>
+
+      <div style="padding: 18px 20px; background-color: var(--bg-card); border: 1px solid var(--border-rule); border-left: 3px solid var(--accent-ink); border-radius: 3px;">
+        <h3 style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--text-main); margin-bottom: 6px;">2. Cryptographic Integrity</h3>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.55; margin: 0;">
+          All 217 archived documents are verified with SHA-256 cryptographic hashes. Users can independently verify that each downloaded PDF is bit-for-bit identical to the recorded checksum.
+        </p>
+      </div>
+
+      <div style="padding: 18px 20px; background-color: var(--bg-card); border: 1px solid var(--border-rule); border-left: 3px solid var(--accent-ink); border-radius: 3px;">
+        <h3 style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--text-main); margin-bottom: 6px;">3. Academic Citation Rigor</h3>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.55; margin: 0;">
+          Each work includes formatted BibTeX citation records and persistent Digital Object Identifier (DOI) resolvers, facilitating direct citation in LaTeX research workflows.
+        </p>
+      </div>
+    </div>
+
+    <h2 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; color: var(--text-main); margin-top: 36px; margin-bottom: 12px; letter-spacing: -0.015em;">
+      Curator & Colophon
+    </h2>
+    <p style="margin-bottom: 24px;">
+      Curated and published by <a href="https://github.com/miskatul-anwar" target="_blank" rel="noopener noreferrer" style="color: var(--text-main); font-weight: 600; text-decoration: underline;">Miskatul Anwar</a>. The full codebase, data pipelines, metadata indices, and archived PDFs are available as open public scholarship on <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-main); font-weight: 600; text-decoration: underline;">GitHub</a>.
+    </p>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+      <a href="{{ '/catalog.html' | relative_url }}" class="btn-scholarly-primary">Browse Full Catalog →</a>
+      <a href="{{ '/timeline.html' | relative_url }}" class="btn-scholarly-secondary">View Chronological Timeline →</a>
+    </div>
+  </div>
 </div>

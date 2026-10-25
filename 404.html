@@ -1,17 +1,23 @@
 ---
 layout: default
-title: "Page Not Found (404)"
+title: "Document Not Found (404)"
 permalink: /404.html
 ---
 
-<div class="container prose" style="text-align: center; padding: 70px 0 100px;">
-  <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;">Error 404</span>
-  <h1 style="margin-top: 8px;">Document Not Found</h1>
-  <p style="max-width: 480px; margin: 0 auto 24px; color: var(--text-secondary);">
-    The page or paper reference you requested could not be located in the catalog index.
-  </p>
-  <div style="display: flex; justify-content: center; gap: 14px;">
-    <a href="{{ '/' | relative_url }}" class="link-btn" style="padding: 8px 16px; font-size: 0.88rem;">Browse Full Catalog (217 works) →</a>
-    <a href="{{ '/timeline.html' | relative_url }}" class="link-btn" style="padding: 8px 16px; font-size: 0.88rem;">View Timeline →</a>
+<div class="container" style="text-align: center; padding: 80px 16px 120px;">
+  <div style="max-width: 540px; margin: 0 auto;">
+    <div class="archive-kicker">Error 404 · Archival Reference Missing</div>
+    <h1 style="font-family: var(--font-serif); font-size: 2.4rem; font-weight: 500; color: var(--text-main); margin-bottom: 12px; letter-spacing: -0.02em;">
+      Document Not Found
+    </h1>
+    <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 28px;">
+      The requested page, call number, or document reference does not exist in the catalog index.
+    </p>
+
+    <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+      <a href="{{ '/' | relative_url }}" class="btn-scholarly-primary">Return to Homepage →</a>
+      <a href="{{ '/catalog.html' | relative_url }}" class="btn-scholarly-secondary">Browse Full Catalog (217 Works) →</a>
+      <a href="{{ '/timeline.html' | relative_url }}" class="btn-scholarly-secondary">View Timeline →</a>
+    </div>
   </div>
 </div>

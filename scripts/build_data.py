@@ -268,6 +268,12 @@ def main():
         area_papers = [p for p in papers if p["area"] == area_id]
         if area_papers:
             area_bytes = sum(p["bytes"] for p in area_papers)
+            milestones = [{
+                "id": p["id"],
+                "year": p["year"],
+                "title": p["title"],
+                "local_path": p["local_path"]
+            } for p in area_papers[:3]]
             areas_list.append({
                 "id": area_id,
                 "name": meta["name"],
@@ -279,7 +285,8 @@ def main():
                 "size_human": format_size(area_bytes),
                 "year_min": min(p["year"] for p in area_papers),
                 "year_max": max(p["year"] for p in area_papers),
-                "paper_ids": [p["id"] for p in area_papers]
+                "paper_ids": [p["id"] for p in area_papers],
+                "milestones": milestones
             })
 
     # Build overall stats

@@ -27,6 +27,26 @@
       "minsky_frames_1974",
       "mycin_1975",
       "physical_symbol_1976"
+    ],
+    "milestones": [
+      {
+        "id": "bayes1763",
+        "year": 1763,
+        "title": "An Essay Towards Solving a Problem in the Doctrine of Chances",
+        "local_path": "library/01_Foundations/1763_bayes1763.pdf"
+      },
+      {
+        "id": "turing1936",
+        "year": 1936,
+        "title": "On Computable Numbers with an Application to the Entscheidungsproblem",
+        "local_path": "library/01_Foundations/1936_turing1936.pdf"
+      },
+      {
+        "id": "mcculloch1943",
+        "year": 1943,
+        "title": "A Logical Calculus of the Ideas Immanent in Nervous Activity",
+        "local_path": "library/01_Foundations/1943_mcculloch1943.pdf"
+      }
     ]
   },
   {
@@ -51,6 +71,26 @@
       "universalapprox1989",
       "lstm1997",
       "lenet1998"
+    ],
+    "milestones": [
+      {
+        "id": "rosenblatt1958",
+        "year": 1958,
+        "title": "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain",
+        "local_path": "library/02_Neural_Networks/1958_rosenblatt1958.pdf"
+      },
+      {
+        "id": "werbos1974",
+        "year": 1974,
+        "title": "Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences",
+        "local_path": "library/02_Neural_Networks/1974_werbos1974.pdf"
+      },
+      {
+        "id": "neocognitron_1980",
+        "year": 1980,
+        "title": "Neocognitron: A Self-organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position",
+        "local_path": "library/02_Neural_Networks/1980_neocognitron_1980.pdf"
+      }
     ]
   },
   {
@@ -83,6 +123,26 @@
       "adam2014",
       "xgboost2016",
       "umap_2018"
+    ],
+    "milestones": [
+      {
+        "id": "pearson1901",
+        "year": 1901,
+        "title": "On Lines and Planes of Closest Fit to Systems of Points in Space",
+        "local_path": "library/03_Machine_Learning/1901_pearson1901.pdf"
+      },
+      {
+        "id": "fisher1936",
+        "year": 1936,
+        "title": "The Use of Multiple Measurements in Taxonomic Problems",
+        "local_path": "library/03_Machine_Learning/1936_fisher1936.pdf"
+      },
+      {
+        "id": "robbinsmonro1951",
+        "year": 1951,
+        "title": "A Stochastic Approximation Method",
+        "local_path": "library/03_Machine_Learning/1951_robbinsmonro1951.pdf"
+      }
     ]
   },
   {
@@ -117,6 +177,26 @@
       "flow_matching_2022",
       "mamba2023",
       "mamba3_2026"
+    ],
+    "milestones": [
+      {
+        "id": "dbn2006",
+        "year": 2006,
+        "title": "A Fast Learning Algorithm for Deep Belief Nets",
+        "local_path": "library/04_Deep_Learning/2006_dbn2006.pdf"
+      },
+      {
+        "id": "alexnet2012",
+        "year": 2012,
+        "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+        "local_path": "library/04_Deep_Learning/2012_alexnet2012.pdf"
+      },
+      {
+        "id": "adversarial_2013",
+        "year": 2013,
+        "title": "Intriguing Properties of Neural Networks",
+        "local_path": "library/04_Deep_Learning/2013_adversarial_2013.pdf"
+      }
     ]
   },
   {
@@ -151,6 +231,26 @@
       "roberta2019",
       "t5_2019",
       "dpr_2020"
+    ],
+    "milestones": [
+      {
+        "id": "eliza_1966",
+        "year": 1966,
+        "title": "ELIZA\u2014A Computer Program for the Study of Natural Language Communication Between Man and Machine",
+        "local_path": "library/05_NLP_Language/1966_eliza_1966.pdf"
+      },
+      {
+        "id": "shrdlu1972",
+        "year": 1972,
+        "title": "Understanding Natural Language",
+        "local_path": "library/05_NLP_Language/1972_shrdlu1972.pdf"
+      },
+      {
+        "id": "elman1990",
+        "year": 1990,
+        "title": "Finding Structure in Time",
+        "local_path": "library/05_NLP_Language/1990_elman1990.pdf"
+      }
     ]
   },
   {
@@ -180,6 +280,26 @@
       "neurosym2024",
       "alphageometry2_2025",
       "unified_neurosym2025"
+    ],
+    "milestones": [
+      {
+        "id": "markovlogic2006",
+        "year": 2006,
+        "title": "Markov Logic Networks",
+        "local_path": "library/06_Neuro_Symbolic/2006_markovlogic2006.pdf"
+      },
+      {
+        "id": "neural_turing2014",
+        "year": 2014,
+        "title": "Neural Turing Machines",
+        "local_path": "library/06_Neuro_Symbolic/2014_neural_turing2014.pdf"
+      },
+      {
+        "id": "logic_tensor2016",
+        "year": 2016,
+        "title": "Logic Tensor Networks: Deep Learning and Logical Reasoning from Data and Knowledge",
+        "local_path": "library/06_Neuro_Symbolic/2016_logic_tensor2016.pdf"
+      }
     ]
   },
   {
@@ -215,6 +335,26 @@
       "rotate2019",
       "hogan_kg2020",
       "graphrag2024"
+    ],
+    "milestones": [
+      {
+        "id": "cyc1985",
+        "year": 1985,
+        "title": "CYC: Using Common Sense Knowledge to Overcome Brittleness and Knowledge Acquisition Bottlenecks",
+        "local_path": "library/07_Knowledge_Graphs/1985_cyc1985.pdf"
+      },
+      {
+        "id": "wordnet_1993",
+        "year": 1993,
+        "title": "WORDNET: A Lexical Database for English",
+        "local_path": "library/07_Knowledge_Graphs/1993_wordnet_1993.pdf"
+      },
+      {
+        "id": "pagerank1998",
+        "year": 1998,
+        "title": "The PageRank Citation Ranking: Bringing Order to the Web",
+        "local_path": "library/07_Knowledge_Graphs/1998_pagerank1998.pdf"
+      }
     ]
   },
   {
@@ -250,6 +390,26 @@
       "llava_2023",
       "sam2023",
       "qwen3_vl_2025"
+    ],
+    "milestones": [
+      {
+        "id": "hog2005",
+        "year": 2005,
+        "title": "Histograms of Oriented Gradients for Human Detection",
+        "local_path": "library/08_Vision_Multimodal/2005_hog2005.pdf"
+      },
+      {
+        "id": "imagenet2009",
+        "year": 2009,
+        "title": "ImageNet: A Large-Scale Hierarchical Image Database",
+        "local_path": "library/08_Vision_Multimodal/2009_imagenet2009.pdf"
+      },
+      {
+        "id": "rcnn2013",
+        "year": 2013,
+        "title": "Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation",
+        "local_path": "library/08_Vision_Multimodal/2013_rcnn2013.pdf"
+      }
     ]
   },
   {
@@ -280,6 +440,26 @@
       "soft_actor_critic_2018",
       "mu_zero2019",
       "flashnext_rl_2026"
+    ],
+    "milestones": [
+      {
+        "id": "actor_critic_1983",
+        "year": 1983,
+        "title": "Neuronlike Adaptive Elements That Can Solve Difficult Learning Control Problems",
+        "local_path": "library/09_Reinforcement_Learning/1983_actor_critic_1983.pdf"
+      },
+      {
+        "id": "sutton1988",
+        "year": 1988,
+        "title": "Learning to Predict by the Methods of Temporal Differences",
+        "local_path": "library/09_Reinforcement_Learning/1988_sutton1988.pdf"
+      },
+      {
+        "id": "qlearning1992",
+        "year": 1992,
+        "title": "Q-learning",
+        "local_path": "library/09_Reinforcement_Learning/1992_qlearning1992.pdf"
+      }
     ]
   },
   {
@@ -330,6 +510,26 @@
       "qwen3_2025",
       "qwen38_next_2026",
       "qwen3_coder_2026"
+    ],
+    "milestones": [
+      {
+        "id": "gpt1_2018",
+        "year": 2018,
+        "title": "Improving Language Understanding by Generative Pre-Training",
+        "local_path": "library/10_LLMs/2018_gpt1_2018.pdf"
+      },
+      {
+        "id": "gpt2_2019",
+        "year": 2019,
+        "title": "Language Models are Unsupervised Multitask Learners",
+        "local_path": "library/10_LLMs/2019_gpt2_2019.pdf"
+      },
+      {
+        "id": "gpt3_2020",
+        "year": 2020,
+        "title": "Language Models are Few-Shot Learners",
+        "local_path": "library/10_LLMs/2020_gpt3_2020.pdf"
+      }
     ]
   },
   {
@@ -352,6 +552,26 @@
       "gnome_2023",
       "alphafold3_2024",
       "alphagenome_2025"
+    ],
+    "milestones": [
+      {
+        "id": "mpnn_2017",
+        "year": 2017,
+        "title": "Neural Message Passing for Quantum Chemistry",
+        "local_path": "library/11_AI_for_Science/2017_mpnn_2017.pdf"
+      },
+      {
+        "id": "schnet_2017",
+        "year": 2017,
+        "title": "SchNet: A Continuous-Filter Convolutional Neural Network for Modeling Quantum Interactions",
+        "local_path": "library/11_AI_for_Science/2017_schnet_2017.pdf"
+      },
+      {
+        "id": "megnet_2018",
+        "year": 2018,
+        "title": "Graph Networks as a Universal Machine Learning Framework for Molecules and Crystals",
+        "local_path": "library/11_AI_for_Science/2018_megnet_2018.pdf"
+      }
     ]
   },
   {
@@ -382,6 +602,26 @@
       "sweagent_2024",
       "aiscientist2_2025",
       "osworld2_2026"
+    ],
+    "milestones": [
+      {
+        "id": "webgpt_2021",
+        "year": 2021,
+        "title": "WebGPT: Browser-assisted Question-answering with Human Feedback",
+        "local_path": "library/12_AI_Agents/2021_webgpt_2021.pdf"
+      },
+      {
+        "id": "agentbench_2023",
+        "year": 2023,
+        "title": "AgentBench: Evaluating LLMs as Agents",
+        "local_path": "library/12_AI_Agents/2023_agentbench_2023.pdf"
+      },
+      {
+        "id": "autogen_2023",
+        "year": 2023,
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "local_path": "library/12_AI_Agents/2023_autogen_2023.pdf"
+      }
     ]
   }
 ]

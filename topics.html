@@ -1,35 +1,66 @@
 ---
 layout: default
-title: "Subject Areas (12 Categories)"
-description: "Directory of the 12 subject areas across 217 papers from foundations to autonomous agents."
+title: "Subject Areas (12 Research Domains)"
+description: "Curated research taxonomy of the 12 subject areas across 217 papers from foundations to autonomous agents."
+permalink: /topics.html
 ---
 
-<div class="archive-header">
+<!-- Scholarly Masthead Intro -->
+<section class="archive-header">
   <div class="container">
+    <div class="archive-kicker">Curated Research Taxonomy · 12 Thematic Domains</div>
     <h1 class="archive-headline">Subject Areas</h1>
     <p class="archive-summary">
-      The catalog is organized across 12 distinct subject areas, spanning mathematical foundations, neural architectures, statistical learning, knowledge graphs, vision, language, and tool-using agents.
+      The archive is structured across twelve research domains, spanning foundational probability to interactive multi-agent systems. Every domain is preserved in full with original PDFs, Sha-256 verification, and citation metadata.
     </p>
-  </div>
-</div>
 
+    <!-- Archival Metrics Bar -->
+    <div class="archive-stats-row">
+      <span class="stat-item"><strong>{{ site.data.stats.area_count }}</strong> research domains</span>
+      <span class="stat-item"><strong>{{ site.data.stats.paper_count }}</strong> cataloged works</span>
+      <span class="stat-item"><strong>{{ site.data.stats.year_min }}–{{ site.data.stats.year_max }}</strong> time span</span>
+      <span class="stat-item"><strong>{{ site.data.stats.total_size_human }}</strong> archival storage</span>
+      <span class="stat-item"><strong>100%</strong> SHA-256 verified</span>
+    </div>
+  </div>
+</section>
+
+<!-- Subject Areas Grid -->
 <div class="container">
   <div class="subject-grid">
     {% for area in site.data.areas %}
-    <div class="subject-card">
-      <div class="subject-header">
-        <span>{{ area.id }}</span>
-        <span>{{ area.year_min }}–{{ area.year_max }}</span>
-      </div>
+    <article class="subject-card">
+      <div>
+        <div class="subject-header">
+          <span>DOMAIN {{ area.id | split: '_' | first }}</span>
+          <span>{{ area.year_min }}–{{ area.year_max }}</span>
+        </div>
 
-      <h2 class="subject-title">{{ area.name }}</h2>
-      <p class="subject-desc">{{ area.description }}</p>
+        <h2 class="subject-title">{{ area.name }}</h2>
+        <p class="subject-desc">{{ area.description }}</p>
+
+        {% if area.milestones and area.milestones.size > 0 %}
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px;">
+          Key Milestones:
+        </div>
+        <ul class="subject-milestones">
+          {% for m in area.milestones %}
+          <li class="subject-milestone-item">
+            <span class="subject-milestone-year">{{ m.year }}</span>
+            <a href="{{ m.local_path | relative_url }}" target="_blank" rel="noopener noreferrer" class="subject-milestone-link">
+              {{ m.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
 
       <div class="subject-footer">
         <span><strong>{{ area.count }}</strong> papers ({{ area.size_human }})</span>
-        <a href="{{ '/catalog.html?area=' | append: area.id | relative_url }}" class="inline-link">Browse papers →</a>
+        <a href="{{ '/catalog.html?area=' | append: area.id | relative_url }}" class="action-link">Browse {{ area.name }} →</a>
       </div>
-    </div>
+    </article>
     {% endfor %}
   </div>
 </div>

@@ -1,34 +1,47 @@
 ---
 layout: default
-title: "Timeline (1763–2026)"
-description: "A chronological progression through 263 years of landmark papers in artificial intelligence."
+title: "Chronological Timeline (1763–2026)"
+description: "A chronological progression through 263 years of landmark papers in artificial intelligence, from early probability theory to frontier foundation models and autonomous agents."
+permalink: /timeline.html
 ---
 
-<div class="archive-header">
+<!-- Scholarly Masthead Intro -->
+<section class="archive-header">
   <div class="container">
-    <h1 class="archive-headline">Timeline</h1>
+    <div class="archive-kicker">Chronological Progression · 1763–2026</div>
+    <h1 class="archive-headline">Chronological Timeline</h1>
     <p class="archive-summary">
-      A chronological progression through 263 years of landmark papers in artificial intelligence, from early probability theory to frontier foundation models and autonomous agents.
+      A 263-year chronological journey tracing the foundational theories, computational paradigms, neural architectures, and emergent reasoning engines that built modern artificial intelligence.
     </p>
 
+    <!-- Archival Metrics Bar -->
+    <div class="archive-stats-row">
+      <span class="stat-item"><strong>9</strong> historical eras</span>
+      <span class="stat-item"><strong>{{ site.data.stats.paper_count }}</strong> preserved works</span>
+      <span class="stat-item"><strong>{{ site.data.stats.year_min }}–{{ site.data.stats.year_max }}</strong> time span</span>
+      <span class="stat-item"><strong>{{ site.data.stats.total_size_human }}</strong> archival storage</span>
+      <span class="stat-item"><strong>100%</strong> SHA-256 verified</span>
+    </div>
+
     <!-- Quick Decade Navigation Bar -->
-    <div class="area-tags-scroll" style="margin-top: 14px; padding-top: 8px; border-top: 1px solid var(--border-light);">
+    <div class="area-tags-scroll" style="margin-top: 16px; padding-top: 10px; border-top: 1px solid var(--border-light);">
       {% for era in site.data.timeline %}
       <a href="#{{ era.id }}" class="area-tag-btn" style="text-decoration: none;">
-        {{ era.id }} <span class="count">({{ era.count }})</span>
+        {{ era.id | upcase }} <span class="count">({{ era.count }})</span>
       </a>
       {% endfor %}
     </div>
   </div>
-</div>
+</section>
 
+<!-- Timeline Main Content -->
 <div class="container">
   <div class="timeline-track">
     {% for era in site.data.timeline %}
     <section class="timeline-era-block" id="{{ era.id }}" style="scroll-margin-top: 80px;">
       <h2 class="timeline-era-title">
-        {{ era.title }}
-        <span class="timeline-era-range">({{ era.year_range }} · {{ era.count }} works)</span>
+        <span>{{ era.title }}</span>
+        <span class="timeline-era-range">{{ era.year_range }} · {{ era.count }} works</span>
       </h2>
 
       <div class="timeline-nodes-list">
@@ -37,6 +50,7 @@ description: "A chronological progression through 263 years of landmark papers i
           <div class="timeline-node-meta">
             <span class="timeline-node-year">{{ paper.year }}</span>
             <span class="timeline-node-area">{{ paper.area_name }}</span>
+            <span style="color: var(--text-muted); font-size: 0.72rem;">[DOC. {{ paper.year }}.{{ paper.id }}]</span>
             <span class="timeline-node-size">{{ paper.size_human }}</span>
           </div>
 
@@ -49,9 +63,10 @@ description: "A chronological progression through 263 years of landmark papers i
           <p class="timeline-node-authors">{{ paper.authors }}</p>
 
           <div class="timeline-node-links">
-            <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener" class="action-link">Open PDF ↗</a>
+            <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener noreferrer" class="action-link">Open PDF ↗</a>
             <a href="{{ paper.local_path | relative_url }}" download="{{ paper.year }}_{{ paper.id }}.pdf" class="action-link action-dim">Download</a>
-            <a href="{{ paper.source_url }}" target="_blank" rel="noopener" class="action-link action-dim">Source / DOI ↗</a>
+            <a href="{{ paper.source_url }}" target="_blank" rel="noopener noreferrer" class="action-link action-dim">Source / DOI ↗</a>
+            <a href="{{ '/catalog.html?q=' | append: paper.id | relative_url }}" class="action-link action-dim">Catalog Entry →</a>
           </div>
         </article>
         {% endfor %}

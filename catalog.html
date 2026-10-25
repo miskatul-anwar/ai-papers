@@ -8,6 +8,7 @@ permalink: /catalog.html
 <!-- Scholarly Masthead Intro -->
 <section class="archive-header">
   <div class="container">
+    <div class="archive-kicker">Archival Bibliographic Index · 217 Preserved Works</div>
     <h1 class="archive-headline">Paper Catalog</h1>
     <p class="archive-summary">
       Search, filter, and study 217 landmark research papers in artificial intelligence, machine learning, neural networks, language modeling, and autonomous agents spanning 1763 to 2026. Every PDF is preserved locally, verified with cryptographic SHA-256 checksums, and available for direct study.
@@ -100,6 +101,7 @@ permalink: /catalog.html
           <div class="entry-left-meta">
             <span class="entry-year">{{ paper.year }}</span>
             <span class="entry-area-code">{{ paper.area_name }}</span>
+            <span style="color: var(--text-muted); font-size: 0.72rem;">[CAT. {{ paper.year }}.{{ paper.id }}]</span>
           </div>
           <span class="entry-size">{{ paper.size_human }}</span>
         </div>
