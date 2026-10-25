@@ -1,97 +1,63 @@
 ---
 layout: default
-title: "About & Methodology — AI Paper Library"
-description: "Catalog curation principles, verification commands, and archival methodology for the 217 AI papers."
+title: "About & Colophon — AI Paper Library"
+description: "Archival methodology, verification commands, and catalog provenance."
 ---
 
 <div class="container prose">
-  <div style="text-align: center; margin-bottom: 30px;">
-    <div class="hero-pill">
-      <span class="hero-pill-dot"></span>
-      <span>Archive Documentation & Integrity</span>
-    </div>
-    <h1 style="margin-top: 10px; font-size: 2.3rem;">About the <span class="gradient-text">AI Paper Library</span></h1>
-  </div>
+  <h1>About & Colophon</h1>
 
   <p>
-    The <strong>AI Paper Library</strong> is an open, curated collection of 217 influential research works in artificial intelligence, machine learning, neural networks, deep learning, natural language processing, knowledge graphs, neuro-symbolic AI, reinforcement learning, multimodal intelligence, large language models, and autonomous agents.
-  </p>
-  <p>
-    The archive covers over 260 years of intellectual development, from Thomas Bayes’ 1763 essay on probability to the frontier multimodal and autonomous reasoning agents of 2026.
+    The <strong>AI Paper Library</strong> is an open research repository collecting 217 landmark papers in artificial intelligence, machine learning, neural networks, deep learning, NLP, knowledge graphs, neuro-symbolic AI, reinforcement learning, multimodal AI, LLMs, and autonomous agents spanning 1763 to 2026.
   </p>
 
-  <h2>Archive Statistics & Audit</h2>
-  <div class="stats-grid" style="margin: 24px 0 32px;">
-    <div class="stat-card">
-      <div class="stat-value">217</div>
-      <div class="stat-label">Cataloged Papers</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">6,443</div>
-      <div class="stat-label">Total Pages</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">783 MiB</div>
-      <div class="stat-label">Archival Storage</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">100%</div>
-      <div class="stat-label">SHA-256 Verified</div>
-    </div>
-  </div>
-
-  <h2>Methodology & Integrity Checks</h2>
   <p>
-    Every paper in this repository has been audited and verified locally using the included Python standard library tool <code>paper_library.py</code>. The verification script ensures:
+    The catalog is designed as a reading curriculum rather than a claim of completeness. Every cataloged paper is preserved in full with a locally stored PDF, validated header and EOF markers, and cryptographic SHA-256 integrity checks.
   </p>
+
+  <h2>Archival Statistics</h2>
   <ul>
-    <li>The file exists in the designated area directory: <code>library/&lt;area&gt;/&lt;year&gt;_&lt;id&gt;.pdf</code>.</li>
-    <li>The file starts with the PDF magic header <code>%PDF-</code> and terminates with an <code>%%EOF</code> marker.</li>
-    <li>The file is non-empty and uncorrupted, successfully readable by standard PDF parsers (<code>pdfinfo</code>).</li>
-    <li>The file matches the recorded cryptographic <strong>SHA-256</strong> checksum in <code>download_status.json</code>.</li>
+    <li><strong>Cataloged works:</strong> 217 papers</li>
+    <li><strong>Verified PDFs:</strong> 217 (100% presence)</li>
+    <li><strong>Total pages:</strong> 6,443 pages readable by <code>pdfinfo</code></li>
+    <li><strong>Total storage:</strong> 783 MiB</li>
+    <li><strong>Temporal span:</strong> 1763 (Bayes) to 2026 (OSWorld 2 / Gemini / FlashNext)</li>
+    <li><strong>Guided curriculum:</strong> 121 papers across 11 phases</li>
   </ul>
 
-  <h2>Running the Local Audit</h2>
+  <h2>Integrity & Verification</h2>
   <p>
-    You can audit or reproduce the library directly on any machine with Python 3.10+ (no third-party dependencies required):
+    The library is audited with the bundled Python standard library script <code>paper_library.py</code>. The verification tool checks that every PDF is physically present, structurally sound, and matches its recorded SHA-256 hash in <code>download_status.json</code>:
   </p>
-  <pre><code># Clone repository
-git clone https://github.com/{{ site.repository }}.git
-cd ai-papers
 
-# Verify local archive integrity
+  <pre><code># Verify complete local archive integrity
 python paper_library.py verify
 
-# Check current status
-python paper_library.py status</code></pre>
+# Check status of all catalog entries
+python paper_library.py status
 
-  <h2>Catalog Structure</h2>
+# Regenerate INDEX.md and TIMELINE.md from catalog.csv
+python paper_library.py index</code></pre>
+
+  <h2>Catalog Schema</h2>
   <p>
-    The repository catalog is stored in <code>catalog.csv</code> with the following schema:
+    The primary data source is <code>catalog.csv</code>, formatted as follows:
   </p>
   <ul>
-    <li><code>id</code>: Unique alphanumeric identifier (e.g. <code>bayes1763</code>, <code>attention2017</code>).</li>
-    <li><code>year</code>: First publication or preprint year used in the reading timeline.</li>
-    <li><code>area</code>: Category folder under <code>library/</code> (e.g. <code>01_Foundations</code>, <code>10_LLMs</code>).</li>
-    <li><code>title</code>: Official published paper title.</li>
-    <li><code>authors</code>: Authors listed in publication order.</li>
-    <li><code>source_url</code>: Official publisher page, DOI resolver, or ArXiv landing page.</li>
-    <li><code>pdf_url</code>: Direct link to the open access PDF copy.</li>
+    <li><code>id</code>: Alphanumeric identifier used in paths and BibTeX keys.</li>
+    <li><code>year</code>: First publication or preprint year used in the chronological reading timeline.</li>
+    <li><code>area</code>: Category subdirectory within <code>library/</code>.</li>
+    <li><code>title</code>: Official paper title.</li>
+    <li><code>authors</code>: Publication authors.</li>
+    <li><code>source_url</code>: Official publisher DOI resolver, ArXiv landing page, or project page.</li>
+    <li><code>pdf_url</code>: Publicly accessible PDF copy source.</li>
   </ul>
 
-  <h2>Hosted Site Architecture</h2>
+  <h2>Site Colophon</h2>
   <p>
-    This website is built with <strong>Jekyll</strong> and hosted on <strong>GitHub Pages</strong>. It features:
+    This website is built with Jekyll and hosted statically via GitHub Pages. Typography is set in <strong>Newsreader</strong> (editorial serif designed by Production Type) for headings and titles, <strong>Inter</strong> for interface elements, and <strong>JetBrains Mono</strong> for identifiers and checksums.
   </p>
-  <ul>
-    <li><strong>Client-side instant filtering & search:</strong> Sub-millisecond filtering across titles, authors, categories, and years.</li>
-    <li><strong>In-browser PDF reader modal:</strong> Instant preview with full-screen and direct download capabilities.</li>
-    <li><strong>One-click BibTeX export:</strong> Formatted academic citation export for every paper.</li>
-    <li><strong>Reading progress tracker:</strong> Local storage progress persistence for the 121-paper guided curriculum.</li>
-    <li><strong>Full responsive design:</strong> Optimized for mobile, tablet, and desktop viewports with dark and light themes.</li>
-  </ul>
 
-  <h2>Curator</h2>
   <p>
     Curated and maintained by <a href="https://github.com/miskatul-anwar" target="_blank" rel="noopener">Miskatul Anwar</a>.
   </p>

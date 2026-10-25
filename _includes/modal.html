@@ -1,88 +1,25 @@
-<!-- PDF Reader Modal -->
-<div class="modal-backdrop" id="pdfModal" aria-hidden="true" role="dialog" aria-labelledby="pdfModalTitle">
-  <div class="modal-container pdf-modal-container">
-    <div class="modal-header">
-      <div class="modal-title-group">
-        <span class="badge" id="modalAreaBadge">Foundations</span>
-        <span class="badge year-badge" id="modalYearBadge">1950</span>
-        <h3 class="modal-title" id="pdfModalTitle">Paper Title</h3>
-        <p class="modal-authors" id="modalAuthors">Authors</p>
-      </div>
-      <div class="modal-actions">
-        <a href="#" id="modalDirectTab" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" title="Open PDF in new browser tab">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <line x1="10" y1="14" x2="21" y2="3"></line>
-          </svg>
-          New Tab
-        </a>
-        <a href="#" id="modalDownloadBtn" download class="btn btn-primary btn-sm" title="Download PDF file">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-          Download
-        </a>
-        <button class="modal-close-btn" id="closePdfModal" aria-label="Close modal">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
+<!-- In-browser PDF Drawer (Optional clean slide-over reader) -->
+<aside class="pdf-drawer" id="pdfDrawer" aria-hidden="true" role="dialog" aria-labelledby="drawerTitle">
+  <div class="drawer-header">
+    <div class="drawer-title-group">
+      <span class="mono-tag" id="drawerYearTag">1950</span>
+      <span class="mono-tag" id="drawerAreaTag">Foundations</span>
+      <h3 class="drawer-title" id="drawerTitle">Paper Title</h3>
     </div>
-    <div class="modal-body pdf-modal-body">
-      <iframe id="pdfViewerFrame" src="" title="PDF Viewer" allowfullscreen></iframe>
+    <div class="drawer-actions">
+      <a href="#" id="drawerDirectTab" target="_blank" rel="noopener noreferrer" class="link-btn" title="Open in new window">
+        External Window ↗
+      </a>
+      <a href="#" id="drawerDownloadBtn" download class="link-btn" title="Download PDF file">
+        Download
+      </a>
+      <button class="drawer-close-btn" id="closeDrawerBtn" aria-label="Close reader">✕</button>
     </div>
   </div>
-</div>
-
-<!-- Citation Modal -->
-<div class="modal-backdrop" id="citationModal" aria-hidden="true" role="dialog" aria-labelledby="citationModalTitle">
-  <div class="modal-container citation-modal-container">
-    <div class="modal-header">
-      <h3 class="modal-title" id="citationModalTitle">BibTeX Citation</h3>
-      <button class="modal-close-btn" id="closeCitationModal" aria-label="Close modal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="code-wrapper">
-        <pre><code id="bibtexContent"></code></pre>
-        <button class="btn btn-primary btn-sm copy-btn" id="copyBibtexBtn">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <span id="copyBtnText">Copy BibTeX</span>
-        </button>
-      </div>
-    </div>
+  <div class="drawer-body">
+    <iframe id="drawerIframe" src="" title="PDF Document Viewer"></iframe>
   </div>
-</div>
+</aside>
 
-<!-- Details Modal -->
-<div class="modal-backdrop" id="detailsModal" aria-hidden="true" role="dialog" aria-labelledby="detailsModalTitle">
-  <div class="modal-container details-modal-container">
-    <div class="modal-header">
-      <h3 class="modal-title" id="detailsModalTitle">Paper Details & Verification</h3>
-      <button class="modal-close-btn" id="closeDetailsModal" aria-label="Close modal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-    <div class="modal-body" id="detailsModalBody">
-      <!-- Populated dynamically -->
-    </div>
-  </div>
-</div>
-
-<!-- Toast Notification -->
-<div class="toast" id="siteToast" role="alert" aria-live="polite"></div>
+<!-- Toast -->
+<div class="site-toast" id="siteToast" role="status" aria-live="polite"></div>

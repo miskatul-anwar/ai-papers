@@ -1,136 +1,66 @@
 ---
 layout: default
-title: "Chronological AI Timeline (1763–2026)"
-description: "Explore the evolution of artificial intelligence and machine learning paper by paper from Bayes (1763) to current frontier models (2026)."
+title: "Chronological Paper Timeline (1763–2026)"
+description: "A chronological bibliography tracing the evolution of artificial intelligence from Bayes (1763) to frontier systems (2026)."
 ---
 
-<div class="timeline-header">
+<div class="archive-header">
   <div class="container">
-    <div class="hero-pill">
-      <span class="hero-pill-dot"></span>
-      <span>263+ Years of AI Evolution</span>
-    </div>
-    <h1 class="hero-title" style="font-size: 2.3rem;">Chronological <span class="gradient-text">AI Timeline</span></h1>
-    <p class="hero-subtitle">
-      Trace how foundational ideas in probability, computability, neural networks, language modeling, and autonomous agents evolved chronologically.
+    <h1 class="archive-headline">Chronological AI Timeline</h1>
+    <p class="archive-summary">
+      Tracing 263 years of intellectual progression from early probability theory and formal computability to connectionism, statistical learning, transformers, and autonomous agents.
     </p>
   </div>
 </div>
 
-<!-- Timeline Era Jump Bar -->
-<div class="timeline-nav">
-  <div class="container timeline-nav-pills">
-    <a href="#era-foundations" class="filter-pill">Pre-1950 Foundations</a>
-    <a href="#era-1950s" class="filter-pill">1950s Birth of AI</a>
-    <a href="#era-1960s" class="filter-pill">1960s Early Logic</a>
-    <a href="#era-1970s" class="filter-pill">1970s Expert Systems</a>
-    <a href="#era-1980s" class="filter-pill">1980s Connectionism</a>
-    <a href="#era-1990s" class="filter-pill">1990s Statistical ML</a>
-    <a href="#era-2000s" class="filter-pill">2000s Kernels & Graphs</a>
-    <a href="#era-2010s" class="filter-pill">2010s Deep Learning</a>
-    <a href="#era-2020s" class="filter-pill">2020s LLMs & Agents</a>
-  </div>
-</div>
-
-<div class="container timeline-container">
+<div class="container timeline-chronology">
   {% assign current_era = "" %}
-  {% assign current_year = "" %}
 
   {% for paper in site.data.papers %}
     {% assign y = paper.year %}
 
-    {% comment %} Era Dividers {% endcomment %}
     {% if y < 1950 and current_era != "pre-1950" %}
       {% assign current_era = "pre-1950" %}
-      <div id="era-foundations" style="scroll-margin-top: 130px; margin-bottom: 24px; padding-top: 10px;">
-        <h2 style="font-size: 1.35rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">
-          ✦ Era 1: Mathematical & Computational Roots (1763–1948)
-        </h2>
-      </div>
+      <h2 class="era-heading">I. Mathematical and Computational Roots (1763–1948)</h2>
     {% elsif y >= 1950 and y < 1960 and current_era != "1950s" %}
       {% assign current_era = "1950s" %}
-      <div id="era-1950s" style="scroll-margin-top: 130px; margin-bottom: 24px; padding-top: 10px;">
-        <h2 style="font-size: 1.35rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">
-          ✦ Era 2: The Birth of Artificial Intelligence (1950–1959)
-        </h2>
-      </div>
+      <h2 class="era-heading">II. The Dartmouth Proposal & Early Symbolic Systems (1950–1959)</h2>
     {% elsif y >= 1960 and y < 1970 and current_era != "1960s" %}
       {% assign current_era = "1960s" %}
-      <div id="era-1960s" style="scroll-margin-top: 130px; margin-bottom: 24px; padding-top: 10px;">
-        <h2 style="font-size: 1.35rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">
-          ✦ Era 3: Early Logic, Search & Pattern Classification (1960–1969)
-        </h2>
-      </div>
+      <h2 class="era-heading">III. Early Logic, Search & Pattern Classification (1960–1969)</h2>
     {% elsif y >= 1970 and y < 1980 and current_era != "1970s" %}
       {% assign current_era = "1970s" %}
-      <div id="era-1970s" style="scroll-margin-top: 130px; margin-bottom: 24px; padding-top: 10px;">
-        <h2 style="font-size: 1.35rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">
-          ✦ Era 4: Expert Systems, Knowledge Representation & EM (1970–1979)
-        </h2>
-      </div>
+      <h2 class="era-heading">IV. Expert Systems, Knowledge Representation & EM (1970–1979)</h2>
     {% elsif y >= 1980 and y < 1990 and current_era != "1980s" %}
       {% assign current_era = "1980s" %}
-      <div id="era-1980s" style="scroll-margin-top: 130px; margin-bottom: 24px; padding-top: 10px;">
-        <h2 style="font-size: 1.35rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">
-          ✦ Era 5: The Connectionist Renaissance & Backpropagation (1980–1989)
-        </h2>
-      </div>
+      <h2 class="era-heading">V. The Connectionist Renaissance & Backpropagation (1980–1989)</h2>
     {% elsif y >= 1990 and y < 2000 and current_era != "1990s" %}
       {% assign current_era = "1990s" %}
-      <div id="era-1990s" style="scroll-margin-top: 130px; margin-bottom: 24px; padding-top: 10px;">
-        <h2 style="font-size: 1.35rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">
-          ✦ Era 6: Statistical Learning, SVMs, LSTM & Ensembles (1990–1999)
-        </h2>
-      </div>
+      <h2 class="era-heading">VI. Statistical Learning, SVMs, LSTM & Ensembles (1990–1999)</h2>
     {% elsif y >= 2000 and y < 2010 and current_era != "2000s" %}
       {% assign current_era = "2000s" %}
-      <div id="era-2000s" style="scroll-margin-top: 130px; margin-bottom: 24px; padding-top: 10px;">
-        <h2 style="font-size: 1.35rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">
-          ✦ Era 7: Topic Models, Knowledge Graphs & Deep Belief Nets (2000–2009)
-        </h2>
-      </div>
+      <h2 class="era-heading">VII. Topic Models, Knowledge Graphs & Deep Belief Nets (2000–2009)</h2>
     {% elsif y >= 2010 and y < 2020 and current_era != "2010s" %}
       {% assign current_era = "2010s" %}
-      <div id="era-2010s" style="scroll-margin-top: 130px; margin-bottom: 24px; padding-top: 10px;">
-        <h2 style="font-size: 1.35rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">
-          ✦ Era 8: The Deep Learning Revolution & Transformers (2010–2019)
-        </h2>
-      </div>
+      <h2 class="era-heading">VIII. Deep Learning & the Transformer Revolution (2010–2019)</h2>
     {% elsif y >= 2020 and current_era != "2020s" %}
       {% assign current_era = "2020s" %}
-      <div id="era-2020s" style="scroll-margin-top: 130px; margin-bottom: 24px; padding-top: 10px;">
-        <h2 style="font-size: 1.35rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border-color); padding-bottom: 8px;">
-          ✦ Era 9: Large Language Models, Reasoning & Autonomous Agents (2020–2026)
-        </h2>
-      </div>
+      <h2 class="era-heading">IX. Large Language Models, Reasoning & Autonomous Agents (2020–2026)</h2>
     {% endif %}
 
-    <div class="timeline-year-group">
-      <div class="timeline-year-marker">{{ paper.year }}</div>
-      <div class="timeline-item">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <span class="badge" style="background-color: {{ paper.area_color }}; color: #fff;">{{ paper.area_name }}</span>
-            {% if paper.learning_path %}
-            <span class="badge badge-lp">★ Path</span>
-            {% endif %}
-          </div>
-          <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">{{ paper.size_human }}</span>
-        </div>
-
-        <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;">
-          <a href="{{ paper.local_path | relative_url }}" class="paper-pdf-trigger" data-id="{{ paper.id }}">
+    <div class="timeline-row">
+      <div class="timeline-year-rail">{{ paper.year }}</div>
+      <div class="timeline-content">
+        <h3 class="timeline-title">
+          <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener noreferrer">
             {{ paper.title }}
           </a>
         </h3>
-
-        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">{{ paper.authors }}</p>
-
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <button class="btn btn-primary btn-sm paper-read-btn" data-id="{{ paper.id }}">Read PDF</button>
-          <a href="{{ paper.local_path | relative_url }}" download="{{ paper.year }}_{{ paper.id }}.pdf" class="btn btn-outline btn-sm">Download</a>
-          <button class="btn btn-ghost btn-sm paper-cite-btn" data-id="{{ paper.id }}">Cite</button>
-          <a href="{{ paper.source_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">Publisher / DOI ↗</a>
+        <p class="timeline-authors">{{ paper.authors }} · <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">{{ paper.area_name }} · {{ paper.size_human }}</span></p>
+        <div class="timeline-links">
+          <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener" style="color: var(--link-color);">PDF ↗</a>
+          <a href="{{ paper.local_path | relative_url }}" download="{{ paper.year }}_{{ paper.id }}.pdf" style="color: var(--text-muted);">Download</a>
+          <a href="{{ paper.source_url }}" target="_blank" rel="noopener" style="color: var(--text-muted);">DOI Resolver ↗</a>
         </div>
       </div>
     </div>
