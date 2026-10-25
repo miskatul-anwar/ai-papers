@@ -83,6 +83,21 @@ AREA_META = {
     }
 }
 
+AREA_TO_PHASE = {
+    "01_Foundations": 1,
+    "02_Neural_Networks": 4,
+    "03_Machine_Learning": 3,
+    "04_Deep_Learning": 4,
+    "05_NLP_Language": 5,
+    "06_Neuro_Symbolic": 6,
+    "07_Knowledge_Graphs": 6,
+    "08_Vision_Multimodal": 8,
+    "09_Reinforcement_Learning": 7,
+    "10_LLMs": 9,
+    "11_AI_for_Science": 10,
+    "12_AI_Agents": 11
+}
+
 def format_size(bytes_val):
     if not bytes_val:
         return "0 B"
@@ -108,7 +123,7 @@ def main():
     lp_text = (ROOT / "LEARNING_PATH.md").read_text(encoding="utf-8")
 
     # Parse learning path phases
-    phases = []
+    phases_raw = []
     current_phase = None
     lp_paper_to_phase = {}
 
@@ -116,25 +131,25 @@ def main():
         m = re.match(r"^##\s+(\d+)\.\s+(.*)", line)
         if m:
             if current_phase:
-                phases.append(current_phase)
+                phases_raw.append(current_phase)
             current_phase = {
                 "num": int(m.group(1)),
                 "title": m.group(2).strip(),
                 "description": "",
-                "paper_ids": []
+                "curriculum_ids": []
             }
             continue
         if current_phase:
             pm = re.search(r"library/[^/]+/\d+_([^\.]+)\.pdf", line)
             if pm:
                 pid = pm.group(1)
-                current_phase["paper_ids"].append(pid)
-                lp_paper_to_phase[pid] = f"{current_phase['num']}. {current_phase['title']}"
-            elif not current_phase["paper_ids"] and line.strip() and not line.startswith("#"):
+                current_phase["curriculum_ids"].append(pid)
+                lp_paper_to_phase[pid] = current_phase["num"]
+            elif not current_phase["curriculum_ids"] and line.strip() and not line.startswith("#"):
                 current_phase["description"] = (current_phase["description"] + " " + line.strip()).strip()
 
     if current_phase:
-        phases.append(current_phase)
+        phases_raw.append(current_phase)
 
     # Build papers
     papers = []
@@ -145,7 +160,16 @@ def main():
         st = status.get(pid, {})
         size_bytes = st.get("bytes", 0)
         total_bytes += size_bytes
-        lp_phase = lp_paper_to_phase.get(pid, "")
+
+        # Determine phase number
+        if pid in lp_paper_to_phase:
+            phase_num = lp_paper_to_phase[pid]
+            is_curriculum = True
+        else:
+            is_curriculum = False
+            phase_num = AREA_TO_PHASE.get(row["area"], 1)
+            if row["area"] == "01_Foundations" and int(row["year"]) >= 1955:
+                phase_num = 2
 
         meta = AREA_META.get(row["area"], {
             "name": row["area"].replace("_", " "),
@@ -153,6 +177,9 @@ def main():
             "icon": "bi-journal-code",
             "description": ""
         })
+
+        phase_match = next((p for p in phases_raw if p["num"] == phase_num), None)
+        phase_title = f"{phase_num}. {phase_match['title']}" if phase_match else f"Phase {phase_num}"
 
         paper = {
             "id": pid,
@@ -169,11 +196,37 @@ def main():
             "bytes": size_bytes,
             "size_human": format_size(size_bytes),
             "sha256": st.get("sha256", ""),
-            "learning_path": bool(lp_phase),
-            "learning_path_phase": lp_phase,
+            "learning_path": is_curriculum,
+            "phase_num": phase_num,
+            "phase_title": phase_title,
             "bibtex": make_bibtex(row)
         }
         papers.append(paper)
+
+    # Build merged phases structure
+    phases = []
+    for praw in phases_raw:
+        pnum = praw["num"]
+        phase_papers = [p for p in papers if p["phase_num"] == pnum]
+        phase_papers.sort(key=lambda x: (x["year"], x["id"]))
+
+        curriculum_ids = [p["id"] for p in phase_papers if p["learning_path"]]
+        all_ids = [p["id"] for p in phase_papers]
+
+        y_min = min(p["year"] for p in phase_papers) if phase_papers else 0
+        y_max = max(p["year"] for p in phase_papers) if phase_papers else 0
+
+        phases.append({
+            "num": pnum,
+            "title": praw["title"],
+            "description": praw["description"],
+            "curriculum_ids": curriculum_ids,
+            "all_ids": all_ids,
+            "year_min": y_min,
+            "year_max": y_max,
+            "total_count": len(all_ids),
+            "curriculum_count": len(curriculum_ids)
+        })
 
     # Build areas summary
     areas_list = []
@@ -230,8 +283,7 @@ def main():
     with open(client_data_dir / "papers.json", "w", encoding="utf-8") as f:
         json.dump(papers, f, indent=2, ensure_ascii=False)
 
-    print(f"Generated data files for {len(papers)} papers across {len(areas_list)} areas.")
-    print(f"Total size: {stats['total_size_human']}, Learning path: {stats['learning_path_count']} papers.")
+    print(f"Generated data files for {len(papers)} papers across {len(phases)} phases and {len(areas_list)} areas.")
 
 if __name__ == "__main__":
     main()

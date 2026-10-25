@@ -1,48 +1,15 @@
 ---
 layout: default
-title: "Guided AI Learning Path (121 Papers)"
-description: "A structured curriculum through 121 representative papers with persistent reading progress tracking."
+title: "Redirecting to Timeline & Reading Path"
+permalink: /learning-path.html
 ---
 
-<div class="archive-header">
-  <div class="container">
-    <h1 class="archive-headline">Guided Learning Path</h1>
-    <p class="archive-summary">
-      A curated route through 121 representative papers across 11 intellectual phases. For each paper, note its core problem formulation, central insight, empirical evidence, limitations, and subsequent improvements.
-    </p>
-  </div>
+<div class="container prose" style="text-align: center; padding: 60px 0;">
+  <h2>Timeline & Reading Path Merged</h2>
+  <p>The guided curriculum has been unified with the historical timeline.</p>
+  <p><a href="{{ '/timeline.html' | relative_url }}" class="inline-link">Click here if you are not redirected automatically →</a></p>
 </div>
 
-<div class="container syllabus-container">
-  <!-- Phases -->
-  {% for phase in site.data.learning_paths %}
-  <section class="syllabus-phase">
-    <h2 class="phase-heading">{{ phase.num }}. {{ phase.title }}</h2>
-    <p class="phase-scope">{{ phase.description }}</p>
-
-    <ul class="phase-items">
-      {% for pid in phase.paper_ids %}
-        {% assign match = site.data.papers | where: "id", pid | first %}
-        {% if match %}
-        <li class="phase-item">
-          <input type="checkbox" class="phase-cb" data-id="{{ match.id }}" id="cb_{{ match.id }}" aria-label="Mark {{ match.title }} as read">
-          <div style="flex: 1; min-width: 0;">
-            <div style="display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
-              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">{{ match.year }}</span>
-              <a href="{{ match.local_path | relative_url }}" target="_blank" rel="noopener noreferrer" class="phase-title">
-                {{ match.title }}
-              </a>
-            </div>
-            <div class="phase-author">{{ match.authors }} · <span style="font-family: var(--font-mono); font-size: 0.75rem;">{{ match.size_human }}</span></div>
-          </div>
-          <div style="display: flex; gap: 10px; font-family: var(--font-mono); font-size: 0.78rem; padding-top: 4px;">
-            <a href="{{ match.local_path | relative_url }}" target="_blank" rel="noopener" style="color: var(--link-color);">PDF ↗</a>
-            <a href="{{ match.local_path | relative_url }}" download="{{ match.year }}_{{ match.id }}.pdf" style="color: var(--text-muted);">Download</a>
-          </div>
-        </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </section>
-  {% endfor %}
-</div>
+<script>
+  window.location.replace("{{ '/timeline.html' | relative_url }}");
+</script>

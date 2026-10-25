@@ -1,68 +1,86 @@
 ---
 layout: default
-title: "Chronological Paper Timeline (1763–2026)"
-description: "A chronological bibliography tracing the evolution of artificial intelligence from Bayes (1763) to frontier systems (2026)."
+title: "Timeline & Reading Path (1763–2026)"
+description: "A unified chronological and pedagogical progression through AI history, spanning 11 developmental phases from Bayes (1763) to autonomous agents (2026)."
 ---
 
 <div class="archive-header">
   <div class="container">
-    <h1 class="archive-headline">Chronological AI Timeline</h1>
+    <h1 class="archive-headline">Timeline & Reading Path</h1>
     <p class="archive-summary">
-      Tracing 263 years of intellectual progression from early probability theory and formal computability to connectionism, statistical learning, transformers, and autonomous agents.
+      A unified chronological progression and reading syllabus through the intellectual evolution of artificial intelligence. Follow the 121 representative milestone works through 11 developmental phases, or explore the full 217-paper archival chronology.
     </p>
+
+    <!-- Scope Toggle & Era Anchors -->
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-top: 18px;">
+      <div class="view-btn-group" id="timelineFilterGroup">
+        <button class="view-btn active" id="filterAllWorksBtn" data-filter="all">
+          Complete Timeline (217 works)
+        </button>
+        <button class="view-btn" id="filterCurriculumBtn" data-filter="curriculum">
+          Guided Curriculum (121 works)
+        </button>
+      </div>
+
+      <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">
+        <span id="timelineCountText">Showing 217 works across 11 phases</span>
+      </div>
+    </div>
+
+    <!-- Quick Jump Links -->
+    <div class="area-tags-scroll" style="margin-top: 14px; padding-top: 4px; border-top: 1px solid var(--border-light);">
+      {% for phase in site.data.learning_paths %}
+      <a href="#phase-{{ phase.num }}" class="area-tag-btn" style="text-decoration: none;">
+        {{ phase.num }}. {{ phase.title | truncate: 22 }}
+      </a>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
-<div class="container timeline-chronology">
-  {% assign current_era = "" %}
-
-  {% for paper in site.data.papers %}
-    {% assign y = paper.year %}
-
-    {% if y < 1950 and current_era != "pre-1950" %}
-      {% assign current_era = "pre-1950" %}
-      <h2 class="era-heading">I. Mathematical and Computational Roots (1763–1948)</h2>
-    {% elsif y >= 1950 and y < 1960 and current_era != "1950s" %}
-      {% assign current_era = "1950s" %}
-      <h2 class="era-heading">II. The Dartmouth Proposal & Early Symbolic Systems (1950–1959)</h2>
-    {% elsif y >= 1960 and y < 1970 and current_era != "1960s" %}
-      {% assign current_era = "1960s" %}
-      <h2 class="era-heading">III. Early Logic, Search & Pattern Classification (1960–1969)</h2>
-    {% elsif y >= 1970 and y < 1980 and current_era != "1970s" %}
-      {% assign current_era = "1970s" %}
-      <h2 class="era-heading">IV. Expert Systems, Knowledge Representation & EM (1970–1979)</h2>
-    {% elsif y >= 1980 and y < 1990 and current_era != "1980s" %}
-      {% assign current_era = "1980s" %}
-      <h2 class="era-heading">V. The Connectionist Renaissance & Backpropagation (1980–1989)</h2>
-    {% elsif y >= 1990 and y < 2000 and current_era != "1990s" %}
-      {% assign current_era = "1990s" %}
-      <h2 class="era-heading">VI. Statistical Learning, SVMs, LSTM & Ensembles (1990–1999)</h2>
-    {% elsif y >= 2000 and y < 2010 and current_era != "2000s" %}
-      {% assign current_era = "2000s" %}
-      <h2 class="era-heading">VII. Topic Models, Knowledge Graphs & Deep Belief Nets (2000–2009)</h2>
-    {% elsif y >= 2010 and y < 2020 and current_era != "2010s" %}
-      {% assign current_era = "2010s" %}
-      <h2 class="era-heading">VIII. Deep Learning & the Transformer Revolution (2010–2019)</h2>
-    {% elsif y >= 2020 and current_era != "2020s" %}
-      {% assign current_era = "2020s" %}
-      <h2 class="era-heading">IX. Large Language Models, Reasoning & Autonomous Agents (2020–2026)</h2>
-    {% endif %}
-
-    <div class="timeline-row">
-      <div class="timeline-year-rail">{{ paper.year }}</div>
-      <div class="timeline-content">
-        <h3 class="timeline-title">
-          <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener noreferrer">
-            {{ paper.title }}
-          </a>
-        </h3>
-        <p class="timeline-authors">{{ paper.authors }} · <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">{{ paper.area_name }} · {{ paper.size_human }}</span></p>
-        <div class="timeline-links">
-          <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener" style="color: var(--link-color);">PDF ↗</a>
-          <a href="{{ paper.local_path | relative_url }}" download="{{ paper.year }}_{{ paper.id }}.pdf" style="color: var(--text-muted);">Download</a>
-          <a href="{{ paper.source_url }}" target="_blank" rel="noopener" style="color: var(--text-muted);">DOI Resolver ↗</a>
-        </div>
-      </div>
+<div class="container syllabus-container">
+  {% for phase in site.data.learning_paths %}
+  <section class="syllabus-phase" id="phase-{{ phase.num }}" style="scroll-margin-top: 90px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--border-rule); padding-bottom: 6px; margin-bottom: 8px;">
+      <h2 class="phase-heading" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;">
+        {{ phase.num }}. {{ phase.title }}
+      </h2>
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+        {{ phase.year_min }}–{{ phase.year_max }} · <span class="phase-paper-count">{{ phase.total_count }}</span> works
+      </span>
     </div>
+
+    <p class="phase-scope">{{ phase.description }}</p>
+
+    <ul class="phase-items">
+      {% for pid in phase.all_ids %}
+        {% assign match = site.data.papers | where: "id", pid | first %}
+        {% if match %}
+        <li class="phase-item timeline-entry" data-curriculum="{{ match.learning_path }}" data-id="{{ match.id }}">
+          <input type="checkbox" class="phase-cb" data-id="{{ match.id }}" id="cb_{{ match.id }}" aria-label="Mark {{ match.title }} as read">
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; color: var(--text-main);">{{ match.year }}</span>
+              <a href="{{ match.local_path | relative_url }}" target="_blank" rel="noopener noreferrer" class="phase-title">
+                {{ match.title }}
+              </a>
+              {% if match.learning_path %}
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-ink); font-weight: 500;">[Guided Path]</span>
+              {% endif %}
+            </div>
+            <div class="phase-author">
+              {{ match.authors }} · <span style="font-family: var(--font-mono); font-size: 0.75rem;">{{ match.area_name }} · {{ match.size_human }}</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; font-family: var(--font-mono); font-size: 0.78rem; padding-top: 4px;">
+            <a href="{{ match.local_path | relative_url }}" target="_blank" rel="noopener" style="color: var(--link-color);">PDF ↗</a>
+            <a href="{{ match.local_path | relative_url }}" download="{{ match.year }}_{{ match.id }}.pdf" style="color: var(--text-muted);">Download</a>
+            <a href="{{ match.source_url }}" target="_blank" rel="noopener" style="color: var(--text-muted);">DOI ↗</a>
+          </div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
   {% endfor %}
 </div>
