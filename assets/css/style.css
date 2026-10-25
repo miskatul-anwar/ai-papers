@@ -1092,26 +1092,6 @@ html.dark .theme-label-light {
   margin-bottom: 12px;
 }
 
-.colophon-audit {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  background-color: var(--code-bg);
-  border: 1px solid var(--code-border);
-  padding: 4px 10px;
-  border-radius: 3px;
-}
-
-.audit-label {
-  color: var(--text-muted);
-}
-
-.colophon-audit code {
-  color: var(--text-main);
-}
-
 .colophon-links {
   display: flex;
   gap: 36px;

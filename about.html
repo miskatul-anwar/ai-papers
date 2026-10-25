@@ -1,63 +1,26 @@
 ---
 layout: default
-title: "About & Colophon — AI Paper Library"
-description: "Archival methodology, verification commands, and catalog provenance."
+title: "About — AI Paper Library"
+description: "A curated personal archive of 217 landmark papers in artificial intelligence."
 ---
 
 <div class="container prose">
-  <h1>About & Colophon</h1>
+  <h1>About the Library</h1>
 
   <p>
-    The <strong>AI Paper Library</strong> is an open research repository collecting 217 landmark papers in artificial intelligence, machine learning, neural networks, deep learning, NLP, knowledge graphs, neuro-symbolic AI, reinforcement learning, multimodal AI, LLMs, and autonomous agents spanning 1763 to 2026.
+    This archive is a curated reading library of 217 landmark papers in artificial intelligence — spanning 263 years from Thomas Bayes' 1763 essay on probability to the foundation models and autonomous reasoning agents of 2026.
   </p>
 
   <p>
-    The catalog is designed as a reading curriculum rather than a claim of completeness. Every cataloged paper is preserved in full with a locally stored PDF, validated header and EOF markers, and cryptographic SHA-256 integrity checks.
+    It exists as an ad-free, paywall-free personal resource: every paper has a locally preserved, verified PDF ready for direct reading, study, or download.
   </p>
 
-  <h2>Archival Statistics</h2>
-  <ul>
-    <li><strong>Cataloged works:</strong> 217 papers</li>
-    <li><strong>Verified PDFs:</strong> 217 (100% presence)</li>
-    <li><strong>Total pages:</strong> 6,443 pages readable by <code>pdfinfo</code></li>
-    <li><strong>Total storage:</strong> 783 MiB</li>
-    <li><strong>Temporal span:</strong> 1763 (Bayes) to 2026 (OSWorld 2 / Gemini / FlashNext)</li>
-    <li><strong>Guided curriculum:</strong> 121 papers across 11 phases</li>
-  </ul>
-
-  <h2>Integrity & Verification</h2>
+  <h2>Curriculum</h2>
   <p>
-    The library is audited with the bundled Python standard library script <code>paper_library.py</code>. The verification tool checks that every PDF is physically present, structurally sound, and matches its recorded SHA-256 hash in <code>download_status.json</code>:
+    The library includes a guided route through 121 core papers organized across 11 intellectual phases — spanning mathematical foundations, early symbolic AI, statistical learning, representation learning, language modeling, and interactive agents.
   </p>
 
-  <pre><code># Verify complete local archive integrity
-python paper_library.py verify
-
-# Check status of all catalog entries
-python paper_library.py status
-
-# Regenerate INDEX.md and TIMELINE.md from catalog.csv
-python paper_library.py index</code></pre>
-
-  <h2>Catalog Schema</h2>
-  <p>
-    The primary data source is <code>catalog.csv</code>, formatted as follows:
-  </p>
-  <ul>
-    <li><code>id</code>: Alphanumeric identifier used in paths and BibTeX keys.</li>
-    <li><code>year</code>: First publication or preprint year used in the chronological reading timeline.</li>
-    <li><code>area</code>: Category subdirectory within <code>library/</code>.</li>
-    <li><code>title</code>: Official paper title.</li>
-    <li><code>authors</code>: Publication authors.</li>
-    <li><code>source_url</code>: Official publisher DOI resolver, ArXiv landing page, or project page.</li>
-    <li><code>pdf_url</code>: Publicly accessible PDF copy source.</li>
-  </ul>
-
-  <h2>Site Colophon</h2>
-  <p>
-    This website is built with Jekyll and hosted statically via GitHub Pages. Typography is set in <strong>Newsreader</strong> (editorial serif designed by Production Type) for headings and titles, <strong>Inter</strong> for interface elements, and <strong>JetBrains Mono</strong> for identifiers and checksums.
-  </p>
-
+  <h2>Curator</h2>
   <p>
     Curated and maintained by <a href="https://github.com/miskatul-anwar" target="_blank" rel="noopener">Miskatul Anwar</a>.
   </p>
