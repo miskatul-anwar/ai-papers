@@ -22,6 +22,7 @@
   // Elements
   const searchInput = document.getElementById('searchInput');
   const searchClearBtn = document.getElementById('searchClearBtn');
+  const searchShortcut = document.querySelector('.search-shortcut');
   const areaTags = document.querySelectorAll('.area-tag-btn');
   const decadeSelect = document.getElementById('decadeSelect');
   const sortSelect = document.getElementById('sortSelect');
@@ -35,6 +36,7 @@
 
   // Reader Drawer
   const pdfDrawer = document.getElementById('pdfDrawer');
+  const drawerBackdrop = document.getElementById('drawerBackdrop');
   const drawerIframe = document.getElementById('drawerIframe');
   const drawerTitle = document.getElementById('drawerTitle');
   const drawerYearTag = document.getElementById('drawerYearTag');
@@ -102,15 +104,41 @@
     drawerDownloadBtn.href = url;
     drawerDownloadBtn.setAttribute('download', `${paper.year}_${paper.id}.pdf`);
     pdfDrawer.classList.add('open');
+    pdfDrawer.setAttribute('aria-hidden', 'false');
+    if (drawerBackdrop) {
+      drawerBackdrop.classList.add('open');
+      drawerBackdrop.setAttribute('aria-hidden', 'false');
+    }
+    document.body.style.overflow = 'hidden';
   }
 
   function closeDrawer() {
     if (!pdfDrawer || !drawerIframe) return;
     pdfDrawer.classList.remove('open');
+    pdfDrawer.setAttribute('aria-hidden', 'true');
+    if (drawerBackdrop) {
+      drawerBackdrop.classList.remove('open');
+      drawerBackdrop.setAttribute('aria-hidden', 'true');
+    }
     drawerIframe.src = '';
+    document.body.style.overflow = '';
   }
 
   if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+
+  /* ==========================================================================
+     Search UI Helpers
+     ========================================================================== */
+
+  function updateSearchUI() {
+    if (searchClearBtn) {
+      searchClearBtn.style.display = state.query ? 'block' : 'none';
+    }
+    if (searchShortcut) {
+      searchShortcut.style.display = state.query ? 'none' : 'block';
+    }
+  }
 
   /* ==========================================================================
      Filtering & Sorting
@@ -210,10 +238,11 @@
           </td>
           <td style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">${escapeHtml(p.area_name)}</td>
           <td>
-            <div style="display: flex; gap: 10px; font-family: var(--font-mono); font-size: 0.78rem;">
+            <div style="display: flex; gap: 8px; font-family: var(--font-mono); font-size: 0.78rem; flex-wrap: wrap;">
               <a href="${pdfUrl}" target="_blank" rel="noopener" style="color: var(--link-color);">PDF ↗</a>
               <a href="${pdfUrl}" download="${p.year}_${p.id}.pdf" style="color: var(--text-muted);">Download</a>
               <button class="action-link toggle-bibtex-btn" data-id="${p.id}" style="color: var(--text-muted);">Cite</button>
+              <button class="action-link drawer-open-btn" data-id="${p.id}" style="color: var(--text-muted);">Reader</button>
             </div>
           </td>
           <td style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">${p.size_human}</td>
@@ -233,15 +262,27 @@
       });
     });
 
-    // BibTeX toggles
+    // BibTeX toggles & cite actions
     document.querySelectorAll('.toggle-bibtex-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         const id = btn.dataset.id;
-        const box = document.getElementById(`box_${id}`);
-        if (!box) return;
         const p = papers.find(item => item.id === id);
         if (!p) return;
+
+        // In table view, copy BibTeX directly to clipboard
+        if (btn.closest('#tableBody') || !document.getElementById(`box_${id}`)) {
+          navigator.clipboard.writeText(p.bibtex).then(() => {
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied!';
+            showToast('BibTeX copied to clipboard');
+            setTimeout(() => { btn.textContent = originalText; }, 1800);
+          });
+          return;
+        }
+
+        const box = document.getElementById(`box_${id}`);
+        if (!box) return;
 
         if (box.classList.contains('open') && box.dataset.type === 'bibtex') {
           box.classList.remove('open');
@@ -282,13 +323,22 @@
 
         box.dataset.type = 'hash';
         box.innerHTML = `
-          <div style="display: flex; flex-direction: column; gap: 4px;">
+          <button class="box-copy-btn" data-text="${encodeURIComponent(p.sha256 || '')}">Copy SHA-256</button>
+          <div style="display: flex; flex-direction: column; gap: 4px; font-family: var(--font-mono); font-size: 0.8rem;">
             <div><strong>File:</strong> ${escapeHtml(p.local_path)} (${(p.bytes || 0).toLocaleString()} bytes)</div>
-            <div><strong>SHA-256:</strong> <span style="color: var(--link-color);">${escapeHtml(p.sha256 || 'Verified')}</span></div>
-            <div><strong>Original PDF URL:</strong> <a href="${p.pdf_url}" target="_blank" rel="noopener" style="color: var(--link-color);">${escapeHtml(p.pdf_url)}</a></div>
+            <div><strong>SHA-256:</strong> <span style="color: var(--link-color); word-break: break-all;">${escapeHtml(p.sha256 || 'Verified')}</span></div>
+            <div><strong>Original PDF URL:</strong> <a href="${p.pdf_url}" target="_blank" rel="noopener" style="color: var(--link-color); word-break: break-all;">${escapeHtml(p.pdf_url)}</a></div>
           </div>
         `;
         box.classList.add('open');
+
+        box.querySelector('.box-copy-btn').addEventListener('click', function () {
+          navigator.clipboard.writeText(decodeURIComponent(this.dataset.text)).then(() => {
+            this.textContent = 'Copied!';
+            showToast('SHA-256 checksum copied to clipboard');
+            setTimeout(() => { this.textContent = 'Copy SHA-256'; }, 1800);
+          });
+        });
       });
     });
   }
@@ -320,45 +370,6 @@
   }
 
   /* ==========================================================================
-     Learning Path Checklist
-     ========================================================================== */
-
-  function initLearningPath() {
-    const checkboxes = document.querySelectorAll('.phase-cb');
-    if (!checkboxes.length) return;
-
-    let readSet = new Set(JSON.parse(localStorage.getItem('ai_papers_read') || '[]'));
-
-    function update() {
-      checkboxes.forEach(cb => {
-        if (readSet.has(cb.dataset.id)) {
-          cb.checked = true;
-          cb.closest('.phase-item').classList.add('done');
-        } else {
-          cb.checked = false;
-          cb.closest('.phase-item').classList.remove('done');
-        }
-      });
-    }
-
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', () => {
-        const id = cb.dataset.id;
-        if (cb.checked) {
-          readSet.add(id);
-          showToast('Marked as read');
-        } else {
-          readSet.delete(id);
-        }
-        localStorage.setItem('ai_papers_read', JSON.stringify(Array.from(readSet)));
-        update();
-      });
-    });
-
-    update();
-  }
-
-  /* ==========================================================================
      Catalog Initialization
      ========================================================================== */
 
@@ -375,6 +386,7 @@
       if (params.has('q')) {
         state.query = params.get('q');
         if (searchInput) searchInput.value = state.query;
+        updateSearchUI();
       }
       if (params.has('area')) {
         state.area = params.get('area');
@@ -389,16 +401,19 @@
       if (searchInput) {
         searchInput.addEventListener('input', (e) => {
           state.query = e.target.value.trim();
-          if (searchClearBtn) searchClearBtn.style.display = state.query ? 'block' : 'none';
+          updateSearchUI();
           render();
         });
       }
 
       if (searchClearBtn) {
         searchClearBtn.addEventListener('click', () => {
-          if (searchInput) searchInput.value = '';
+          if (searchInput) {
+            searchInput.value = '';
+            searchInput.focus();
+          }
           state.query = '';
-          searchClearBtn.style.display = 'none';
+          updateSearchUI();
           render();
         });
       }
@@ -439,6 +454,15 @@
       setView(state.view);
       render();
 
+      // Deep linking via ?id=paper_id to open Reader Drawer automatically
+      if (params.has('id')) {
+        const targetId = params.get('id');
+        const p = papers.find(item => item.id === targetId);
+        if (p) {
+          setTimeout(() => openDrawer(p), 150);
+        }
+      }
+
     } catch (e) {
       console.error('Catalog initialization error:', e);
       if (matchCount) matchCount.textContent = 'Failed to load paper index.';
@@ -468,7 +492,11 @@
       });
 
       tabs.forEach((tab, i) => {
-        tab.classList.toggle('active', i === currentIndex);
+        const isActive = i === currentIndex;
+        tab.classList.toggle('active', isActive);
+        if (isActive) {
+          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
       });
     }
 
@@ -486,7 +514,6 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     initCatalog();
-    initLearningPath();
     initQuotesCarousel();
   });
 

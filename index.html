@@ -240,7 +240,7 @@ permalink: /
       {% for area in site.data.areas %}
       <div class="subject-card">
         <div class="subject-header">
-          <span>{{ area.id }}</span>
+          <span>DOMAIN {{ area.id | split: '_' | first }}</span>
           <span>{{ area.year_min }}–{{ area.year_max }}</span>
         </div>
 

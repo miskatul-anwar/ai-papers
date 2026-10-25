@@ -364,6 +364,13 @@ html.dark .theme-label-light {
   padding: 2px 6px;
   border-radius: 3px;
   pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.search-input:not(:placeholder-shown) ~ .search-shortcut {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
 }
 
 .search-clear-btn {
@@ -378,6 +385,7 @@ html.dark .theme-label-light {
   font-size: 0.9rem;
   display: none;
   padding: 4px 6px;
+  z-index: 2;
 }
 
 .search-clear-btn:hover {
@@ -678,11 +686,13 @@ html.dark .theme-label-light {
 
 .table-wrapper {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-top: 1px solid var(--border-rule);
 }
 
 .catalog-table {
   width: 100%;
+  min-width: 680px;
   border-collapse: collapse;
   text-align: left;
   font-size: 0.88rem;
@@ -865,72 +875,6 @@ html.dark .theme-label-light {
   font-size: 0.78rem;
 }
 
-/* ==========================================================================
-   Curriculum / Learning Path (Graduate Syllabus Aesthetic)
-   ========================================================================== */
-
-.syllabus-container {
-  max-width: 860px;
-  margin: 30px auto 60px;
-}
-
-.syllabus-phase {
-  margin-bottom: 40px;
-}
-
-.phase-heading {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--text-main);
-  border-bottom: 1px solid var(--border-rule);
-  padding-bottom: 6px;
-  margin-bottom: 8px;
-}
-
-.phase-scope {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  font-style: italic;
-  margin-bottom: 14px;
-}
-
-.phase-items {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
-
-.phase-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.phase-item.done .phase-title {
-  text-decoration: line-through;
-  opacity: 0.55;
-}
-
-.phase-cb {
-  margin-top: 5px;
-  cursor: pointer;
-  accent-color: var(--text-main);
-}
-
-.phase-title {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--text-main);
-}
-
-.phase-author {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-}
 
 /* ==========================================================================
    Subjects Directory (Topics)
@@ -1105,6 +1049,26 @@ html.dark .theme-label-light {
 /* ==========================================================================
    Slide-over Reader Drawer
    ========================================================================== */
+
+.drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 199;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.drawer-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 .pdf-drawer {
   position: fixed;
