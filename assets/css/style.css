@@ -78,6 +78,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1259,8 +1260,25 @@ html.dark .theme-label-light {
   .pdf-drawer {
     width: 100vw;
   }
-  .timeline-row {
-    grid-template-columns: 1fr;
-    gap: 4px;
+}
+
+@media (max-width: 600px) {
+  .timeline-track {
+    padding-left: 24px;
+    margin-left: 6px;
+  }
+  .timeline-era-title::before {
+    left: -31px;
+  }
+  .timeline-node::before {
+    left: -29px;
+  }
+  .archive-headline {
+    font-size: 1.7rem;
+  }
+  .toolbar-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
