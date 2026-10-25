@@ -1,10 +1,14 @@
 <header class="masthead">
   <div class="container masthead-inner">
-    <div class="masthead-brand">
+    <div class="masthead-brand-wrap">
       <a href="{{ '/' | relative_url }}" class="masthead-logo-link">
         <img src="{{ '/assets/images/logo.jpeg' | relative_url }}" alt="AI Paper Library" class="masthead-logo" width="32" height="32">
         <span class="masthead-title">AI Paper Library</span>
       </a>
+      <button class="theme-toggle theme-toggle-mobile" aria-label="Toggle dark/light mode" title="Toggle theme (T)">
+        <span class="theme-label-dark">Light</span>
+        <span class="theme-label-light">Dark</span>
+      </button>
     </div>
 
     <nav class="masthead-nav">
@@ -14,7 +18,7 @@
       <a href="{{ '/topics.html' | relative_url }}" class="nav-link {% if page.url contains 'topics' %}active{% endif %}">Topics</a>
       <a href="{{ '/about.html' | relative_url }}" class="nav-link {% if page.url contains 'about' %}active{% endif %}">About</a>
       <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener noreferrer" class="nav-link nav-ext">GitHub ↗</a>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme (T)">
+      <button class="theme-toggle theme-toggle-desktop" aria-label="Toggle dark/light mode" title="Toggle theme (T)">
         <span class="theme-label-dark">Light Mode</span>
         <span class="theme-label-light">Dark Mode</span>
       </button>

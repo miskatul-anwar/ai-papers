@@ -141,9 +141,19 @@ a.inline-link:hover, .prose a:hover {
   height: 60px;
 }
 
-.masthead-brand {
+.masthead-brand,
+.masthead-brand-wrap {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle-mobile {
+  display: none;
+}
+
+.theme-toggle-desktop {
+  display: inline-flex;
 }
 
 .masthead-logo-link {
@@ -1236,52 +1246,6 @@ html.dark .theme-label-light {
 }
 
 /* ==========================================================================
-   Responsive
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .masthead-inner {
-    flex-direction: column;
-    height: auto;
-    padding: 12px 0;
-    gap: 8px;
-    align-items: flex-start;
-  }
-  .masthead-nav {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .colophon-inner {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .pdf-drawer {
-    width: 100vw;
-  }
-}
-
-@media (max-width: 600px) {
-  .timeline-track {
-    padding-left: 24px;
-    margin-left: 6px;
-  }
-  .timeline-era-title::before {
-    left: -31px;
-  }
-  .timeline-node::before {
-    left: -29px;
-  }
-  .archive-headline {
-    font-size: 1.7rem;
-  }
-  .toolbar-controls {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
-
-/* ==========================================================================
    Homepage Components (Monograph Editorial Styling)
    ========================================================================== */
 
@@ -1968,29 +1932,365 @@ html.dark .theme-label-light {
   line-height: 1.55;
 }
 
-@media (max-width: 860px) {
+/* ==========================================================================
+   Comprehensive Responsive System (PC & Mobile Phone Scaling)
+   ========================================================================== */
+
+/* Large Desktop / PC Screens (>= 1200px) */
+@media (min-width: 1200px) {
+  :root {
+    --container-max: 1200px;
+  }
+}
+
+/* Tablets and Laptops (769px to 1024px) */
+@media (max-width: 1024px) {
   .home-dossiers-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
   .home-landmarks-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .home-eras-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .home-principles-grid {
-    grid-template-columns: 1fr;
+  .subject-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
+/* Mobile Devices & Phones (<= 768px) */
+@media (max-width: 768px) {
+  :root {
+    --container-max: 100%;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Two-tier Mobile Header */
+  .masthead-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0 8px;
+    gap: 6px;
+    align-items: stretch;
+  }
+
+  .masthead-brand-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .masthead-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .masthead-title {
+    font-size: 1.2rem;
+  }
+
+  .theme-toggle-desktop {
+    display: none !important;
+  }
+
+  .theme-toggle-mobile {
+    display: inline-flex !important;
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    margin-left: auto;
+  }
+
+  .masthead-nav {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 0 2px;
+    gap: 4px;
+  }
+
+  .masthead-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    padding: 5px 10px;
+    font-size: 0.88rem;
+    flex-shrink: 0;
+  }
+
+  /* Inputs on Mobile: 16px prevents iOS Safari auto-zoom */
+  .search-input,
+  .home-search-input,
+  .select-clean {
+    font-size: 16px !important;
+  }
+
+  /* Hero on Mobile */
+  .home-hero {
+    padding: 32px 0 22px;
+  }
+
+  .home-hero-logo {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 12px;
+  }
+
+  .home-hero-kicker {
+    font-size: 0.76rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+
   .home-hero-title {
-    font-size: 2.1rem;
+    font-size: 2.0rem;
+    line-height: 1.18;
+    margin-bottom: 8px;
   }
-  .home-eras-grid {
-    grid-template-columns: 1fr;
+
+  .home-hero-prose {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
   }
+
+  .home-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 12px;
+    padding: 12px 14px;
+    text-align: left;
+    margin-bottom: 22px;
+  }
+
+  .home-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn-scholarly-primary,
+  .btn-scholarly-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+    font-size: 0.86rem;
+    box-sizing: border-box;
+  }
+
+  /* Voices Epigraph on Mobile */
+  .voices-section {
+    padding: 32px 0;
+  }
+
+  .voices-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .quote-card {
+    padding: 18px 16px 18px 22px;
+  }
+
+  .quote-glyph {
+    font-size: 2.2rem;
+    left: 8px;
+    top: 6px;
+  }
+
+  .quote-body {
+    font-size: 1.14rem;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+
+  .quote-attribution {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .quote-actions {
+    width: 100%;
+  }
+
+  .quote-actions .action-link {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 8px 12px;
+    background-color: var(--bg-hover);
+    border: 1px solid var(--border-rule);
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  .quote-tab-strip {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .quote-tab-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Search Bar on Mobile */
+  .home-search-bar {
+    padding: 22px 0;
+  }
+
   .home-search-form {
     flex-direction: column;
+    gap: 8px;
+  }
+
+  .home-search-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.88rem;
+  }
+
+  /* Reading Dossiers on Mobile */
+  .home-dossiers-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dossier-card {
+    padding: 18px 16px;
+  }
+
+  .dossier-paper-authors {
+    display: none;
+  }
+
+  /* Landmark Folio Cards on Mobile */
+  .home-landmarks-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .home-landmark-card {
+    padding: 18px 16px;
+  }
+
+  .home-card-header {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .home-card-pullquote {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 8px 12px;
+  }
+
+  .home-card-footer {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  /* Eras & Subject Grids on Mobile */
+  .home-eras-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .subject-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .home-principles-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Catalog Controls on Mobile */
+  .toolbar-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .filter-secondary-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .select-clean {
+    width: 100%;
+  }
+
+  .catalog-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .table-wrapper,
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Timeline on Mobile */
+  .timeline-track {
+    padding-left: 20px;
+    margin-left: 4px;
+  }
+
+  .timeline-era-title::before {
+    left: -27px;
+  }
+
+  .timeline-node::before {
+    left: -25px;
+  }
+
+  .timeline-node-links {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  /* Drawer on Mobile */
+  .pdf-drawer {
+    width: 100vw;
+  }
+
+  .colophon-inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* Small Handheld Phones (<= 420px) */
+@media (max-width: 420px) {
+  .home-hero-title {
+    font-size: 1.68rem;
+  }
+
+  .masthead-title {
+    font-size: 1.12rem;
+  }
+
+  .home-card-title {
+    font-size: 1.15rem;
+  }
+
+  .home-hero-stats {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }

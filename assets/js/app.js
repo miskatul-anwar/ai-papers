@@ -44,7 +44,6 @@
   const closeDrawerBtn = document.getElementById('closeDrawerBtn');
 
   const siteToast = document.getElementById('siteToast');
-  const themeToggle = document.getElementById('themeToggle');
 
   /* ==========================================================================
      Theme & Keyboard Shortcuts
@@ -55,9 +54,9 @@
     localStorage.setItem('ai_papers_theme', isDark ? 'dark' : 'light');
   }
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', toggleTheme);
-  }
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.addEventListener('click', toggleTheme);
+  });
 
   window.addEventListener('keydown', (e) => {
     // Focus search on '/'
