@@ -1,0 +1,122 @@
+[
+  {
+    "id": "bayes1763",
+    "year": 1763,
+    "area": "01_Foundations",
+    "area_name": "Foundations",
+    "title": "An Essay Towards Solving a Problem in the Doctrine of Chances",
+    "authors": "Thomas Bayes and Richard Price",
+    "local_path": "library/01_Foundations/1763_bayes1763.pdf",
+    "source_url": "https://doi.org/10.1098/rstl.1763.0053",
+    "size_human": "241 KB",
+    "significance": "Introduces inverse probability and Bayes\u2019 Theorem, establishing the foundation of probabilistic reasoning and Bayesian statistical learning."
+  },
+  {
+    "id": "shannon1948",
+    "year": 1948,
+    "area": "01_Foundations",
+    "area_name": "Foundations",
+    "title": "A Mathematical Theory of Communication",
+    "authors": "Claude Shannon",
+    "local_path": "library/01_Foundations/1948_shannon1948.pdf",
+    "source_url": "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x",
+    "size_human": "358 KB",
+    "significance": "Foundational treatise creating information theory, mathematically defining entropy, channel capacity, and discrete information quantification."
+  },
+  {
+    "id": "turing1950",
+    "year": 1950,
+    "area": "01_Foundations",
+    "area_name": "Foundations",
+    "title": "Computing Machinery and Intelligence",
+    "authors": "Alan Turing",
+    "local_path": "library/01_Foundations/1950_turing1950.pdf",
+    "source_url": "https://doi.org/10.1093/mind/LIX.236.433",
+    "size_human": "160 KB",
+    "significance": "Introduces the Imitation Game (Turing Test) and articulates the fundamental philosophy, arguments, and prospect of artificial machine intelligence."
+  },
+  {
+    "id": "rumelhart1986",
+    "year": 1986,
+    "area": "02_Neural_Networks",
+    "area_name": "Neural Networks",
+    "title": "Learning Representations by Back-propagating Errors",
+    "authors": "David Rumelhart and Geoffrey Hinton and Ronald Williams",
+    "local_path": "library/02_Neural_Networks/1986_rumelhart1986.pdf",
+    "source_url": "https://doi.org/10.1038/323533a0",
+    "size_human": "246 KB",
+    "significance": "Demonstrates generalized backpropagation for multi-layer neural networks, solving the non-linear representation problem and catalyzing connectionism."
+  },
+  {
+    "id": "lstm1997",
+    "year": 1997,
+    "area": "02_Neural_Networks",
+    "area_name": "Neural Networks",
+    "title": "Long Short-Term Memory",
+    "authors": "Sepp Hochreiter and Juergen Schmidhuber",
+    "local_path": "library/02_Neural_Networks/1997_lstm1997.pdf",
+    "source_url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+    "size_human": "428 KB",
+    "significance": "Invents the constant error carousel and gating mechanism to eliminate vanishing gradients in recurrent networks, enabling long-range sequence modeling."
+  },
+  {
+    "id": "alexnet2012",
+    "year": 2012,
+    "area": "04_Deep_Learning",
+    "area_name": "Deep Learning",
+    "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+    "authors": "Alex Krizhevsky and Ilya Sutskever and Geoffrey Hinton",
+    "local_path": "library/04_Deep_Learning/2012_alexnet2012.pdf",
+    "source_url": "https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks",
+    "size_human": "1.4 MB",
+    "significance": "Wins ImageNet 2012 by an unprecedented margin using deep convolutional networks on GPUs with ReLU and dropout, sparking modern deep learning."
+  },
+  {
+    "id": "transformer2017",
+    "year": 2017,
+    "area": "05_NLP_Language",
+    "area_name": "NLP & Language",
+    "title": "Attention Is All You Need",
+    "authors": "Ashish Vaswani and others",
+    "local_path": "library/05_NLP_Language/2017_transformer2017.pdf",
+    "source_url": "https://arxiv.org/abs/1706.03762",
+    "size_human": "2.1 MB",
+    "significance": "Dispenses with recurrence and convolutions entirely, introducing multi-head self-attention that became the universal backbone for modern foundation models."
+  },
+  {
+    "id": "gpt3_2020",
+    "year": 2020,
+    "area": "10_LLMs",
+    "area_name": "LLMs & Reasoning",
+    "title": "Language Models are Few-Shot Learners",
+    "authors": "Tom Brown and others",
+    "local_path": "library/10_LLMs/2020_gpt3_2020.pdf",
+    "source_url": "https://arxiv.org/abs/2005.14165",
+    "size_human": "6.5 MB",
+    "significance": "Demonstrates that massive scaling of autoregressive Transformers produces emergent few-shot learning and in-context task execution without gradient updates."
+  },
+  {
+    "id": "react2022",
+    "year": 2022,
+    "area": "10_LLMs",
+    "area_name": "LLMs & Reasoning",
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "authors": "Shunyu Yao and others",
+    "local_path": "library/10_LLMs/2022_react2022.pdf",
+    "source_url": "https://arxiv.org/abs/2210.03629",
+    "size_human": "619 KB",
+    "significance": "Synergizes verbal reasoning traces with external tool actions, establishing the foundational architecture for autonomous language model agents."
+  },
+  {
+    "id": "deepseek_r1_2025",
+    "year": 2025,
+    "area": "10_LLMs",
+    "area_name": "LLMs & Reasoning",
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "authors": "DeepSeek-AI",
+    "local_path": "library/10_LLMs/2025_deepseek_r1_2025.pdf",
+    "source_url": "https://arxiv.org/abs/2501.12948",
+    "size_human": "4.8 MB",
+    "significance": "Demonstrates large-scale pure reinforcement learning without supervised cold-start data to elicit emergent deep reasoning and self-verification in LLMs."
+  }
+]

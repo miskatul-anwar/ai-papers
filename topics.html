@@ -27,7 +27,7 @@ description: "Directory of the 12 subject areas across 217 papers from foundatio
 
       <div class="subject-footer">
         <span><strong>{{ area.count }}</strong> papers ({{ area.size_human }})</span>
-        <a href="{{ '/?area=' | append: area.id | relative_url }}" class="inline-link">Browse papers →</a>
+        <a href="{{ '/catalog.html?area=' | append: area.id | relative_url }}" class="inline-link">Browse papers →</a>
       </div>
     </div>
     {% endfor %}

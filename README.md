@@ -16,7 +16,8 @@ Every paper is hosted in full with a verified, downloadable PDF, cryptographic S
 
 ## 🧭 Web Application Features
 
-- **⚡ Instant Search & Multi-Filter:** Sub-millisecond client-side filtering across titles, authors, years, categories, and IDs.
+- **🏛️ Archival Homepage:** Editorial monograph featuring essential landmark milestones, historical epochs, and instant search.
+- **⚡ Instant Search & Multi-Filter:** Sub-millisecond client-side filtering across titles, authors, years, categories, and IDs on the [Catalog](https://miskatul-anwar.github.io/ai-papers/catalog.html).
 - **📖 In-Browser PDF Reader:** Read any paper immediately in a modal viewer or download for offline reading.
 - **⏳ Chronological Timeline (1763–2026):** Visual vertical timeline from Thomas Bayes (1763) and Alan Turing (1936, 1950) to frontier agentic architectures of 2026.
 - **📚 Curated Subject Areas:** 12 thematic areas from neural foundations and deep learning to multi-agent systems.

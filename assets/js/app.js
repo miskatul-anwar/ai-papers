@@ -61,11 +61,13 @@
 
   window.addEventListener('keydown', (e) => {
     // Focus search on '/'
-    if (e.key === '/' && document.activeElement !== searchInput) {
-      if (searchInput) {
+    const homeInput = document.querySelector('.home-search-input');
+    const targetInput = searchInput || homeInput;
+    if (e.key === '/' && document.activeElement !== targetInput) {
+      if (targetInput) {
         e.preventDefault();
-        searchInput.focus();
-        searchInput.select();
+        targetInput.focus();
+        targetInput.select();
       }
     }
     // Toggle theme on 't' or 'T' if not in input

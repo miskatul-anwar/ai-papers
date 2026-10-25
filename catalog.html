@@ -1,0 +1,147 @@
+---
+layout: default
+title: "Paper Catalog (217 Works)"
+description: "Search, filter, and study 217 landmark research papers in artificial intelligence spanning 1763 to 2026."
+permalink: /catalog.html
+---
+
+<!-- Scholarly Masthead Intro -->
+<section class="archive-header">
+  <div class="container">
+    <h1 class="archive-headline">Paper Catalog</h1>
+    <p class="archive-summary">
+      Search, filter, and study 217 landmark research papers in artificial intelligence, machine learning, neural networks, language modeling, and autonomous agents spanning 1763 to 2026. Every PDF is preserved locally, verified with cryptographic SHA-256 checksums, and available for direct study.
+    </p>
+    <div class="archive-stats-row">
+      <span class="stat-item"><strong>{{ site.data.stats.paper_count }}</strong> cataloged works</span>
+      <span class="stat-item"><strong>{{ site.data.stats.area_count }}</strong> subject areas</span>
+      <span class="stat-item"><strong>{{ site.data.stats.learning_path_count }}</strong> landmark papers</span>
+      <span class="stat-item"><strong>{{ site.data.stats.year_min }}–{{ site.data.stats.year_max }}</strong> time span</span>
+      <span class="stat-item"><strong>{{ site.data.stats.total_size_human }}</strong> archival storage</span>
+      <span class="stat-item"><strong>6,443</strong> total pages</span>
+    </div>
+  </div>
+</section>
+
+<!-- Search & Filtering Toolbar -->
+<section class="toolbar-section">
+  <div class="container">
+    <div class="search-box-row">
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search 217 papers by title, author, year, topic, or ID (e.g. 'attention', 'turing', 'agent', '1986')..." autocomplete="off">
+        <span class="search-shortcut">/</span>
+        <button id="searchClearBtn" class="search-clear-btn" aria-label="Clear search">✕</button>
+      </div>
+    </div>
+
+    <!-- Category Filter Tags -->
+    <div class="area-tags-scroll">
+      <button class="area-tag-btn active" data-area="all">
+        All <span class="count">({{ site.data.stats.paper_count }})</span>
+      </button>
+      {% for area in site.data.areas %}
+      <button class="area-tag-btn" data-area="{{ area.id }}">
+        {{ area.name }} <span class="count">({{ area.count }})</span>
+      </button>
+      {% endfor %}
+    </div>
+
+    <div class="toolbar-controls" style="margin-top: 10px;">
+      <div class="filter-secondary-group">
+        <select id="decadeSelect" class="select-clean" aria-label="Filter by era">
+          <option value="all">All Eras (1763–2026)</option>
+          <option value="pre-1950">Pre-1950 (Foundations)</option>
+          <option value="1950s">1950s (Birth of AI)</option>
+          <option value="1960s">1960s (Early Logic & Search)</option>
+          <option value="1970s">1970s (Expert Systems)</option>
+          <option value="1980s">1980s (Connectionism)</option>
+          <option value="1990s">1990s (Statistical Learning)</option>
+          <option value="2000s">2000s (Kernels & Graphs)</option>
+          <option value="2010s">2010s (Deep Learning)</option>
+          <option value="2020s">2020s (LLMs & Agents)</option>
+        </select>
+
+        <label class="checkbox-clean">
+          <input type="checkbox" id="lpOnlyCb">
+          <span>Landmark papers only (121)</span>
+        </label>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <select id="sortSelect" class="select-clean" aria-label="Sort papers">
+          <option value="year-desc">Year: Newest first</option>
+          <option value="year-asc">Year: Oldest first</option>
+          <option value="title-asc">Title: A to Z</option>
+          <option value="size-desc">File size: Largest first</option>
+        </select>
+
+        <div class="view-btn-group">
+          <button id="viewListBtn" class="view-btn active" title="Bibliographic List View">List</button>
+          <button id="viewTableBtn" class="view-btn" title="Table View">Table</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Catalog Main Content -->
+<section class="catalog-section">
+  <div class="container">
+    <div class="catalog-meta-bar">
+      <span id="matchCount">{{ site.data.stats.paper_count }} of {{ site.data.stats.paper_count }} papers listed</span>
+      <span>Press <kbd style="font-family: var(--font-mono); font-size: 0.72rem; border: 1px solid var(--border-rule); padding: 1px 4px; border-radius: 2px;">/</kbd> to search · <kbd style="font-family: var(--font-mono); font-size: 0.72rem; border: 1px solid var(--border-rule); padding: 1px 4px; border-radius: 2px;">T</kbd> to toggle theme</span>
+    </div>
+
+    <!-- Dense List View (Pre-rendered for SEO + Enhanced by JS) -->
+    <div class="catalog-list" id="catalogList">
+      {% for paper in site.data.papers %}
+      <article class="paper-entry" data-id="{{ paper.id }}">
+        <div class="entry-topline">
+          <div class="entry-left-meta">
+            <span class="entry-year">{{ paper.year }}</span>
+            <span class="entry-area-code">{{ paper.area_name }}</span>
+          </div>
+          <span class="entry-size">{{ paper.size_human }}</span>
+        </div>
+
+        <h3 class="entry-title">
+          <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener noreferrer" class="paper-link" data-id="{{ paper.id }}">
+            {{ paper.title }}
+          </a>
+        </h3>
+
+        <p class="entry-authors">{{ paper.authors }}</p>
+
+        <div class="entry-actions">
+          <a href="{{ paper.local_path | relative_url }}" target="_blank" rel="noopener noreferrer" class="action-link">Open PDF ↗</a>
+          <a href="{{ paper.local_path | relative_url }}" download="{{ paper.year }}_{{ paper.id }}.pdf" class="action-link action-dim">Download</a>
+          <a href="{{ paper.source_url }}" target="_blank" rel="noopener noreferrer" class="action-link action-dim">Source / DOI ↗</a>
+          <button class="action-link action-dim toggle-bibtex-btn" data-id="{{ paper.id }}">BibTeX</button>
+          <button class="action-link action-dim toggle-hash-btn" data-id="{{ paper.id }}">SHA-256</button>
+          <button class="action-link action-dim drawer-open-btn" data-id="{{ paper.id }}">Reader Drawer</button>
+        </div>
+
+        <div class="entry-expandable-box" id="box_{{ paper.id }}"></div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- Table View -->
+    <div class="table-wrapper" id="tableWrapper" style="display: none;">
+      <table class="catalog-table">
+        <thead>
+          <tr>
+            <th style="width: 70px;">Year</th>
+            <th>Title & Authors</th>
+            <th style="width: 170px;">Area</th>
+            <th style="width: 160px;">Links</th>
+            <th style="width: 80px;">Size</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

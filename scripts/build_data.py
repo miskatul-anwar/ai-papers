@@ -314,6 +314,39 @@ def main():
     with open(data_dir / "stats.json", "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
 
+    # Landmarks data for Homepage
+    landmarks_spec = [
+        {"id": "bayes1763", "significance": "Introduces inverse probability and Bayes’ Theorem, establishing the foundation of probabilistic reasoning and Bayesian statistical learning."},
+        {"id": "shannon1948", "significance": "Foundational treatise creating information theory, mathematically defining entropy, channel capacity, and discrete information quantification."},
+        {"id": "turing1950", "significance": "Introduces the Imitation Game (Turing Test) and articulates the fundamental philosophy, arguments, and prospect of artificial machine intelligence."},
+        {"id": "rumelhart1986", "significance": "Demonstrates generalized backpropagation for multi-layer neural networks, solving the non-linear representation problem and catalyzing connectionism."},
+        {"id": "lstm1997", "significance": "Invents the constant error carousel and gating mechanism to eliminate vanishing gradients in recurrent networks, enabling long-range sequence modeling."},
+        {"id": "alexnet2012", "significance": "Wins ImageNet 2012 by an unprecedented margin using deep convolutional networks on GPUs with ReLU and dropout, sparking modern deep learning."},
+        {"id": "transformer2017", "significance": "Dispenses with recurrence and convolutions entirely, introducing multi-head self-attention that became the universal backbone for modern foundation models."},
+        {"id": "gpt3_2020", "significance": "Demonstrates that massive scaling of autoregressive Transformers produces emergent few-shot learning and in-context task execution without gradient updates."},
+        {"id": "react2022", "significance": "Synergizes verbal reasoning traces with external tool actions, establishing the foundational architecture for autonomous language model agents."},
+        {"id": "deepseek_r1_2025", "significance": "Demonstrates large-scale pure reinforcement learning without supervised cold-start data to elicit emergent deep reasoning and self-verification in LLMs."}
+    ]
+    papers_by_id = {p["id"]: p for p in papers}
+    landmarks_data = []
+    for s in landmarks_spec:
+        if s["id"] in papers_by_id:
+            p = papers_by_id[s["id"]]
+            landmarks_data.append({
+                "id": p["id"],
+                "year": p["year"],
+                "area": p["area"],
+                "area_name": p["area_name"],
+                "title": p["title"],
+                "authors": p["authors"],
+                "local_path": p["local_path"],
+                "source_url": p["source_url"],
+                "size_human": p["size_human"],
+                "significance": s["significance"]
+            })
+    with open(data_dir / "landmarks.json", "w", encoding="utf-8") as f:
+        json.dump(landmarks_data, f, indent=2, ensure_ascii=False)
+
     # Write assets/data/papers.json for client-side search
     client_data_dir = ROOT / "assets" / "data"
     client_data_dir.mkdir(parents=True, exist_ok=True)
