@@ -62,10 +62,27 @@ permalink: /catalog.html
           <option value="2020s">2020s (LLMs & Agents)</option>
         </select>
 
-        <label class="checkbox-clean">
+        <label class="toggle-switch" for="lpOnlyCb">
           <input type="checkbox" id="lpOnlyCb">
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
           <span>Landmark papers only ({{ site.data.stats.learning_path_count }})</span>
         </label>
+      </div>
+
+      <!-- Interactive Year Horizon Slider -->
+      <div class="year-slider-wrap">
+        <label for="yearSlider" class="year-slider-label">
+          <span>Horizon:</span>
+          <span id="yearSliderVal" class="year-slider-val">All (1763–2026)</span>
+        </label>
+        <div class="year-slider-inner">
+          <span class="slider-bound">1763</span>
+          <input type="range" id="yearSlider" class="slider-input" min="1763" max="2026" value="1763" step="1" aria-label="Filter papers from year">
+          <span class="slider-bound">2026</span>
+          <button id="yearSliderReset" class="slider-reset-btn" title="Reset year filter" style="display: none;">Reset</button>
+        </div>
       </div>
 
       <div style="display: flex; align-items: center; gap: 12px;">

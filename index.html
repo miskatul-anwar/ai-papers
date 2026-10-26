@@ -35,20 +35,36 @@ permalink: /
 </section>
 
 <!-- Voices from the Frontier (Epigraph Quotes Showcase) -->
-<section class="voices-section">
+<section class="voices-section" aria-label="Voices from the Frontier quotes showcase">
   <div class="container voices-wrapper">
     <div class="voices-header">
       <span class="voices-kicker">Voices from the Frontier · Landmark Paper Quotes</span>
       <div class="voices-controls">
-        <button id="prevQuoteBtn" class="voices-nav-btn" aria-label="Previous Quote">← Previous</button>
-        <button id="nextQuoteBtn" class="voices-nav-btn" aria-label="Next Quote">Next →</button>
+        <div class="slider-counter" id="quoteCounter" aria-label="Slide position">
+          <span class="current-slide">01</span>
+          <span class="counter-divider">/</span>
+          <span class="total-slides">08</span>
+        </div>
+        <div class="slider-btn-group">
+          <button id="prevQuoteBtn" class="voices-slider-btn" aria-label="Previous Quote" title="Previous Quote (Left Arrow)">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13l-5-5 5-5"/></svg>
+          </button>
+          <button id="nextQuoteBtn" class="voices-slider-btn" aria-label="Next Quote" title="Next Quote (Right Arrow)">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>
+          </button>
+        </div>
       </div>
     </div>
 
-    <div class="quote-slide-container">
+    <!-- Editorial Slider Progress Track -->
+    <div class="slider-progress-track" aria-hidden="true">
+      <div class="slider-progress-bar" id="quoteProgressBar" style="width: 12.5%;"></div>
+    </div>
+
+    <div class="quote-slide-container" id="quoteSlider" tabindex="0" aria-roledescription="carousel" aria-label="Landmark quotes carousel">
       {% for q in site.data.quotes %}
-      <article class="quote-card {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
-        <div class="quote-glyph">“</div>
+      <article class="quote-card {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}" aria-roledescription="slide" aria-label="{{ forloop.index }} of {{ forloop.length }}">
+        <div class="quote-glyph" aria-hidden="true">“</div>
         <div class="quote-theme-pill">{{ q.theme }}</div>
         <blockquote class="quote-body">
           {{ q.quote }}
@@ -67,10 +83,12 @@ permalink: /
     </div>
 
     <!-- Quick Quote Selector Strip -->
-    <div class="quote-tab-strip">
+    <div class="quote-tab-strip" role="tablist" aria-label="Quote slider pagination">
       {% for q in site.data.quotes %}
-      <button class="quote-tab-btn {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
-        {{ q.author | split: ',' | first | split: ' ' | last }} ({{ q.year }})
+      <button class="quote-tab-btn {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="Go to quote by {{ q.author | split: ',' | first | split: ' ' | last }}">
+        <span class="quote-tab-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+        <span class="quote-tab-author">{{ q.author | split: ',' | first | split: ' ' | last }}</span>
+        <span class="quote-tab-year">({{ q.year }})</span>
       </button>
       {% endfor %}
     </div>

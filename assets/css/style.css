@@ -35,6 +35,11 @@
   --code-bg: #f6f5f2;
   --code-border: #e4e3df;
 
+  --scrollbar-track: var(--bg-subtle);
+  --scrollbar-thumb: var(--border-rule);
+  --scrollbar-thumb-hover: var(--border-strong);
+  --scrollbar-thumb-active: var(--accent-ink);
+
   --container-max: 1140px;
 }
 
@@ -89,6 +94,47 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* ==========================================================================
+   Archival Custom Scrollbars
+   Crafted to seamlessly integrate with light & dark archival typography
+   ========================================================================== */
+
+/* Standard CSS Scrollbars (Firefox & Modern Standards) */
+html, body, * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* Chromium / Blink / WebKit Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 9999px;
+  border: 2px solid var(--scrollbar-track);
+  background-clip: padding-box;
+  transition: background-color 0.18s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--scrollbar-thumb-active);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 a {
@@ -406,8 +452,28 @@ html.dark .theme-label-light {
   align-items: center;
   gap: 6px;
   overflow-x: auto;
-  padding-bottom: 2px;
+  padding-bottom: 6px;
   scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.area-tags-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.area-tags-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.area-tags-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--border-rule);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+}
+
+.area-tags-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: var(--border-strong);
 }
 
 .area-tag-btn {
@@ -465,19 +531,229 @@ html.dark .theme-label-light {
   border-color: var(--text-main);
 }
 
+/* Toggle Switch & Clean Checkboxes */
+.toggle-switch,
 .checkbox-clean {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-size: 0.82rem;
   color: var(--text-secondary);
   cursor: pointer;
   user-select: none;
+  transition: color 0.15s ease;
 }
 
-.checkbox-clean input {
-  accent-color: var(--text-main);
+.toggle-switch:hover,
+.checkbox-clean:hover {
+  color: var(--text-main);
+}
+
+.toggle-switch input[type="checkbox"],
+.checkbox-clean input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.toggle-track {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+  background-color: var(--border-rule);
+  border-radius: 9999px;
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease;
+}
+
+html.dark .toggle-thumb {
+  background-color: #f2f2f3;
+}
+
+.toggle-switch input:checked + .toggle-track,
+.checkbox-clean input:checked + .toggle-track {
+  background-color: var(--accent-ink);
+}
+
+.toggle-switch input:checked + .toggle-track .toggle-thumb,
+.checkbox-clean input:checked + .toggle-track .toggle-thumb {
+  transform: translateX(14px);
+}
+
+.toggle-switch input:focus-visible + .toggle-track,
+.checkbox-clean input:focus-visible + .toggle-track {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Archival Range Sliders (HTML5 Range Inputs)
+   ========================================================================== */
+
+input[type="range"].slider-input,
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: var(--border-rule);
+  border-radius: 9999px;
+  outline: none;
   cursor: pointer;
+  transition: background 0.15s ease;
+  margin: 6px 0;
+}
+
+input[type="range"]:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 3px;
+}
+
+/* WebKit Track & Thumb */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  background: var(--border-rule);
+  border-radius: 9999px;
+  border: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-page);
+  border: 2px solid var(--accent-ink);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-top: -5px;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+  border-color: var(--text-main);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.22);
+  background: var(--accent-ink);
+}
+
+/* Firefox Track, Thumb & Progress */
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  background: var(--border-rule);
+  border-radius: 9999px;
+  border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-page);
+  border: 2px solid var(--accent-ink);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.18);
+  border-color: var(--text-main);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+input[type="range"]::-moz-range-thumb:active {
+  transform: scale(1.22);
+  background: var(--accent-ink);
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: var(--accent-ink);
+  height: 6px;
+  border-radius: 9999px;
+}
+
+/* Year Horizon Slider Component */
+.year-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 10px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  width: 100%;
+  max-width: 380px;
+}
+
+.year-slider-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+}
+
+.year-slider-val {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--accent-ink);
+  font-size: 0.8rem;
+}
+
+.year-slider-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.slider-bound {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.slider-reset-btn {
+  background: none;
+  border: 1px solid var(--border-rule);
+  border-radius: 2px;
+  padding: 1px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.slider-reset-btn:hover {
+  color: var(--text-main);
+  border-color: var(--text-main);
+  background-color: var(--bg-page);
 }
 
 .view-btn-group {
@@ -688,6 +964,26 @@ html.dark .theme-label-light {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border-top: 1px solid var(--border-rule);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 9999px;
+  border: 1px solid var(--bg-subtle);
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
 }
 
 .catalog-table {
@@ -1489,23 +1785,23 @@ html.dark .theme-label-light {
    ========================================================================== */
 
 .voices-section {
-  padding: 44px 0;
+  padding: 44px 0 38px;
   border-bottom: 1px solid var(--border-light);
   background-color: var(--bg-card);
+  position: relative;
 }
 
 .voices-wrapper {
-  max-width: 860px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
 .voices-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border-rule);
-  padding-bottom: 8px;
+  margin-bottom: 12px;
+  gap: 16px;
 }
 
 .voices-kicker {
@@ -1519,32 +1815,94 @@ html.dark .theme-label-light {
 
 .voices-controls {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 12px;
 }
 
-.voices-nav-btn {
+/* Monospace Slide Counter */
+.slider-counter {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.slider-counter .current-slide {
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+
+.slider-counter .counter-divider {
+  margin: 0 3px;
+  opacity: 0.5;
+}
+
+.slider-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.voices-slider-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   background: var(--bg-page);
   border: 1px solid var(--border-rule);
-  border-radius: 3px;
-  padding: 4px 10px;
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
+  border-radius: 50%;
   color: var(--text-secondary);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-.voices-nav-btn:hover {
+.voices-slider-btn:hover {
   color: var(--text-main);
-  border-color: var(--text-main);
+  border-color: var(--accent-ink);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
+.voices-slider-btn:active {
+  transform: translateY(1px) scale(0.96);
+}
+
+.voices-slider-btn:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 2px;
+}
+
+/* Editorial Slider Progress Track */
+.slider-progress-track {
+  width: 100%;
+  height: 2px;
+  background-color: var(--border-light);
+  border-radius: 1px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.slider-progress-bar {
+  height: 100%;
+  background-color: var(--accent-ink);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 1px;
+}
+
+/* Slide Container: Stacked Grid for Silky Transitions */
 .quote-slide-container {
   position: relative;
-  min-height: 200px;
+  display: grid;
+  grid-template-areas: "slide";
+  min-height: 210px;
+  outline: none;
 }
 
 .quote-card {
+  grid-area: slide;
   position: relative;
   padding: 24px 30px 24px 44px;
   background-color: var(--bg-page);
@@ -1552,11 +1910,22 @@ html.dark .theme-label-light {
   border-left: 3px solid var(--accent-ink);
   border-radius: 3px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.32s;
+  pointer-events: none;
 }
 
 .quote-card.active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .quote-glyph {
@@ -1624,18 +1993,39 @@ html.dark .theme-label-light {
   font-size: 0.78rem;
 }
 
+/* Quick Quote Selector Strip */
 .quote-tab-strip {
   display: flex;
   gap: 6px;
-  margin-top: 18px;
+  margin-top: 20px;
   overflow-x: auto;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.quote-tab-strip::-webkit-scrollbar {
+  height: 4px;
+}
+
+.quote-tab-strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.quote-tab-strip::-webkit-scrollbar-thumb {
+  background-color: var(--border-rule);
+  border-radius: 9999px;
+}
+
+.quote-tab-strip::-webkit-scrollbar-thumb:hover {
+  background-color: var(--border-strong);
 }
 
 .quote-tab-btn {
-  background: transparent;
-  border: 1px solid var(--border-rule);
-  border-radius: 2px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: 3px;
   padding: 5px 10px;
   font-family: var(--font-mono);
   font-size: 0.74rem;
@@ -1643,11 +2033,28 @@ html.dark .theme-label-light {
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quote-tab-num {
+  font-size: 0.68rem;
+  opacity: 0.7;
+}
+
+.quote-tab-author {
+  font-weight: 500;
+}
+
+.quote-tab-year {
+  opacity: 0.75;
 }
 
 .quote-tab-btn:hover {
   color: var(--text-main);
-  border-color: var(--text-secondary);
+  border-color: var(--border-strong);
+  background-color: var(--bg-hover);
 }
 
 .quote-tab-btn.active {
@@ -1655,6 +2062,15 @@ html.dark .theme-label-light {
   color: var(--bg-page);
   border-color: var(--text-main);
   font-weight: 600;
+}
+
+.quote-tab-btn.active .quote-tab-num {
+  color: var(--accent-ink);
+  opacity: 1;
+}
+
+html.dark .quote-tab-btn.active .quote-tab-num {
+  color: var(--accent-ink);
 }
 
 /* ==========================================================================
@@ -1871,8 +2287,6 @@ html.dark .theme-label-light {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   padding-top: 12px;
-  border-top: 1px solid var(--border-light);
-}
   border-top: 1px solid var(--border-light);
 }
 
@@ -2248,6 +2662,11 @@ html.dark .theme-label-light {
     flex-direction: column;
     width: 100%;
     gap: 8px;
+  }
+
+  .year-slider-wrap {
+    max-width: 100%;
+    flex-wrap: wrap;
   }
 
   .select-clean {

@@ -12,6 +12,7 @@
     query: '',
     area: 'all',
     decade: 'all',
+    minYear: 1763,
     lpOnly: false,
     sort: 'year-desc',
     view: localStorage.getItem('ai_papers_view') || 'list'
@@ -157,6 +158,7 @@
       }
       if (state.area !== 'all' && p.area !== state.area) return false;
       if (state.lpOnly && !p.learning_path) return false;
+      if (state.minYear && state.minYear > 1763 && p.year < state.minYear) return false;
 
       if (state.decade !== 'all') {
         const y = p.year;
@@ -425,6 +427,44 @@
         });
       }
 
+      // Year Horizon Slider Control
+      const yearSlider = document.getElementById('yearSlider');
+      const yearSliderVal = document.getElementById('yearSliderVal');
+      const yearSliderReset = document.getElementById('yearSliderReset');
+
+      function updateYearSliderUI() {
+        if (!yearSliderVal) return;
+        if (state.minYear && state.minYear > 1763) {
+          const count = papers.filter(p => {
+            if (state.area !== 'all' && p.area !== state.area) return false;
+            if (state.lpOnly && !p.learning_path) return false;
+            return p.year >= state.minYear;
+          }).length;
+          yearSliderVal.textContent = `Since ${state.minYear} (${count} works)`;
+          if (yearSliderReset) yearSliderReset.style.display = 'inline-block';
+        } else {
+          yearSliderVal.textContent = 'All (1763–2026)';
+          if (yearSliderReset) yearSliderReset.style.display = 'none';
+        }
+      }
+
+      if (yearSlider) {
+        yearSlider.addEventListener('input', (e) => {
+          state.minYear = parseInt(e.target.value, 10);
+          updateYearSliderUI();
+          render();
+        });
+      }
+
+      if (yearSliderReset) {
+        yearSliderReset.addEventListener('click', () => {
+          if (yearSlider) yearSlider.value = '1763';
+          state.minYear = 1763;
+          updateYearSliderUI();
+          render();
+        });
+      }
+
       if (sortSelect) {
         sortSelect.addEventListener('change', (e) => {
           state.sort = e.target.value;
@@ -470,17 +510,27 @@
   }
 
   /* ==========================================================================
-     Homepage Epigraph Quotes Carousel
+     Homepage Epigraph Quotes Carousel / Slider
      ========================================================================== */
 
   function initQuotesCarousel() {
+    const slider = document.getElementById('quoteSlider');
     const cards = document.querySelectorAll('.quote-card');
     const tabs = document.querySelectorAll('.quote-tab-btn');
     const prevBtn = document.getElementById('prevQuoteBtn');
     const nextBtn = document.getElementById('nextQuoteBtn');
+    const counterCurrent = document.querySelector('#quoteCounter .current-slide');
+    const counterTotal = document.querySelector('#quoteCounter .total-slides');
+    const progressBar = document.getElementById('quoteProgressBar');
+
     if (!cards.length) return;
 
     let currentIndex = 0;
+    let autoPlayTimer = null;
+
+    if (counterTotal) {
+      counterTotal.textContent = String(cards.length).padStart(2, '0');
+    }
 
     function showQuote(index) {
       if (index < 0) index = cards.length - 1;
@@ -488,28 +538,108 @@
       currentIndex = index;
 
       cards.forEach((card, i) => {
-        card.classList.toggle('active', i === currentIndex);
+        const isActive = i === currentIndex;
+        card.classList.toggle('active', isActive);
+        card.setAttribute('aria-hidden', isActive ? 'false' : 'true');
       });
 
       tabs.forEach((tab, i) => {
         const isActive = i === currentIndex;
         tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
         if (isActive) {
           tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }
       });
+
+      if (counterCurrent) {
+        counterCurrent.textContent = String(currentIndex + 1).padStart(2, '0');
+      }
+
+      if (progressBar) {
+        progressBar.style.width = `${((currentIndex + 1) / cards.length) * 100}%`;
+      }
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(() => {
+        showQuote(currentIndex + 1);
+      }, 9000);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
     }
 
     if (prevBtn) {
-      prevBtn.addEventListener('click', () => showQuote(currentIndex - 1));
+      prevBtn.addEventListener('click', () => {
+        showQuote(currentIndex - 1);
+        startAutoPlay();
+      });
     }
+
     if (nextBtn) {
-      nextBtn.addEventListener('click', () => showQuote(currentIndex + 1));
+      nextBtn.addEventListener('click', () => {
+        showQuote(currentIndex + 1);
+        startAutoPlay();
+      });
     }
 
     tabs.forEach((tab, i) => {
-      tab.addEventListener('click', () => showQuote(i));
+      tab.addEventListener('click', () => {
+        showQuote(i);
+        startAutoPlay();
+      });
     });
+
+    // Touch Swipe Gestures for Mobile
+    if (slider) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      slider.addEventListener('touchstart', (e) => {
+        stopAutoPlay();
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      slider.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchEndX - touchStartX;
+        if (Math.abs(diff) > 40) {
+          if (diff < 0) {
+            showQuote(currentIndex + 1);
+          } else {
+            showQuote(currentIndex - 1);
+          }
+        }
+        startAutoPlay();
+      }, { passive: true });
+
+      slider.addEventListener('mouseenter', stopAutoPlay);
+      slider.addEventListener('mouseleave', startAutoPlay);
+      slider.addEventListener('focusin', stopAutoPlay);
+      slider.addEventListener('focusout', startAutoPlay);
+
+      // Keyboard arrow navigation
+      slider.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          showQuote(currentIndex - 1);
+          startAutoPlay();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          showQuote(currentIndex + 1);
+          startAutoPlay();
+        }
+      });
+    }
+
+    showQuote(0);
+    startAutoPlay();
   }
 
   document.addEventListener('DOMContentLoaded', () => {
